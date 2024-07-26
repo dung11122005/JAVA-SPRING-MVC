@@ -83,7 +83,7 @@
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
                         <span class="text-light"><a href="https://www.facebook.com/cotem.khong.90?locale=vi_VN"><i
                                     class="fas fa-copyright text-light me-2"></i>Đây là
-                                trang web của HOÀNG TẤN DŨNG</a>mọi quyền được bảo lưu</span>
+                                trang web của HOÀNG TẤN DŨNG </a>mọi quyền được bảo lưu</span>
                     </div>
                     <div class="col-md-6 my-auto text-center text-md-end text-white">
                         <!--/*** This template is free as long as you keep the below author’s credit link/attribution link/backlink. ***/-->
