@@ -5,7 +5,8 @@
             <div class="container topbar bg-primary d-none d-lg-block">
                 <div class="d-flex justify-content-between">
                     <div class="top-info ps-2">
-                        <small class="me-3"><i class="fas fa-map-marker-alt me-2 text-secondary"></i> <a href="#"
+                        <small class="me-3"><i class="fas fa-map-marker-alt me-2 text-secondary"></i> <a
+                                href="https://www.google.com/maps/place/320+%C4%90.+Tr%E1%BA%A7n+B%C3%ACnh+Tr%E1%BB%8Dng,+Ph%C6%B0%E1%BB%9Dng+4,+Qu%E1%BA%ADn+5,+H%E1%BB%93+Ch%C3%AD+Minh+72520,+Vi%E1%BB%87t+Nam/@10.7612343,106.6818076,171m/data=!3m1!1e3!4m6!3m5!1s0x31752f1dcd4041b1:0x39f9d63d7b21e6f9!8m2!3d10.7623554!4d106.6793357!16s%2Fg%2F11csg4n2mp?hl=vi-VN&entry=ttu"
                                 class="text-white">320/32/6 Trần Bình Trọng, P4, Q5, HCM</a></small>
                         <small class="me-3"><i class="fas fa-envelope me-2 text-secondary"></i><a href="#"
                                 class="text-white">hoangtandung2k5@gmail.com</a></small>

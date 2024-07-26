@@ -6,7 +6,7 @@
                 <div class="row g-5 align-items-center">
                     <div class="col-md-12 col-lg-7">
                         <h4 class="mb-3 text-secondary">100% Sản Phẩm Chính Hãng</h4>
-                        <h1 class="mb-5 display-3 text-primary">Hàng cao cấp rẻ vô địch</h1>
+                        <h1 class="mb-5 display-3 text-primary">Hàng cao cấp <br /> rẻ vô địch</h1>
                         <div class="position-relative mx-auto">
                             <input class="form-control border-2 border-secondary w-75 py-3 px-4 rounded-pill"
                                 type="number" placeholder="Tìm kiếm">

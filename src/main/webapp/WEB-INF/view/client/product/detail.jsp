@@ -73,7 +73,7 @@
             <div class="container-fluid page-header py-1">
                 <h3 class="text-center text-white">Chi tiết sản phẩm</h3>
                 <ol class="breadcrumb justify-content-center mb-0">
-                    <li class="breadcrumb-item active text-white">Mua trực tiếp tại shop sẽ được thêm nhiều ưu đãi</li>
+                    <li class="breadcrumb-item active text-white">Vui chơi có thưởng khi mua trực tiếp tại cửa hàng</li>
                 </ol>
             </div>
             <!-- Single Page Header End -->
@@ -271,12 +271,12 @@
                                         </div>
                                         <div class="col-lg-12">
                                             <div class="border-bottom rounded my-4">
-                                                <textarea name="" id="" class="form-control border-0" cols="30" rows="8"
+                                                <textarea name="" id="" class="form-control border-0" cols="30" rows="4"
                                                     placeholder="Your Review *" spellcheck="false"></textarea>
                                             </div>
                                         </div>
                                         <div class="col-lg-12">
-                                            <div class="d-flex justify-content-between py-3 mb-5">
+                                            <div class="d-flex justify-content-between py-3 mb-4">
                                                 <div class="d-flex align-items-center">
                                                     <p class="mb-0 me-3">Please rate:</p>
                                                     <div class="d-flex align-items-center" style="font-size: 12px;">
