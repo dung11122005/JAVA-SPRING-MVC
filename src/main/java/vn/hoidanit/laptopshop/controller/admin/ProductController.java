@@ -80,7 +80,13 @@ public class ProductController {
             return "admin/product/update";
         }
 
-        Product currentProduct = this.productService.fetchProductById(pr.getId()).get();
+        Optional<Product> optionalProduct = this.productService.fetchProductById(pr.getId());
+        Product currentProduct;
+        if (optionalProduct.isPresent()) {
+            currentProduct = optionalProduct.get();
+        } else {
+            currentProduct = null;
+        }
 
         if (currentProduct != null) {
             // update new image
@@ -99,7 +105,6 @@ public class ProductController {
 
             this.productService.createProduct(currentProduct);
         }
-
         return "redirect:/admin/product";
     }
 
