@@ -23,41 +23,30 @@
                     <div id="layoutSidenav_content">
                         <main>
                             <div class="container-fluid px-4">
-                                <h1 class="mt-4">User</h1>
+                                <h1 class="mt-4">Product</h1>
                                 <ol class="breadcrumb mb-4">
                                     <li class="breadcrumb-item active"><a href="/admin">Dashboard</a></li>
-                                    <li class="breadcrumb-item active"><a href="/admin/user">User</a></li>
-                                    <li class="breadcrumb-item active">Update</li>
+                                    <li class="breadcrumb-item active"><a href="/admin/product">Product</a></li>
+                                    <li class="breadcrumb-item active">View detail</li>
                                 </ol>
                                 <div class=" mt-5">
                                     <div class="row">
-                                        <div class="col-md-6 col-12 mx-auto">
-                                            <h3>Update a User</h3>
+                                        <div class="col-12 mx-auto">
+                                            <div class="d-flex justify-content-between">
+                                                <h3>Delete the Product with id = ${id}</h3>
+                                            </div>
                                             <hr />
-                                            <form:form method="post" action="/admin/user/update"
-                                                modelAttribute="newUser">
+                                            <div class="alert alert-danger" role="alert">
+                                                Are you sure to delete this Product ?
+                                            </div>
+                                            <form:form method="post" action="/admin/product/delete"
+                                                modelAttribute="newProduct">
                                                 <div class="mb-3" style="display: none;">
                                                     <label class="form-label">Id:</label>
-                                                    <form:input type="text" class="form-control" path="id" />
+                                                    <form:input value="${id}" type="text" class="form-control"
+                                                        path="id" />
                                                 </div>
-                                                <div class="mb-3">
-                                                    <label class="form-label">Email:</label>
-                                                    <form:input type="email" class="form-control" path="email"
-                                                        disabled="true" />
-                                                </div>
-                                                <div class="mb-3">
-                                                    <label class="form-label">Phone number:</label>
-                                                    <form:input type="text" class="form-control" path="phone" />
-                                                </div>
-                                                <div class="mb-3">
-                                                    <label class="form-label">Full name:</label>
-                                                    <form:input type="text" class="form-control" path="fullName" />
-                                                </div>
-                                                <div class="mb-3">
-                                                    <label class="form-label">Address:</label>
-                                                    <form:input type="text" class="form-control" path="address" />
-                                                </div>
-                                                <button type="submit" class="btn btn-warning">Update</button>
+                                                <button class="btn btn-danger">Confirm</button>
                                             </form:form>
                                         </div>
                                     </div>

@@ -78,7 +78,7 @@ public class UserController {
         hoidanit.setPassword(hashPassword);
         hoidanit.setRole(this.userService.getRoleByName(hoidanit.getRole().getName()));
         // Save
-        // this.userService.handleSaveUser(hoidanit);
+        this.userService.handleSaveUser(hoidanit);
         return "redirect:/admin/user";
     }
 
@@ -92,20 +92,20 @@ public class UserController {
 
     @RequestMapping("/admin/user/update/{id}")
     public String getUpdateUserPage(Model model, @PathVariable long id) {
-        User currenUser = this.userService.getUserById(id);
-        model.addAttribute("newUser", currenUser);
+        User currentUser = this.userService.getUserById(id);
+        model.addAttribute("newUser", currentUser);
         return "admin/user/update";
     }
 
     @PostMapping("/admin/user/update")
-    public String postUpdateUser(Model model, @ModelAttribute("newUser") User hoidanit) {
-        User currenUser = this.userService.getUserById(hoidanit.getId());
-        if (currenUser != null) {
-            currenUser.setFullName(hoidanit.getFullName());
-            currenUser.setAddress(hoidanit.getAddress());
-            currenUser.setPhone(hoidanit.getPhone());
+    public String postUpdateUser(@ModelAttribute("newUser") User hoidanit) {
+        User currentUser = this.userService.getUserById(hoidanit.getId());
+        if (currentUser != null) {
+            currentUser.setFullName(hoidanit.getFullName());
+            currentUser.setAddress(hoidanit.getAddress());
+            currentUser.setPhone(hoidanit.getPhone());
 
-            this.userService.handleSaveUser(currenUser);
+            this.userService.handleSaveUser(currentUser);
         }
         return "redirect:/admin/user";
     }
@@ -118,7 +118,7 @@ public class UserController {
     }
 
     @PostMapping("/admin/user/delete")
-    public String postDeleteUser(Model model, @ModelAttribute("newUser") User eric) {
+    public String postDeleteUser(@ModelAttribute("newUser") User eric) {
         this.userService.deleteAUser(eric.getId());
         return "redirect:/admin/user";
     }

@@ -1,7 +1,5 @@
 package vn.hoidanit.laptopshop.domain;
 
-import javax.print.attribute.standard.Sides;
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -39,6 +37,7 @@ public class Product {
     @NotNull
     @DecimalMin(value = "0", inclusive = false, message = "quantity phải lớn hơn 0")
     private long quantity;
+
     private long sold;
     private String factory;
     private String target;
