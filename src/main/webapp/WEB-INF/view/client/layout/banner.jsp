@@ -2,7 +2,7 @@
     <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
         <!-- Hero Start -->
         <div class="container-fluid py-5 mb-5 hero-header">
-            <div class="container py-5">
+            <div class="container py-3">
                 <div class="row g-5 align-items-center">
                     <div class="col-md-12 col-lg-7">
                         <h4 class="mb-3 text-secondary">100% Sản Phẩm Chính Hãng</h4>
