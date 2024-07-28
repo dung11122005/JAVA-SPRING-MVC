@@ -52,35 +52,31 @@
                                 </div>
                                 <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
                                     <form:form method="post" action="/register" modelAttribute="registerUser">
-                                        <!-- <div
-                                            class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
-                                            <p class="lead fw-normal mb-0 me-3">Đăng nhập với</p>
-                                            <button type="button" class="btn btn-primary btn-floating mx-1">
-                                                <i class="fab fa-facebook-f"></i>
-                                            </button>
-
-                                            <button type="button" class="btn btn-primary btn-floating mx-1">
-                                                <i class="fab fa-twitter"></i>
-                                            </button>
-
-                                            <button type="button" class="btn btn-primary btn-floating mx-1">
-                                                <i class="fab fa-linkedin-in"></i>
-                                            </button>
-                                        </div> -->
+                                        <c:set var="errorFirstName">
+                                            <form:errors path="firstName" cssClass="invalid-feedback" />
+                                        </c:set>
+                                        <c:set var="errorEmail">
+                                            <form:errors path="email" cssClass="invalid-feedback" />
+                                        </c:set>
+                                        <c:set var="errorPassword">
+                                            <form:errors path="confirmPassword" cssClass="invalid-feedback" />
+                                        </c:set>
 
                                         <div class="divider d-flex align-items-center my-4">
-                                            <p style="font-size: 25px;" class="text-center fw-bold mx-3 mb-0">Đăng kí
+                                            <p style="font-size: 27px;" class="text-center fw-bold mx-3 mb-0">Đăng kí
                                                 tài khoản - Laptopshop</p>
                                         </div>
                                         <!-- First Name input -->
                                         <div class="form-outline mb-4">
-                                            <form:input type="text" class="form-control form-control-lg"
+                                            <form:input type="text"
+                                                class="form-control form-control-lg ${not empty errorFirstName ? 'is-invalid':''}"
                                                 placeholder="First Name" path="firstName" />
                                             <label class="form-label" for="form3Example3">First
                                                 Name</label>
+                                            ${errorFirstName}
                                         </div>
                                         <!-- last Name input -->
-                                        <div class="form-outline mb-4">
+                                        <div style="margin-top: 35px;" class="form-outline mb-4">
                                             <form:input type="text" class="form-control form-control-lg"
                                                 placeholder="Last Name" path="lastName" />
                                             <label class="form-label" for="form3Example3">Last
@@ -88,29 +84,36 @@
                                         </div>
 
                                         <!-- Email input -->
-                                        <div class="form-outline mb-4">
-                                            <form:input type="email" class="form-control form-control-lg"
+                                        <div style="margin-top: 35px;" class="form-outline mb-4">
+                                            <form:input type="email"
+                                                class="form-control form-control-lg ${not empty errorEmail ? 'is-invalid':''}"
                                                 placeholder="Enter a valid email address" path="email" />
                                             <label class="form-label" for="form3Example3">Email
                                                 address</label>
+                                            ${errorEmail}
                                         </div>
 
                                         <!-- Password input -->
-                                        <div class="form-outline mb-3">
+                                        <div style="margin-top: 35px;" class=" form-outline mb-3">
                                             <form:input type="password" class="form-control form-control-lg"
                                                 placeholder="Enter password" path="password" />
                                             <label class="form-label" for="form3Example4">Password</label>
                                         </div>
 
                                         <!-- Confirm Password input -->
-                                        <div class="form-outline mb-3">
-                                            <form:input type="password" class="form-control form-control-lg"
+                                        <div style="margin-top: 35px;" class="form-outline mb-3">
+                                            <form:input type="password"
+                                                class="form-control form-control-lg ${not empty errorPassword ? 'is-invalid':''}"
                                                 placeholder="Enter password" path="confirmPassword" />
                                             <label class="form-label" for="form3Example4">Confirm
                                                 Password</label>
+                                            ${errorPassword}
                                         </div>
 
-                                        <div class="d-flex justify-content-between align-items-center">
+
+
+                                        <div style="padding-top: 15px;"
+                                            class="d-flex justify-content-between align-items-center">
                                             <!-- Checkbox -->
                                             <div class="form-check mb-0">
                                                 <input class="form-check-input me-2" type="checkbox" value=""
@@ -122,7 +125,7 @@
                                             <a href="#!" class="text-body">Forgot password?</a>
                                         </div>
 
-                                        <div class="text-center text-lg-start mt-4 pt-2">
+                                        <div class="text-center text-lg-start mt-3 pt-2">
                                             <button class="btn btn-primary btn-lg"
                                                 style="padding-left: 2.5rem; padding-right: 2.5rem;">Confirm</button>
 

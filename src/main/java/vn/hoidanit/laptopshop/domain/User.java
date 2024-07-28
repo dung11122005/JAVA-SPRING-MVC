@@ -11,7 +11,6 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.Email;
-import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import vn.hoidanit.laptopshop.service.validator.StrongPassword;
@@ -26,7 +25,6 @@ public class User {
 
     @NotNull
     @Email(message = "Email không hợp lệ", regexp = "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:.[a-zA-Z0-9-]+)*$")
-    @NotEmpty(message = "Email không được để trống")
     private String email;
 
     @NotNull

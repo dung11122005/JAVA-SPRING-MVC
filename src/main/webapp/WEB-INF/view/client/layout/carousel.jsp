@@ -6,7 +6,7 @@
                 <div class="container py-5">
                     <h1 class="mb-0">Laptop Gaming - Macbook</h1>
                     <div class="owl-carousel vegetable-carousel justify-content-center">
-                        <c:forEach var="product" items="${products}">
+                        <c:forEach var="product" items="${products}" end="6">
                             <div class="border border-primary rounded position-relative vesitable-item">
                                 <div class="vesitable-img">
                                     <img src="/images/product/${product.image}" class="img-fluid w-100 rounded-top"
