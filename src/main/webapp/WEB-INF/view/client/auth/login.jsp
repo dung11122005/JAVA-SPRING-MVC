@@ -9,7 +9,7 @@
                     <meta charset="UTF-8" />
                     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
                     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-                    <title>Sign up - laptopshop</title>
+                    <title>Login - laptopshop</title>
                     <!-- MDB icon -->
                     <link rel="icon" href="/client/img/mdb-favicon.ico" type="image/x-icon" />
                     <!-- Font Awesome -->
@@ -51,8 +51,8 @@
                                         class="img-fluid" alt="Sample image">
                                 </div>
                                 <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
-                                    <form:form method="post" action="/register" modelAttribute="registerUser">
-                                        <!-- <div
+                                    <form>
+                                        <div
                                             class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
                                             <p class="lead fw-normal mb-0 me-3">Đăng nhập với</p>
                                             <button type="button" class="btn btn-primary btn-floating mx-1">
@@ -66,48 +66,24 @@
                                             <button type="button" class="btn btn-primary btn-floating mx-1">
                                                 <i class="fab fa-linkedin-in"></i>
                                             </button>
-                                        </div> -->
+                                        </div>
 
                                         <div class="divider d-flex align-items-center my-4">
-                                            <p style="font-size: 25px;" class="text-center fw-bold mx-3 mb-0">Đăng kí
-                                                tài khoản - Laptopshop</p>
-                                        </div>
-                                        <!-- First Name input -->
-                                        <div class="form-outline mb-4">
-                                            <form:input type="text" class="form-control form-control-lg"
-                                                placeholder="First Name" path="firstName" />
-                                            <label class="form-label" for="form3Example3">First
-                                                Name</label>
-                                        </div>
-                                        <!-- last Name input -->
-                                        <div class="form-outline mb-4">
-                                            <form:input type="text" class="form-control form-control-lg"
-                                                placeholder="Last Name" path="lastName" />
-                                            <label class="form-label" for="form3Example3">Last
-                                                Name</label>
+                                            <p class="text-center fw-bold mx-3 mb-0">Or</p>
                                         </div>
 
                                         <!-- Email input -->
                                         <div class="form-outline mb-4">
-                                            <form:input type="email" class="form-control form-control-lg"
-                                                placeholder="Enter a valid email address" path="email" />
-                                            <label class="form-label" for="form3Example3">Email
-                                                address</label>
+                                            <input type="email" id="form3Example3" class="form-control form-control-lg"
+                                                placeholder="Enter a valid email address" />
+                                            <label class="form-label" for="form3Example3">Email address</label>
                                         </div>
 
                                         <!-- Password input -->
                                         <div class="form-outline mb-3">
-                                            <form:input type="password" class="form-control form-control-lg"
-                                                placeholder="Enter password" path="password" />
+                                            <input type="password" id="form3Example4"
+                                                class="form-control form-control-lg" placeholder="Enter password" />
                                             <label class="form-label" for="form3Example4">Password</label>
-                                        </div>
-
-                                        <!-- Confirm Password input -->
-                                        <div class="form-outline mb-3">
-                                            <form:input type="password" class="form-control form-control-lg"
-                                                placeholder="Enter password" path="confirmPassword" />
-                                            <label class="form-label" for="form3Example4">Confirm
-                                                Password</label>
                                         </div>
 
                                         <div class="d-flex justify-content-between align-items-center">
@@ -123,15 +99,13 @@
                                         </div>
 
                                         <div class="text-center text-lg-start mt-4 pt-2">
-                                            <button class="btn btn-primary btn-lg"
-                                                style="padding-left: 2.5rem; padding-right: 2.5rem;">Confirm</button>
-
+                                            <button type="button" class="btn btn-primary btn-lg"
+                                                style="padding-left: 2.5rem; padding-right: 2.5rem;">Login</button>
+                                            <p class="small fw-bold mt-2 pt-1 mb-0">Bạn chưa có tài khoản? <a
+                                                    href="/register" class="link-danger">Đăng kí</a></p>
                                         </div>
 
-                                    </form:form>
-                                    <p class="small fw-bold mt-2 pt-1 mb-0">Bạn đã có tài khoản <a href="/login"
-                                            class="link-danger">Đăng nhập</a>
-                                    </p>
+                                    </form>
                                 </div>
                             </div>
                         </div>
