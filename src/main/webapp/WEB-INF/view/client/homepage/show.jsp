@@ -20,7 +20,8 @@
                 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
                 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
                     rel="stylesheet">
-
+                <link rel="stylesheet"
+                    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
                 <!-- Libraries Stylesheet -->
                 <link href="/client/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
                 <link href="/client/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
@@ -31,6 +32,18 @@
 
                 <!-- Template Stylesheet -->
                 <link href="/client/css/style.css" rel="stylesheet">
+
+                <style>
+                    /* Add this CSS to your stylesheet */
+                    .dropdown-menu {
+                        display: none;
+                    }
+
+                    .dropdown:hover .dropdown-menu {
+                        display: block;
+                        right: 0px;
+                    }
+                </style>
 
 
             </head>
@@ -50,28 +63,6 @@
 
 
 
-                <!-- Modal Search Start -->
-                <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog modal-fullscreen">
-                        <div class="modal-content rounded-0">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Search by keyword</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body d-flex align-items-center">
-                                <div class="input-group w-75 mx-auto d-flex">
-                                    <input type="search" class="form-control p-3" placeholder="keywords"
-                                        aria-describedby="search-icon-1">
-                                    <span id="search-icon-1" class="input-group-text p-3"><i
-                                            class="fa fa-search"></i></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Modal Search End -->
 
 
                 <jsp:include page="../layout/banner.jsp" />

@@ -11,7 +11,7 @@
                     <meta http-equiv="x-ua-compatible" content="ie=edge" />
                     <title>Login - laptopshop</title>
                     <!-- MDB icon -->
-                    <link rel="icon" href="/client/img/mdb-favicon.ico" type="image/x-icon" />
+
                     <!-- Font Awesome -->
                     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" />
                     <!-- Google Fonts Roboto -->
@@ -51,7 +51,7 @@
                                         class="img-fluid" alt="Sample image">
                                 </div>
                                 <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
-                                    <form>
+                                    <form:form method="post" action="/login">
                                         <div
                                             class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
                                             <h1 style="font-size: 27px; margin-right: 10px;">Đăng nhập với</h1>
@@ -71,19 +71,28 @@
                                         <div class="divider d-flex align-items-center my-4">
                                             <p class="text-center fw-bold mx-3 mb-0">Or</p>
                                         </div>
-
+                                        <c:if test="${param.error != null}">
+                                            <div class="my-2" style="color: red;">Invalid email or password.</div>
+                                        </c:if>
+                                        <c:if test="${param.logout != null}">
+                                            <div class="my-2" style="color: rgb(0, 171, 54);">Logout success.</div>
+                                        </c:if>
                                         <!-- Email input -->
                                         <div class="form-outline mb-4">
                                             <input type="email" id="form3Example3" class="form-control form-control-lg"
-                                                placeholder="Enter a valid email address" />
+                                                placeholder="Enter a valid email address" name="username" />
                                             <label class="form-label" for="form3Example3">Email address</label>
                                         </div>
 
                                         <!-- Password input -->
                                         <div style="margin-top: 35px;" class="form-outline mb-3">
                                             <input type="password" id="form3Example4"
-                                                class="form-control form-control-lg" placeholder="Enter password" />
+                                                class="form-control form-control-lg" placeholder="Enter password"
+                                                name="password" />
                                             <label class="form-label" for="form3Example4">Password</label>
+                                        </div>
+                                        <div>
+                                            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
                                         </div>
 
                                         <div style="margin-top: 35px;"
@@ -100,13 +109,13 @@
                                         </div>
 
                                         <div class="text-center text-lg-start mt-3 pt-2">
-                                            <button type="button" class="btn btn-primary btn-lg"
+                                            <button class="btn btn-primary btn-lg"
                                                 style="padding-left: 2.5rem; padding-right: 2.5rem;">Login</button>
-                                            <p class="small fw-bold mt-2 pt-1 mb-0">Bạn chưa có tài khoản ? <a
-                                                    href="/register" class="link-danger">Đăng kí</a></p>
-                                        </div>
 
-                                    </form>
+                                        </div>
+                                        <p class="small fw-bold mt-2 pt-1 mb-0">Bạn chưa có tài khoản ? <a
+                                                href="/register" class="link-danger">Đăng kí</a></p>
+                                    </form:form>
                                 </div>
                             </div>
                         </div>
