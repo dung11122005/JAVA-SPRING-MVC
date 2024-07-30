@@ -66,7 +66,7 @@ public class HomePageController {
         user.setPassword(hashPassword);
         user.setRole(this.userService.getRoleByName("USER"));
         // Save
-        // this.userService.handleSaveUser(user);
+        this.userService.handleSaveUser(user);
         return "redirect:/login";
     }
 
