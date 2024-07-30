@@ -52,6 +52,8 @@
                                 </div>
                                 <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
                                     <form:form method="post" action="/register" modelAttribute="registerUser">
+
+                                        <!-- https://mkyong.com/spring-mvc/spring-mvc-form-check-if-a-field-has-an-error/ -->
                                         <c:set var="errorFirstName">
                                             <form:errors path="firstName" cssClass="invalid-feedback" />
                                         </c:set>
