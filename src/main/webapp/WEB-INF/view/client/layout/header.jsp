@@ -47,6 +47,9 @@
                                 </div>
                             </div>
                             <div class="d-flex m-3 me-0">
+
+                                <!-- https://stackoverflow.com/a/21329436/22612096 -->
+
                                 <c:if test="${not empty pageContext.request.userPrincipal}">
                                     <a href="/cart" class="position-relative me-4 my-auto">
                                         <i class="fa fa-shopping-bag fa-2x"></i>
