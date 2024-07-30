@@ -30,7 +30,7 @@ public class User {
 
     @NotNull
     @Size(min = 2, message = "Password phải có tối thiểu 2 kí tự")
-    @StrongPassword
+    // @StrongPassword
     private String password;
 
     @NotNull
