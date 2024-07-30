@@ -80,10 +80,10 @@ public class ProductController {
             return "admin/product/update";
         }
 
-        Optional<Product> optionalProduct = this.productService.fetchProductById(pr.getId());
+        Optional<Product> productOptional = this.productService.fetchProductById(pr.getId());
         Product currentProduct;
-        if (optionalProduct.isPresent()) {
-            currentProduct = optionalProduct.get();
+        if (productOptional.isPresent()) {
+            currentProduct = productOptional.get();
         } else {
             currentProduct = null;
         }

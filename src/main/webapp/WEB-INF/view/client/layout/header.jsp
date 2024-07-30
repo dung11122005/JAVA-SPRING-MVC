@@ -56,7 +56,7 @@
                                     </a>
 
                                     <div class="dropdown my-auto dropdown-hover">
-                                        <a href="#" class="nav-link dropdown-toggle dropdown-hover" role="button"
+                                        <a href="#" class="position-relative me-4 my-auto" role="button"
                                             id="dropdownMenuLink" aria-expanded="false" data-bs-toggle="dropdown"
                                             data-bs-hover="true">
                                             <i class="fas fa-user fa-2x"></i>
@@ -64,7 +64,8 @@
                                         <ul class="dropdown-menu dropdown-menu-end p-4"
                                             aria-labelledby="dropdownMenuLink">
                                             <li class="d-flex align-items-center flex-column" style="min-width: 300px;">
-                                                <img style="width: 150px; height: 150px; border-radius: 50%; overflow: hidden;"
+                                                <img style="width: 150px; height: 150px; border-radius: 50%; overflow: hidden;  display: flex;
+                                                justify-content: center; align-items: center; object-fit: cover;"
                                                     src="/images/avatar/${sessionScope.avatar}" />
                                                 <div class="text-center my-3">
                                                     <c:out value="${sessionScope.fullName}" />
