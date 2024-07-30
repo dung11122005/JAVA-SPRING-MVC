@@ -62,7 +62,7 @@
 
 
                 <!-- Single Page Header start -->
-                <div class="container-fluid page-header py-1">
+                <div style="margin-bottom: -70px;" class="container-fluid page-header py-1">
                     <h3 class="text-center text-white">Chi tiết giỏ hàng</h3>
                     <ol class="breadcrumb justify-content-center mb-0">
                         <li class="breadcrumb-item active text-white">Vui chơi có thưởng khi mua trực tiếp tại cửa hàng

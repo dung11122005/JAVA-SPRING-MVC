@@ -85,7 +85,7 @@
 
 
                 <!-- Single Page Header start -->
-                <div class="container-fluid page-header py-1">
+                <div style="margin-bottom: -70px;" class="container-fluid page-header py-1">
                     <h3 class="text-center text-white">Chi tiết sản phẩm</h3>
                     <ol class="breadcrumb justify-content-center mb-0">
                         <li class="breadcrumb-item active text-white">Vui chơi có thưởng khi mua trực tiếp tại cửa hàng
@@ -96,16 +96,16 @@
 
 
                 <!-- Single Product Start -->
-                <div class="container-fluid py-5 mt-5">
+                <div class="container-fluid py-5">
                     <div class="container py-5">
                         <div class="row g-4 mb-5">
-                            <div>
-                                <ol class="breadcrumb mb-4">
-                                    <li class="breadcrumb-item active"><a href="/">Home</a></li>
-                                    <li class="breadcrumb-item active">Chi tiết sản phẩm</li>
-                                </ol>
-                            </div>
                             <div class="col-lg-8 col-xl-9">
+                                <div>
+                                    <ol class="breadcrumb mb-4">
+                                        <li class="breadcrumb-item active"><a href="/">Home</a></li>
+                                        <li class="breadcrumb-item active">Chi tiết sản phẩm</li>
+                                    </ol>
+                                </div>
                                 <div class="row g-4">
                                     <div class="col-lg-6">
                                         <div class="border rounded">
