@@ -37,13 +37,13 @@ public class ProductController {
     public String getProduct(Model model) {
         List<Product> prs = this.productService.fetchProducts();
         model.addAttribute("products", prs);
-        return "/admin/product/show";
+        return "admin/product/show";
     }
 
     @GetMapping("/admin/product/create")
     public String getCreateProductPage(Model model) {
         model.addAttribute("newProduct", new Product());
-        return "/admin/product/create";
+        return "admin/product/create";
     }
 
     @PostMapping("/admin/product/create")
@@ -53,7 +53,7 @@ public class ProductController {
             @RequestParam("hoidanitFile") MultipartFile file) {
 
         if (newProductBindingResult.hasErrors()) {
-            return "/admin/product/create";
+            return "admin/product/create";
         }
 
         String image = this.uploadService.handleSaveUploadFile(file, "product");
@@ -112,7 +112,7 @@ public class ProductController {
     public String getDeleteUserPage(Model model, @PathVariable long id) {
         model.addAttribute("id", id);
         model.addAttribute("newProduct", new Product());
-        return "/admin/product/delete";
+        return "admin/product/delete";
     }
 
     @PostMapping("/admin/product/delete")
