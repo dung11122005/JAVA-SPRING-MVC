@@ -2,7 +2,7 @@
     <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
         <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
             <!-- Vesitable Shop Start-->
-            <div class="container-fluid vesitable py-5">
+            <div style="margin-bottom: -70px;" class="container-fluid vesitable">
                 <div class="container py-5">
                     <h1 class="mb-0">Laptop Gaming - Macbook</h1>
                     <div class="owl-carousel vegetable-carousel justify-content-center">
