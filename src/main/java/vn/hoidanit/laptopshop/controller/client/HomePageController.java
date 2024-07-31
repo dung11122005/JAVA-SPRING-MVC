@@ -64,6 +64,7 @@ public class HomePageController {
         String hashPassword = this.passwordEncoder.encode(user.getPassword());
 
         user.setPassword(hashPassword);
+        user.setAvatar("avatar_default.png");
         user.setRole(this.userService.getRoleByName("USER"));
         // Save
         this.userService.handleSaveUser(user);
