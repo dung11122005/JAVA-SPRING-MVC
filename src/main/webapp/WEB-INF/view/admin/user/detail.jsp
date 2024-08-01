@@ -11,7 +11,7 @@
                 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
                 <meta name="description" content="Hoàng Tấn Dũng - Dự án laptopshop" />
                 <meta name="author" content="Hoàng Tấn Dũng" />
-                <title>Create User - Hoàng Tấn Dũng</title>
+                <title>Detail User - Hoàng Tấn Dũng</title>
                 <link href="/css/styles.css" rel="stylesheet" />
                 <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
                 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -37,7 +37,8 @@
                                 <h1 class="mt-4">Manage User</h1>
                                 <ol class="breadcrumb mb-4">
                                     <li class="breadcrumb-item active"><a href="/admin">Dashboard</a></li>
-                                    <li class="breadcrumb-item active">Users</li>
+                                    <li class="breadcrumb-item active"><a href="/admin/user">User</a></li>
+                                    <li class="breadcrumb-item active">view</li>
                                 </ol>
                                 <div class="container mt-5">
                                     <div class="row">
@@ -47,6 +48,8 @@
                                             </div>
                                             <hr />
                                             <div class="card" style="width: 60%;">
+                                                <img class="card-img-top" src="/images/avatar/${user.avatar}"
+                                                    alt="Card image cap" />
                                                 <div class="card-header">
                                                     User information
                                                 </div>

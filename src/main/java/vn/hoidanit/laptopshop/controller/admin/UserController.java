@@ -98,9 +98,16 @@ public class UserController {
     }
 
     @PostMapping("/admin/user/update")
-    public String postUpdateUser(@ModelAttribute("newUser") User hoidanit) {
+    public String postUpdateUser(@ModelAttribute("newUser") @Valid User hoidanit,
+            BindingResult newUserBindingResult,
+            @RequestParam("hoidanitFile") MultipartFile file) {
         User currentUser = this.userService.getUserById(hoidanit.getId());
         if (currentUser != null) {
+            // update new image
+            if (!file.isEmpty()) {
+                String img = this.uploadService.handleSaveUploadFile(file, "avatar");
+                currentUser.setAvatar(img);
+            }
             currentUser.setFullName(hoidanit.getFullName());
             currentUser.setAddress(hoidanit.getAddress());
             currentUser.setPhone(hoidanit.getPhone());

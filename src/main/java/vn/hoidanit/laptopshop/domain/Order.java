@@ -34,7 +34,7 @@ public class Order {
     private User user;
 
     @OneToMany(mappedBy = "order")
-    List<OrderDetail> orderDetail;
+    private List<OrderDetail> orderDetails;
 
     public long getId() {
         return id;
@@ -92,12 +92,12 @@ public class Order {
         this.user = user;
     }
 
-    public List<OrderDetail> getOrderDetail() {
-        return orderDetail;
+    public List<OrderDetail> getOrderDetails() {
+        return orderDetails;
     }
 
-    public void setOrderDetail(List<OrderDetail> orderDetail) {
-        this.orderDetail = orderDetail;
+    public void setOrderDetails(List<OrderDetail> orderDetails) {
+        this.orderDetails = orderDetails;
     }
 
     @Override

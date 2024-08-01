@@ -67,4 +67,8 @@ public class UserService {
         return this.userRepository.findByEmail(email);
     }
 
+    public long countUsers() {
+        return this.userRepository.count();
+    }
+
 }
