@@ -39,12 +39,18 @@
                     <script>
                         $(document).ready(() => {
                             const avatarFile = $("#avatarFile");
+                            const orgImage = "${newUser.avatar}";
+                            if (orgImage) {
+                                const urlImage = "/images/avatar/" + orgImage;
+                                $("#avatarPreview").attr("src", urlImage);
+                                $("#avatarPreview").css({ "display": "block" });
+                            }
+
                             avatarFile.change(function (e) {
                                 const imgURL = URL.createObjectURL(e.target.files[0]);
                                 $("#avatarPreview").attr("src", imgURL);
                                 $("#avatarPreview").css({ "display": "block" });
                             });
-
                         });
                     </script>
                     <style>
@@ -109,22 +115,29 @@
                                                         </c:if>
                                                     </p>
                                                     <form:form method="post" action="/update-user-in-profile"
-                                                        id="formupdateuser" style="display:none;">
+                                                        modelAttribute="newUser" id="formupdateuser"
+                                                        style="display:none;" enctype="multipart/form-data">
                                                         <input type="hidden" name="${_csrf.parameterName}"
                                                             value="${_csrf.token}" />
+                                                        <c:set var="errorFullName">
+                                                            <form:errors path="fullName" cssClass="invalid-feedback" />
+                                                        </c:set>
                                                         <div class="form-group mb-3">
-                                                            <input type="text" class="form-control"
-                                                                placeholder="fullName" name="fullName">
+                                                            <form:input type="text"
+                                                                class="form-control ${not empty errorFullName ? 'is-invalid':''}"
+                                                                placeholder="fullName" path="fullName"
+                                                                disabled="true" />
+                                                            ${errorFullName}
                                                         </div>
                                                         <div class="form-group mb-3">
-                                                            <input type="text" class="form-control"
-                                                                placeholder="address" name="address">
+                                                            <form:input type="text" class="form-control"
+                                                                placeholder="address" path="address" />
                                                         </div>
                                                         <div class="form-group mb-3">
-                                                            <input type="text" class="form-control" placeholder="phone"
-                                                                name="phone">
+                                                            <form:input type="text" class="form-control"
+                                                                placeholder="phone" path="phone" />
                                                         </div>
-                                                        <!-- <div class="mb-3 col-12 col-md-6">
+                                                        <div class="mb-3 col-12 col-md-6">
                                                             <label for="avatarFile" class="form-label">Image:</label>
                                                             <input class="form-control" type="file" id="avatarFile"
                                                                 accept=".png, .jpg, .jpeg" name="hoidanitFile" />
@@ -132,7 +145,7 @@
                                                         <div class="col-12 mb-3">
                                                             <img style="max-height: 250px;display: none;"
                                                                 alt="avatar preview" id="avatarPreview">
-                                                        </div> -->
+                                                        </div>
                                                         <button style="color: white;" class="btn btn-primary">Xác
                                                             nhận</button>
                                                     </form:form>

@@ -111,18 +111,21 @@ public class HomePageController {
 
     @GetMapping("/user-profile")
     public String getUserProfilePage(Model model, HttpServletRequest request) {
-
+        HttpSession session = request.getSession(false);
+        long id = (long) session.getAttribute("id");
+        User currentUser = this.userService.getUserById(id);
+        model.addAttribute("newUser", currentUser);
         return "client/profile/profile";
     }
 
     @PostMapping("/update-user-in-profile")
     public String handleUpdateUserInProfilePage(
-            HttpServletRequest request,
-            @RequestParam("fullName") String fullName,
-            @RequestParam("address") String address,
-            @RequestParam("phone") String phone) {
+            @ModelAttribute("newUser") @Valid User user,
+            BindingResult newUserBindingResult,
+            @RequestParam("hoidanitFile") MultipartFile file,
+            HttpServletRequest request) {
 
-        if (fullName == "" && address == "" && phone == "") {
+        if (user.getAddress() == "" && user.getPhone() == "" && file.isEmpty()) {
             return "redirect:/user-profile";
         }
 
@@ -130,14 +133,18 @@ public class HomePageController {
         long id = (long) session.getAttribute("id");
         User currentUser = this.userService.getUserById(id);
 
-        if (fullName != "") {
-            currentUser.setFullName(fullName);
+        if (!file.isEmpty()) {
+            String img = this.uploadService.handleSaveUploadFile(file, "avatar");
+            currentUser.setAvatar(img);
         }
-        if (address != "") {
-            currentUser.setAddress(address);
+        // if (user.getFullName() != "") {
+        // currentUser.setFullName(user.getFullName());
+        // }
+        if (user.getAddress() != "") {
+            currentUser.setAddress(user.getAddress());
         }
-        if (phone != "") {
-            currentUser.setPhone(phone);
+        if (user.getPhone() != "") {
+            currentUser.setPhone(user.getPhone());
         }
 
         this.userService.handleSaveUser(currentUser);
@@ -145,7 +152,7 @@ public class HomePageController {
         session.setAttribute("fullName", currentUser.getFullName());
         session.setAttribute("address", currentUser.getAddress());
         session.setAttribute("phone", currentUser.getPhone());
-
+        session.setAttribute("avatar", currentUser.getAvatar());
         return "redirect:/user-profile";
     }
 }
