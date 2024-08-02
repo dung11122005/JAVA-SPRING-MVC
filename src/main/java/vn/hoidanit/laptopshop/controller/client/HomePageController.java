@@ -1,7 +1,6 @@
 package vn.hoidanit.laptopshop.controller.client;
 
 import java.util.List;
-import java.util.Optional;
 
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
@@ -52,6 +51,8 @@ public class HomePageController {
     @GetMapping("/")
     public String getHomePage(Model model) {
         List<Product> products = this.productService.fetchProducts();
+        List<Product> bestProducts = this.orderService.fetchBestSellingProductPage();
+        model.addAttribute("bestProducts", bestProducts);
         model.addAttribute("products", products);
         return "client/homepage/show";
     }
@@ -155,4 +156,5 @@ public class HomePageController {
         session.setAttribute("avatar", currentUser.getAvatar());
         return "redirect:/user-profile";
     }
+
 }

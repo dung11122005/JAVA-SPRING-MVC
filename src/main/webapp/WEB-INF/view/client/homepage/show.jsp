@@ -187,7 +187,7 @@
                             <p>Sản phẩm có chất lượng hàng đầu được bán chạy nhất trong quý.</p>
                         </div>
                         <div class="row g-4">
-                            <c:forEach var="product" items="${products}" end="2">
+                            <c:forEach var="product" items="${bestProducts}" end="2">
                                 <div class="col-lg-6 col-xl-4">
                                     <div class="p-4 rounded bg-light">
                                         <div class="row align-items-center">
@@ -217,7 +217,7 @@
                                     </div>
                                 </div>
                             </c:forEach>
-                            <c:forEach var="product" items="${products}" begin="4" end="7">
+                            <c:forEach var="product" items="${bestProducts}" begin="3" end="6">
                                 <div class="col-md-6 col-lg-6 col-xl-3">
                                     <div class="text-center">
                                         <img src="/images/product/${product.image}" class="img-fluid rounded" alt="">
@@ -235,7 +235,8 @@
                                             </h4>
                                             <a href="#"
                                                 class="btn border border-secondary rounded-pill px-3 text-primary"><i
-                                                    class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                                                    class="fa fa-shopping-bag me-2 text-primary"></i> Add to
+                                                cart</a>
                                         </div>
                                     </div>
                                 </div>
