@@ -134,13 +134,13 @@ public class HomePageController {
         // String img = this.uploadService.handleSaveUploadFile(file, "avatar");
         // currentUser.setAvatar(img);
         // }
-        if (fullName != "" || fullName != null) {
+        if (fullName != "") {
             currentUser.setFullName(fullName);
         }
-        if (address != "" || address != null) {
+        if (address != "") {
             currentUser.setAddress(address);
         }
-        if (phone != "" || phone != null) {
+        if (phone != "") {
             currentUser.setPhone(phone);
         }
 
