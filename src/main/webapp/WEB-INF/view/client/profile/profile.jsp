@@ -99,7 +99,7 @@
                                                 <div class="card-body text-center">
                                                     <img src="images/avatar/${sessionScope.avatar}" alt="avatar"
                                                         class="rounded-circle img-fluid"
-                                                        style="width: 150px; height: 150px;">
+                                                        style="width: 150px; height: 150px; object-fit: cover; ">
                                                     <h5 class="my-3">${sessionScope.fullName}</h5>
                                                     <p class="text-muted mb-1">Email:
                                                         <c:if test="${not empty sessionScope.email}">
