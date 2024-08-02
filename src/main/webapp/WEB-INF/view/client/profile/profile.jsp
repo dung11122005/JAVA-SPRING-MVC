@@ -109,8 +109,7 @@
                                                         </c:if>
                                                     </p>
                                                     <form:form method="post" action="/update-user-in-profile"
-                                                        id="formupdateuser" style="display:none;"
-                                                        enctype="multipart/form-data">
+                                                        id="formupdateuser" style="display:none;">
                                                         <input type="hidden" name="${_csrf.parameterName}"
                                                             value="${_csrf.token}" />
                                                         <div class="form-group mb-3">
@@ -125,7 +124,7 @@
                                                             <input type="text" class="form-control" placeholder="phone"
                                                                 name="phone">
                                                         </div>
-                                                        <div class="mb-3 col-12 col-md-6">
+                                                        <!-- <div class="mb-3 col-12 col-md-6">
                                                             <label for="avatarFile" class="form-label">Image:</label>
                                                             <input class="form-control" type="file" id="avatarFile"
                                                                 accept=".png, .jpg, .jpeg" name="hoidanitFile" />
@@ -133,8 +132,9 @@
                                                         <div class="col-12 mb-3">
                                                             <img style="max-height: 250px;display: none;"
                                                                 alt="avatar preview" id="avatarPreview">
-                                                        </div>
-                                                        <button class="btn btn-primary">Xác nhận</button>
+                                                        </div> -->
+                                                        <button style="color: white;" class="btn btn-primary">Xác
+                                                            nhận</button>
                                                     </form:form>
 
                                                 </div>
@@ -176,11 +176,11 @@
 
                                         <div class="col-lg-8">
                                             <div class="d-flex mb-3">
-                                                <button style="display: block;" class="btn btn-primary"
+                                                <button style="display: block; color: white;" class="btn btn-primary"
                                                     id="openbuttonUpdatedform">Cập nhật thông tin
 
                                                 </button>
-                                                <button style="display: none;" class="btn btn-primary"
+                                                <button style="display: none; color: white;" class="btn btn-primary"
                                                     id="closebuttonUpdatedform">Không cập nhật
                                                 </button>
                                             </div>

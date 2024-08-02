@@ -120,8 +120,7 @@ public class HomePageController {
             HttpServletRequest request,
             @RequestParam("fullName") String fullName,
             @RequestParam("address") String address,
-            @RequestParam("phone") String phone,
-            @RequestParam("hoidanitFile") MultipartFile file) {
+            @RequestParam("phone") String phone) {
 
         if (fullName == "" && address == "" && phone == "") {
             return "redirect:/user-profile";
@@ -130,10 +129,7 @@ public class HomePageController {
         HttpSession session = request.getSession(false);
         long id = (long) session.getAttribute("id");
         User currentUser = this.userService.getUserById(id);
-        // if (!file.isEmpty()) {
-        // String img = this.uploadService.handleSaveUploadFile(file, "avatar");
-        // currentUser.setAvatar(img);
-        // }
+
         if (fullName != "") {
             currentUser.setFullName(fullName);
         }
@@ -149,7 +145,6 @@ public class HomePageController {
         session.setAttribute("fullName", currentUser.getFullName());
         session.setAttribute("address", currentUser.getAddress());
         session.setAttribute("phone", currentUser.getPhone());
-        // session.setAttribute("avatar", currentUser.getAvatar());
 
         return "redirect:/user-profile";
     }
