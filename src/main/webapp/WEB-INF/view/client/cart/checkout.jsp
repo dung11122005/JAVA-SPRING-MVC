@@ -35,6 +35,17 @@
 
                     <!-- Template Stylesheet -->
                     <link href="/client/css/style.css" rel="stylesheet">
+                    <style>
+                        /* Add this CSS to your stylesheet */
+                        .dropdown-menu {
+                            display: none;
+                        }
+
+                        .dropdown:hover .dropdown-menu {
+                            display: block;
+                            right: 0px;
+                        }
+                    </style>
                 </head>
 
                 <body>
