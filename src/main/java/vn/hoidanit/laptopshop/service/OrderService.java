@@ -9,6 +9,8 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.TreeSet;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import vn.hoidanit.laptopshop.domain.Order;
@@ -36,6 +38,10 @@ public class OrderService {
 
     public List<Order> fetchAllOrders() {
         return this.orderRepository.findAll();
+    }
+
+    public Page<Order> fetchAllOrdersPagination(Pageable page) {
+        return this.orderRepository.findAll(page);
     }
 
     public Optional<Order> fetchOrderById(long id) {

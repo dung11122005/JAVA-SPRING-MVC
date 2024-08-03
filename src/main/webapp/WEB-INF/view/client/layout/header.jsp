@@ -34,7 +34,7 @@
                         <div class="collapse navbar-collapse bg-white justify-content-between mx-5" id="navbarCollapse">
                             <div class="navbar-nav">
                                 <a href="/" class="nav-item nav-link active">Trang chủ</a>
-                                <a href="shop.html" class="nav-item nav-link">Sản Phẩm</a>
+                                <a href="/products" class="nav-item nav-link">Sản Phẩm</a>
                                 <a href="shop-detail.html" class="nav-item nav-link">Phụ Kiện</a>
                                 <div class="nav-item dropdown">
                                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Thiết bị văn

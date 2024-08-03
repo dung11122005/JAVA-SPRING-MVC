@@ -96,7 +96,7 @@
                                                 </ul>
                                             </nav>
                                         </div>
-                                        <hr />
+
                                     </div>
                                 </div>
                             </div>
