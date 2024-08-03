@@ -125,8 +125,8 @@
                                                         <div class="form-group mb-3">
                                                             <form:input type="text"
                                                                 class="form-control ${not empty errorFullName ? 'is-invalid':''}"
-                                                                placeholder="fullName" path="fullName"
-                                                                disabled="true" />
+                                                                placeholder="fullName" path="fullName" />
+                                                            <!-- disabled="true" -->
                                                             ${errorFullName}
                                                         </div>
                                                         <div class="form-group mb-3">
