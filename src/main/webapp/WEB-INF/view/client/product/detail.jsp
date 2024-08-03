@@ -377,7 +377,7 @@
                                         </div>
                                     </div>
                                     <div class="col-lg-12">
-                                        <h4 class="mb-4">Sản phẩm nổi bật</h4>
+                                        <h4 class="mb-4">Sản phẩm bán chạy nhất</h4>
                                         <c:forEach var="product" items="${products}" end="6">
                                             <div class="d-flex align-items-center justify-content-start">
                                                 <div class="rounded"

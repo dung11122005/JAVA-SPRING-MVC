@@ -134,15 +134,38 @@
                                                             </div>
                                                         </div>
                                                     </div>
-
-
                                                 </c:forEach>
+
+                                                <div class="pagination d-flex justify-content-center mt-5 mb-3">
+                                                    <li class="page-item">
+                                                        <a class="${1 eq currentPage ? 'disabled page-link' : 'page-link'}"
+                                                            href="/?page=${currentPage - 1}" aria-label="Previous">
+                                                            <span aria-hidden="true">&laquo;</span>
+                                                        </a>
+                                                    </li>
+                                                    <c:forEach begin="0" end="${totalPages - 1}" varStatus="loop">
+                                                        <li class="page-item">
+                                                            <a class="${(loop.index + 1) eq currentPage ? 'active page-link' : 'page-link'}"
+                                                                href="/?page=${loop.index + 1}">
+                                                                ${loop.index + 1}
+                                                            </a>
+                                                        </li>
+                                                    </c:forEach>
+                                                    <li class="page-item">
+                                                        <a class="${totalPages eq currentPage ? 'disabled page-link' : 'page-link'}"
+                                                            href="/?page=${currentPage + 1}" aria-label="Next">
+                                                            <span aria-hidden="true">&raquo;</span>
+                                                        </a>
+                                                    </li>
+
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <hr />
                     </div>
                 </div>
                 <!-- Fruits Shop End-->
@@ -151,7 +174,8 @@
 
                 <!-- Featurs Start -->
                 <div class="container-fluid service">
-                    <div class="container py-5">
+                    <div class="container">
+                        <h1 class="mb-5">Laptopshop - Giảm giá siêu lớn</h1>
                         <div class="row g-4 justify-content-center">
                             <c:forEach var="product" items="${products}" begin="4" end="6">
                                 <div class="col-md-6 col-lg-4">

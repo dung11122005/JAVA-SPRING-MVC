@@ -35,6 +35,17 @@
 
                     <!-- Template Stylesheet -->
                     <link href="/client/css/style.css" rel="stylesheet">
+                    <style>
+                        /* Add this CSS to your stylesheet */
+                        .dropdown-menu {
+                            display: none;
+                        }
+
+                        .dropdown:hover .dropdown-menu {
+                            display: block;
+                            right: 0px;
+                        }
+                    </style>
                 </head>
 
                 <body>
@@ -49,9 +60,9 @@
                     <jsp:include page="../layout/header.jsp" />
 
                     <!-- Single Product Start -->
-                    <div class="container-fluid py-5 mt-5">
+                    <div style="margin-top: 70px;" class="container-fluid py-5">
                         <div class="container py-5">
-                            <div class="row g-4 mb-5">
+                            <div class="row g-4 ">
                                 <div>
                                     <nav aria-label="breadcrumb">
                                         <ol class="breadcrumb">
@@ -62,7 +73,7 @@
                                     </nav>
                                 </div>
 
-                                <div class="row g-4 fruite">
+                                <div style="margin-top: -10px;" class="row g-4 fruite">
                                     <div class="col-12 col-md-3">
                                         <div class="row g-4">
                                             <div class="col-12">
