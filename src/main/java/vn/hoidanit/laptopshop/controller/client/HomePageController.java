@@ -69,8 +69,10 @@ public class HomePageController {
         Page<Product> prs = this.productService.fetchProductPagination(pageable);
         List<Product> products = prs.getContent();
         List<Product> bestProducts = this.orderService.fetchBestSellingProductPage();
+        List<Product> productCarousel = this.productService.fetchProducts();
         model.addAttribute("bestProducts", bestProducts);
         model.addAttribute("products", products);
+        model.addAttribute("productCarousel", productCarousel);
         model.addAttribute("currentPage", page);
         model.addAttribute("totalPages", prs.getTotalPages());
         return "client/homepage/show";

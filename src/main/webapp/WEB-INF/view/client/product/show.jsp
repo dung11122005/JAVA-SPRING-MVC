@@ -252,6 +252,7 @@
                                             </c:forEach>
 
                                             <div class="pagination d-flex justify-content-center mt-5">
+
                                                 <li class="page-item">
                                                     <a class="${1 eq currentPage ? 'disabled page-link' : 'page-link'}"
                                                         href="/products?page=${currentPage - 1}" aria-label="Previous">

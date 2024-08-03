@@ -275,7 +275,7 @@
                 <!-- Banner Section Start-->
                 <div style="margin-bottom: 30px;" class="container-fluid banner bg-secondary">
                     <div class="container py-5">
-                        <c:forEach var="product" items="${products}" begin="4" end="4">
+                        <c:forEach var="product" items="${productCarousel}" begin="4" end="4">
                             <div class="row g-4 align-items-center">
                                 <div class="col-lg-6">
                                     <div class="py-4">
