@@ -159,9 +159,11 @@ public class HomePageController {
             String img = this.uploadService.handleSaveUploadFile(file, "avatar");
             currentUser.setAvatar(img);
         }
-        // if (user.getFullName() != "") {
-        // currentUser.setFullName(user.getFullName());
-        // }
+        if (user.getFullName().equals("")) {
+
+        } else {
+            currentUser.setFullName(user.getFullName());
+        }
         if (user.getAddress() != "") {
             currentUser.setAddress(user.getAddress());
         }
