@@ -245,10 +245,10 @@
                                                 <h4 class="mb-3">
                                                     <fmt:formatNumber type="number" value="${product.price}" /> đ
                                                 </h4>
-                                                <a href="#"
-                                                    class="btn border border-secondary rounded-pill px-3 text-primary"><i
+                                                <button data-product-id="${product.id}"
+                                                    class="btnAddToCartHomepage btn border border-secondary rounded-pill px-3 text-primary"><i
                                                         class="fa fa-shopping-bag me-2 text-primary"></i> Add to
-                                                    cart</a>
+                                                    cart</button>
                                             </div>
                                         </div>
                                     </div>
@@ -270,10 +270,10 @@
                                             <h4 class="mb-3">
                                                 <fmt:formatNumber type="number" value="${product.price}" /> đ
                                             </h4>
-                                            <a href="#"
-                                                class="btn border border-secondary rounded-pill px-3 text-primary"><i
+                                            <button data-product-id="${product.id}"
+                                                class="btnAddToCartHomepage btn border border-secondary rounded-pill px-3 text-primary"><i
                                                     class="fa fa-shopping-bag me-2 text-primary"></i> Add to
-                                                cart</a>
+                                                cart</button>
                                         </div>
                                     </div>
                                 </div>

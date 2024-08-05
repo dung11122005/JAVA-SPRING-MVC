@@ -160,6 +160,7 @@
     //     button.parent().parent().find('input').val(newVal);
     // });
 
+
     $('.quantity button').on('click', function () {
         let change = 0;
 
@@ -176,6 +177,7 @@
                 newVal = 1;
             }
         }
+
         const input = button.parent().parent().find('input');
         input.val(newVal);
 
@@ -183,6 +185,8 @@
         const index = input.attr("data-cart-detail-index")
         const el = document.getElementById(`cartDetails${index}.quantity`);
         $(el).val(newVal);
+
+
 
         //get price
         const price = input.attr("data-cart-detail-price");
@@ -219,6 +223,24 @@
             });
         }
     });
+
+
+    // Attach the click event handler to the checkboxes within the OrderCart
+    $('.orderCart input').on('click', function () {
+        $(".orderCart .form-check-input:not(:checked)").each(function () {
+            const index = $(this).attr("data-cart-detail-index")
+            const el = document.getElementById(`cartDetails${index}.checkbox`);
+            $(el).val(0);
+        });
+        $(".orderCart .form-check-input:checked").each(function () {
+            const index = $(this).attr("data-cart-detail-index")
+            const el = document.getElementById(`cartDetails${index}.checkbox`);
+            $(el).val(1);
+        });
+    });
+
+
+
 
     function formatCurrency(value) {
         // Use the 'vi-VN' locale to format the number according to Vietnamese currency format

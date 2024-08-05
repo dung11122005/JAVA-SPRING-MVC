@@ -107,7 +107,11 @@
                                             </c:if>
                                             <c:forEach var="cartDetail" items="${cartDetails}" varStatus="status">
                                                 <tr>
-                                                    <th scope="row">
+                                                    <th class="orderCart"
+                                                        style="display: flex; align-items: center; gap: 15px;"
+                                                        scope="row">
+                                                        <input class=" form-check-input" type="checkbox"
+                                                            data-cart-detail-index="${status.index}">
                                                         <div class="d-flex align-items-center">
                                                             <img src="/images/product/${cartDetail.product.image}"
                                                                 class="img-fluid me-5 rounded-circle" style="width: 80px; height: 80px; overflow: hidden;  display: flex;
@@ -211,15 +215,17 @@
                                                         <fmt:formatNumber type="number" value="${totalPrice}" /> đ
                                                     </p>
                                                 </div>
+
                                                 <form:form action="/confirm-checkout" method="post"
                                                     modelAttribute="cart">
                                                     <input type="hidden" name="${_csrf.parameterName}"
                                                         value="${_csrf.token}" />
-                                                    <div style="display: none;">
+                                                    <div style="display: block;">
                                                         <c:forEach var="cartDetail" items="${cart.cartDetails}"
                                                             varStatus="status">
                                                             <div class="mb-3">
                                                                 <!-- https://stackoverflow.com/a/15481311 -->
+
                                                                 <div class="form-group">
                                                                     <label>Id:</label>
                                                                     <form:input class="form-control" type="text"
@@ -232,10 +238,16 @@
                                                                         value="${cartDetail.quantity}"
                                                                         path="cartDetails[${status.index}].quantity" />
                                                                 </div>
+                                                                <div class="form-group">
+                                                                    <label>checkbox:</label>
+                                                                    <form:input class="form-control" type="text"
+                                                                        value="${cartDetail.checkbox}"
+                                                                        path="cartDetails[${status.index}].checkbox" />
+                                                                </div>
                                                             </div>
                                                         </c:forEach>
                                                     </div>
-                                                    <button
+                                                    <button id="clickOrder"
                                                         class="btn border-secondary rounded-pill px-4 py-3 text-primary text-uppercase mb-4 ms-4">Xác
                                                         nhận đặt hàng
                                                     </button>

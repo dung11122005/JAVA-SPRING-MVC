@@ -19,7 +19,7 @@ public class CartDetail {
     private long quantity;
 
     private double price;
-
+    private long checkbox = 0;
     // cart_id: long
     @ManyToOne
     @JoinColumn(name = "cart_id")
@@ -68,6 +68,14 @@ public class CartDetail {
 
     public void setProduct(Product product) {
         this.product = product;
+    }
+
+    public long getCheckbox() {
+        return checkbox;
+    }
+
+    public void setCheckbox(long checkbox) {
+        this.checkbox = checkbox;
     }
 
 }

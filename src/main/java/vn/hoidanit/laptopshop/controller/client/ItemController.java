@@ -107,11 +107,20 @@ public class ItemController {
 
         Cart cart = this.productService.fetchByUser(currentUser);
 
-        List<CartDetail> cartDetails = cart == null ? new ArrayList<CartDetail>() : cart.getCartDetails();
+        List<CartDetail> cds = cart == null ? new ArrayList<CartDetail>() : cart.getCartDetails();
+        List<CartDetail> cartDetails = new ArrayList<CartDetail>();
+        for (CartDetail cd : cds) {
+            if (cd.getCheckbox() != 0) {
+                cartDetails.add(cd);
+            }
+        }
 
         double totalPrice = 0;
         for (CartDetail cd : cartDetails) {
-            totalPrice += cd.getPrice() * cd.getQuantity();
+            if (cd.getCheckbox() != 0) {
+                totalPrice += cd.getPrice() * cd.getQuantity();
+            }
+
         }
 
         model.addAttribute("cartDetails", cartDetails);

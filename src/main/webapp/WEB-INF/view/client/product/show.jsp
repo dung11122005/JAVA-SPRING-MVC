@@ -49,8 +49,7 @@
                             display: block;
                             right: 0px;
                         }
-                    </style>
-                    <style>
+
                         .page-link.disabled {
                             color: var(--bs-pagination-disabled-color);
                             pointer-events: none;
@@ -254,8 +253,8 @@
                                                                     <input type="hidden" name="${_csrf.parameterName}"
                                                                         value="${_csrf.token}" />
 
-                                                                    <button
-                                                                        class="mx-auto btn border border-secondary rounded-pill px-3 text-primary"><i
+                                                                    <button data-product-id="${product.id}"
+                                                                        class="btnAddToCartHomepage mx-auto btn border border-secondary rounded-pill px-3 text-primary"><i
                                                                             class="fa fa-shopping-bag me-2 text-primary"></i>
                                                                         Add to cart
                                                                     </button>

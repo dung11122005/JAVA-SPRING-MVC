@@ -51,6 +51,10 @@ public class ProductService {
         return this.productRepository.save(pr);
     }
 
+    public CartDetail saveCartDetail(CartDetail pr) {
+        return this.cartDetailRepository.save(pr);
+    }
+
     public List<Product> fetchProducts() {
         return this.productRepository.findAll();
     }
@@ -214,6 +218,7 @@ public class ProductService {
             if (cdOptional.isPresent()) {
                 CartDetail currentCartDetail = cdOptional.get();
                 currentCartDetail.setQuantity(cartDetail.getQuantity());
+                currentCartDetail.setCheckbox(cartDetail.getCheckbox());
                 this.cartDetailRepository.save(currentCartDetail);
             }
         }
@@ -247,24 +252,33 @@ public class ProductService {
                 order = this.orderRepository.save(order);
 
                 for (CartDetail cd : cartDetails) {
-                    OrderDetail orderDetail = new OrderDetail();
-                    orderDetail.setOrder(order);
-                    orderDetail.setProduct(cd.getProduct());
-                    orderDetail.setPrice(cd.getPrice());
-                    orderDetail.setQuantity(cd.getQuantity());
+                    if (cd.getCheckbox() != 0) {
+                        OrderDetail orderDetail = new OrderDetail();
+                        orderDetail.setOrder(order);
+                        orderDetail.setProduct(cd.getProduct());
+                        orderDetail.setPrice(cd.getPrice());
+                        orderDetail.setQuantity(cd.getQuantity());
 
-                    this.orderDetailRepository.save(orderDetail);
+                        this.orderDetailRepository.save(orderDetail);
+                    }
+
                 }
-
+                int i = 0;
                 // step 2: delete cart detail and cart
                 for (CartDetail cd : cartDetails) {
-                    this.cartDetailRepository.deleteById(cd.getId());
+                    if (cd.getCheckbox() != 0) {
+                        this.cartDetailRepository.deleteById(cd.getId());
+                    } else {
+                        i++;
+                    }
+
+                }
+                if (i == 0) {
+                    this.cartRepository.deleteById(cart.getId());
                 }
 
-                this.cartRepository.deleteById(cart.getId());
-
                 // step 3: update session
-                session.setAttribute("sum", 0);
+                session.setAttribute("sum", i);
             }
         }
 
