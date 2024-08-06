@@ -234,65 +234,60 @@
                                             </div>
                                             <div class="tab-pane" id="nav-mission" role="tabpanel"
                                                 aria-labelledby="nav-mission-tab">
-                                                <div class="d-flex">
-                                                    <img src="/client/img/avatar.jpg"
-                                                        class="img-fluid rounded-circle p-3"
-                                                        style="width: 100px; height: 100px;" alt="">
-                                                    <div class="">
-                                                        <p class="mb-2" style="font-size: 14px;">April 12, 2024</p>
-                                                        <div class="d-flex justify-content-between">
-                                                            <h5>Jason Smith</h5>
-                                                            <div class="d-flex mb-3">
-                                                                <i class="fa fa-star text-secondary"></i>
-                                                                <i class="fa fa-star text-secondary"></i>
-                                                                <i class="fa fa-star text-secondary"></i>
-                                                                <i class="fa fa-star text-secondary"></i>
-                                                                <i class="fa fa-star"></i>
+                                                <c:forEach var="comment" items="${comments}">
+                                                    <div class="d-flex">
+                                                        <img src="/images/avatar/${comment.user.avatar}"
+                                                            class="img-fluid rounded-circle p-3" style="width: 100px; height: 100px;overflow: hidden;  display: flex;
+                                                justify-content: center; align-items: center; object-fit: cover;"
+                                                            alt="">
+                                                        <div class="">
+                                                            <div class="d-flex justify-content-between">
+                                                                <h5>${comment.user.fullName}</h5>
+                                                                <c:if test="${comment.sta== '5sao'}">
+                                                                    <div class="d-flex mb-3">
+                                                                        <i class="fa fa-star text-secondary"></i>
+                                                                        <i class="fa fa-star text-secondary"></i>
+                                                                        <i class="fa fa-star text-secondary"></i>
+                                                                        <i class="fa fa-star text-secondary"></i>
+                                                                        <i class="fa fa-star text-secondary"></i>
+                                                                    </div>
+                                                                </c:if>
+                                                                <c:if test="${comment.sta== '4sao'}">
+                                                                    <div class="d-flex mb-3">
+                                                                        <i class="fa fa-star text-secondary"></i>
+                                                                        <i class="fa fa-star text-secondary"></i>
+                                                                        <i class="fa fa-star text-secondary"></i>
+                                                                        <i class="fa fa-star text-secondary"></i>
+                                                                    </div>
+                                                                </c:if>
+                                                                <c:if test="${comment.sta== '3sao'}">
+                                                                    <div class="d-flex mb-3">
+                                                                        <i class="fa fa-star text-secondary"></i>
+                                                                        <i class="fa fa-star text-secondary"></i>
+                                                                        <i class="fa fa-star text-secondary"></i>
+                                                                    </div>
+                                                                </c:if>
+                                                                <c:if test="${comment.sta== '2sao'}">
+                                                                    <div class="d-flex mb-3">
+                                                                        <i class="fa fa-star text-secondary"></i>
+                                                                        <i class="fa fa-star text-secondary"></i>
+                                                                    </div>
+                                                                </c:if>
+                                                                <c:if test="${comment.sta== '1sao'}">
+                                                                    <div class="d-flex mb-3">
+                                                                        <i class="fa fa-star text-secondary"></i>
+                                                                    </div>
+                                                                </c:if>
                                                             </div>
+                                                            <p>${comment.description} </p>
                                                         </div>
-                                                        <p>The generated Lorem Ipsum is therefore always free from
-                                                            repetition injected humour, or non-characteristic
-                                                            words etc. Susp endisse ultricies nisi vel quam suscipit
-                                                        </p>
                                                     </div>
-                                                </div>
-                                                <div class="d-flex">
-                                                    <img src="/client/img/avatar.jpg"
-                                                        class="img-fluid rounded-circle p-3"
-                                                        style="width: 100px; height: 100px;" alt="">
-                                                    <div class="">
-                                                        <p class="mb-2" style="font-size: 14px;">April 12, 2024</p>
-                                                        <div class="d-flex justify-content-between">
-                                                            <h5>Sam Peters</h5>
-                                                            <div class="d-flex mb-3">
-                                                                <i class="fa fa-star text-secondary"></i>
-                                                                <i class="fa fa-star text-secondary"></i>
-                                                                <i class="fa fa-star text-secondary"></i>
-                                                                <i class="fa fa-star"></i>
-                                                                <i class="fa fa-star"></i>
-                                                            </div>
-                                                        </div>
-                                                        <p class="text-dark">The generated Lorem Ipsum is therefore
-                                                            always
-                                                            free from repetition injected humour, or non-characteristic
-                                                            words etc. Susp endisse ultricies nisi vel quam suscipit
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="tab-pane" id="nav-vision" role="tabpanel">
-                                                <p class="text-dark">Tempor erat elitr rebum at clita. Diam dolor diam
-                                                    ipsum
-                                                    et tempor sit. Aliqu diam
-                                                    amet diam et eos labore. 3</p>
-                                                <p class="mb-0">Diam dolor diam ipsum et tempor sit. Aliqu diam amet
-                                                    diam et
-                                                    eos labore.
-                                                    Clita erat ipsum et lorem et sit</p>
+                                                </c:forEach>
                                             </div>
                                         </div>
                                     </div>
-                                    <form action="post">
+                                    <form method="post" action="/confirm-comment">
+                                        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
                                         <h4 class="mb-4 fw-bold">Leave a Reply</h4>
                                         <div class="col-lg-12 mb-4">
                                             <div class="mb-2"><b>Đánh giá</b></div>
@@ -300,63 +295,67 @@
                                                 <input class="form-check-input" type="radio" id="sort-1" value="1sao"
                                                     name="radio-sort">
                                                 <label class="form-check-label" for="sort-1"><i
-                                                        class="fas fa-star"></i></label>
+                                                        class="fa fa-star text-secondary"></i>
                                             </div>
                                             <div class="form-check form-check-inline">
                                                 <input class="form-check-input" type="radio" id="sort-2" value="2sao"
                                                     name="radio-sort">
                                                 <label class="form-check-label" for="sort-2">
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
+                                                    <i class="fa fa-star text-secondary"></i>
+                                                    <i class="fa fa-star text-secondary"></i>
                                                 </label>
                                             </div>
 
                                             <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" id="sort-3" checked
-                                                    value="3sao" name="radio-sort">
+                                                <input class="form-check-input" type="radio" id="sort-3" value="3sao"
+                                                    name="radio-sort">
                                                 <label class="form-check-label" for="sort-3">
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
+                                                    <i class="fa fa-star text-secondary"></i>
+                                                    <i class="fa fa-star text-secondary"></i>
+                                                    <i class="fa fa-star text-secondary"></i>
+
                                                 </label>
                                             </div>
                                             <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" id="sort-4" checked
-                                                    value="4sao" name="radio-sort">
+                                                <input class="form-check-input" type="radio" id="sort-4" value="4sao"
+                                                    name="radio-sort">
                                                 <label class="form-check-label" for="sort-4">
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
+                                                    <i class="fa fa-star text-secondary"></i>
+                                                    <i class="fa fa-star text-secondary"></i>
+                                                    <i class="fa fa-star text-secondary"></i>
+                                                    <i class="fa fa-star text-secondary"></i>
+
                                                 </label>
                                             </div>
                                             <div class="form-check form-check-inline">
                                                 <input class="form-check-input" type="radio" id="sort-5" checked
                                                     value="5sao" name="radio-sort">
                                                 <label class="form-check-label" for="sort-5">
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
+                                                    <i class="fa fa-star text-secondary"></i>
+                                                    <i class="fa fa-star text-secondary"></i>
+                                                    <i class="fa fa-star text-secondary"></i>
+                                                    <i class="fa fa-star text-secondary"></i>
+                                                    <i class="fa fa-star text-secondary"></i>
+
                                                 </label>
                                             </div>
                                         </div>
                                         <div class="row g-4">
-
                                             <div class="col-lg-12">
                                                 <div class="border-bottom rounded my-4">
-                                                    <textarea name="receiverName" class="form-control border-0"
-                                                        cols="30" rows="2" placeholder="Miêu tả của bạn *" required
+                                                    <textarea name="description" class="form-control border-0" cols="30"
+                                                        rows="2" placeholder="Miêu tả của bạn *" required
                                                         spellcheck="false"></textarea>
                                                 </div>
                                             </div>
-
-
-                                            <button
-                                                class="btn border border-secondary text-primary rounded-pill px-4 py-3">
-                                                Đăng bình luận</button>
                                         </div>
+                                        <div style="display: none;">
+                                            <input class="form-check-input" value="${product.id}" name="id">
+                                        </div>
+                                        <button style="width: 200px;" id="btnConfirmComment"
+                                            class="btn border border-secondary text-primary rounded-pill px-4 py-3">
+                                            Đăng bình luận
+                                        </button>
                                     </form>
                                 </div>
                             </div>

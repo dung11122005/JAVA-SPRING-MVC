@@ -16,12 +16,16 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import vn.hoidanit.laptopshop.domain.Cart;
 import vn.hoidanit.laptopshop.domain.CartDetail;
+import vn.hoidanit.laptopshop.domain.Comment;
 import vn.hoidanit.laptopshop.domain.Product;
 import vn.hoidanit.laptopshop.domain.Product_;
 import vn.hoidanit.laptopshop.domain.User;
 import vn.hoidanit.laptopshop.domain.dto.ProductCriteriaDTO;
+import vn.hoidanit.laptopshop.service.CommentService;
 import vn.hoidanit.laptopshop.service.OrderService;
 import vn.hoidanit.laptopshop.service.ProductService;
+import vn.hoidanit.laptopshop.service.UserService;
+
 import org.springframework.web.bind.annotation.PostMapping;
 
 import jakarta.servlet.http.HttpServletRequest;
@@ -33,11 +37,17 @@ public class ItemController {
 
     private final ProductService productService;
     private final OrderService orderService;
+    private final UserService userService;
+    private final CommentService commentService;
 
     public ItemController(ProductService productService,
-            OrderService orderService) {
+            OrderService orderService,
+            UserService userService,
+            CommentService commentService) {
         this.productService = productService;
         this.orderService = orderService;
+        this.userService = userService;
+        this.commentService = commentService;
     }
 
     @GetMapping("/product/{id}")
@@ -46,6 +56,14 @@ public class ItemController {
         List<Product> ListProductBest = this.orderService.fetchBestSellingProductPage();
         List<Product> productCarousel = this.productService.fetchProducts();
         Product pr;
+        Product prs = new Product();
+
+        Optional optionalProduct = this.productService.fetchProductById(id);
+        if (optionalProduct.isPresent()) {
+            prs = (Product) optionalProduct.get();
+        }
+        List<Comment> comments = prs.getComments();
+
         if (OptionalPr.isPresent()) {
             pr = OptionalPr.get();
         } else {
@@ -54,6 +72,7 @@ public class ItemController {
         model.addAttribute("product", pr);
         model.addAttribute("products", ListProductBest);
         model.addAttribute("productCarousel", productCarousel);
+        model.addAttribute("comments", comments);
         model.addAttribute("id", id);
 
         return "client/product/detail";
@@ -210,6 +229,25 @@ public class ItemController {
         model.addAttribute("totalPages", pr.getTotalPages());
         model.addAttribute("queryString", qs);
         return "client/product/show";
+    }
+
+    @PostMapping("/confirm-comment")
+    public String postConfirmComment(HttpServletRequest request,
+            @RequestParam("radio-sort") String star,
+            @RequestParam("description") String description,
+            @RequestParam("id") long idProduct) {
+        HttpSession session = request.getSession(false);
+        User currentUser = new User();// null
+        long id = (long) session.getAttribute("id");
+        currentUser = this.userService.getUserById(id);
+        Product product = new Product();
+        Optional optionalProduct = this.productService.fetchProductById(idProduct);
+        if (optionalProduct.isPresent()) {
+            product = (Product) optionalProduct.get();
+        }
+
+        this.commentService.handleConfirmComment(star, description, idProduct, currentUser, product);
+        return "redirect:/product/" + idProduct;
     }
 
 }

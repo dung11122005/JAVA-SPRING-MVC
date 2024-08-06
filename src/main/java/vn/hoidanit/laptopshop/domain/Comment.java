@@ -9,14 +9,14 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "comments")
+@Table(name = "cmt")
 public class Comment {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    private String describe;
-    private String star;
+    private String description;
+    private String sta;
 
     @ManyToOne
     @JoinColumn(name = "product_id")
@@ -34,20 +34,20 @@ public class Comment {
         this.id = id;
     }
 
-    public String getDescribe() {
-        return describe;
+    public String getSta() {
+        return sta;
     }
 
-    public void setDescribe(String describe) {
-        this.describe = describe;
+    public void setSta(String sta) {
+        this.sta = sta;
     }
 
-    public String getStar() {
-        return star;
+    public String getDescription() {
+        return description;
     }
 
-    public void setStar(String star) {
-        this.star = star;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public Product getProduct() {

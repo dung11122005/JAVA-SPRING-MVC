@@ -289,6 +289,11 @@
         window.location.href = currentUrl.toString();
     });
 
+    // $('#btnConfirmComment').click(function (event) {
+    //     let sortValue = $('input[name="radio-sort"]:checked').val();
+
+    // })
+
     //handle auto checkbox after page loading
     // Parse the URL parameters
     const params = new URLSearchParams(window.location.search);
