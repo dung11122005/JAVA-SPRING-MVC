@@ -43,7 +43,8 @@ public class ItemController {
     @GetMapping("/product/{id}")
     public String getProductPage(Model model, @PathVariable long id) {
         Optional<Product> OptionalPr = this.productService.fetchProductById(id);
-        List<Product> ListProduct = this.orderService.fetchBestSellingProductPage();
+        List<Product> ListProductBest = this.orderService.fetchBestSellingProductPage();
+        List<Product> productCarousel = this.productService.fetchProducts();
         Product pr;
         if (OptionalPr.isPresent()) {
             pr = OptionalPr.get();
@@ -51,7 +52,8 @@ public class ItemController {
             pr = null;
         }
         model.addAttribute("product", pr);
-        model.addAttribute("products", ListProduct);
+        model.addAttribute("products", ListProductBest);
+        model.addAttribute("productCarousel", productCarousel);
         model.addAttribute("id", id);
 
         return "client/product/detail";
@@ -75,12 +77,15 @@ public class ItemController {
 
         Cart cart = this.productService.fetchByUser(currenUser);
 
-        List<CartDetail> cartDetails = cart == null ? new ArrayList<CartDetail>() : cart.getCartDetails();
-
+        List<CartDetail> cds = cart == null ? new ArrayList<CartDetail>() : cart.getCartDetails();
+        List<CartDetail> cartDetails = new ArrayList<CartDetail>();
         double totalPrice = 0;
 
-        for (CartDetail cd : cartDetails) {
+        for (CartDetail cd : cds) {
+            cd.setCheckbox(0);
+            this.productService.saveCartDetail(cd);
             totalPrice += cd.getPrice() * cd.getQuantity();
+            cartDetails.add(cd);
         }
 
         model.addAttribute("cartDetails", cartDetails);

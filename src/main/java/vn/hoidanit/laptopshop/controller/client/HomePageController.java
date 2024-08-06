@@ -1,5 +1,6 @@
 package vn.hoidanit.laptopshop.controller.client;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -14,10 +15,13 @@ import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 
+import vn.hoidanit.laptopshop.domain.Cart;
+import vn.hoidanit.laptopshop.domain.CartDetail;
 import vn.hoidanit.laptopshop.domain.Order;
 import vn.hoidanit.laptopshop.domain.Product;
 import vn.hoidanit.laptopshop.domain.User;
 import vn.hoidanit.laptopshop.domain.dto.RegisterDTO;
+import vn.hoidanit.laptopshop.repository.CartRepository;
 import vn.hoidanit.laptopshop.service.OrderService;
 import vn.hoidanit.laptopshop.service.ProductService;
 import vn.hoidanit.laptopshop.service.UploadService;
@@ -38,23 +42,44 @@ public class HomePageController {
     private final PasswordEncoder passwordEncoder;
     private final OrderService orderService;
     private final UploadService uploadService;
+    private final CartRepository cartRepository;
 
     public HomePageController(
             ProductService productService,
             UserService userService,
             PasswordEncoder passwordEncoder,
             OrderService orderService,
-            UploadService uploadService) {
+            UploadService uploadService,
+            CartRepository cartRepository) {
         this.productService = productService;
         this.userService = userService;
         this.passwordEncoder = passwordEncoder;
         this.orderService = orderService;
         this.uploadService = uploadService;
+        this.cartRepository = cartRepository;
     }
 
     @GetMapping("/")
     public String getHomePage(Model model,
-            @RequestParam("page") Optional<String> pageOptional) {
+            @RequestParam("page") Optional<String> pageOptional, HttpServletRequest request) {
+        User currentUser = new User();// null
+        HttpSession session = request.getSession(false);
+        long id = (long) session.getAttribute("id");
+        currentUser.setId(id);
+
+        Cart cart = this.cartRepository.findByUser(currentUser);
+        List<CartDetail> cartDetails = cart == null ? new ArrayList<CartDetail>() : cart.getCartDetails();
+        int sum = 0;
+        for (CartDetail cd : cartDetails) {
+            if (cd != null) {
+                sum++;
+            }
+        }
+        if (cart != null) {
+            cart.setSum(sum);
+            this.cartRepository.save(cart);
+        }
+
         int page = 1;
         try {
             if (pageOptional.isPresent()) {

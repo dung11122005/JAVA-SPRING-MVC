@@ -39,14 +39,6 @@ public class Cart {
         this.id = id;
     }
 
-    public int getSum() {
-        return sum;
-    }
-
-    public void setSum(int sum) {
-        this.sum = sum;
-    }
-
     public User getUser() {
         return user;
     }
@@ -61,6 +53,14 @@ public class Cart {
 
     public void setCartDetails(List<CartDetail> cartDetails) {
         this.cartDetails = cartDetails;
+    }
+
+    public int getSum() {
+        return sum;
+    }
+
+    public void setSum(int sum) {
+        this.sum = sum;
     }
 
 }

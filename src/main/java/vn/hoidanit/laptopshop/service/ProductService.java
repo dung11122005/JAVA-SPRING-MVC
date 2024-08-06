@@ -188,28 +188,33 @@ public class ProductService {
     }
 
     public void handleRemoveCartDetail(long cartDetailId, HttpSession session) {
-        Optional<CartDetail> cartDetaiOptional = this.cartDetailRepository.findById(cartDetailId);
+        try {
+            Optional<CartDetail> cartDetailOptional = this.cartDetailRepository.findById(cartDetailId);
 
-        if (cartDetaiOptional.isPresent()) {
-            CartDetail cartDetail = cartDetaiOptional.get();
+            if (cartDetailOptional.isPresent()) {
+                CartDetail cartDetail = cartDetailOptional.get();
 
-            Cart currenCart = cartDetail.getCart();
-            // delete cart-detail
-            this.cartDetailRepository.deleteById(cartDetailId);
+                Cart currentCart = cartDetail.getCart();
+                // delete cart-detail
+                this.cartDetailRepository.deleteById(cartDetailId);
 
-            // update cart
-            if (currenCart.getSum() > 1) {
-                // update current cart
-                int s = currenCart.getSum() - 1;
-                currenCart.setSum(s);
-                session.setAttribute("sum", s);
-                this.cartRepository.save(currenCart);
-            } else {
-                // delete cart (sum=1)
-                this.cartRepository.deleteById(currenCart.getId());
-                session.setAttribute("sum", 0);
+                // update cart
+                if (currentCart.getSum() > 1) {
+                    // update current cart
+                    int s = currentCart.getSum() - 1;
+                    currentCart.setSum(s);
+                    session.setAttribute("sum", s);
+                    this.cartRepository.save(currentCart);
+                } else {
+                    // delete cart (sum=1)
+                    this.cartRepository.deleteById(currentCart.getId());
+                    session.setAttribute("sum", 0);
+                }
             }
+        } catch (Exception e) {
+            // TODO: handle exception
         }
+
     }
 
     public void handleUpdateCartBeforeCheckout(List<CartDetail> cartDetails) {
@@ -231,6 +236,7 @@ public class ProductService {
         // create order detail
         // step 1: get cart by user
         Cart cart = this.cartRepository.findByUser(user);
+
         if (cart != null) {
             List<CartDetail> cartDetails = cart.getCartDetails();
 
@@ -246,7 +252,10 @@ public class ProductService {
 
                 double sum = 0;
                 for (CartDetail cd : cartDetails) {
-                    sum += cd.getPrice() * cd.getQuantity();
+                    if (cd.getCheckbox() != 0) {
+                        sum += cd.getPrice() * cd.getQuantity();
+                    }
+
                 }
                 order.setTotalPrice(sum);
                 order = this.orderRepository.save(order);
@@ -271,17 +280,21 @@ public class ProductService {
                     } else {
                         i++;
                     }
-
                 }
-                if (i == 0) {
-                    this.cartRepository.deleteById(cart.getId());
+
+                try {
+                    if (i == 0) {
+                        this.cartRepository.deleteById(cart.getId());
+                    }
+                } catch (Exception e) {
+                    // TODO: handle exception
                 }
 
                 // step 3: update session
                 session.setAttribute("sum", i);
+
             }
         }
-
     }
 
     public long countProducts() {

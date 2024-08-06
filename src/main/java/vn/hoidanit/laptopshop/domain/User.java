@@ -53,6 +53,9 @@ public class User {
     @OneToOne(mappedBy = "user")
     private Cart cart;
 
+    @OneToMany(mappedBy = "user")
+    List<Comment> comments;
+
     public long getId() {
         return id;
     }
@@ -137,6 +140,14 @@ public class User {
     public String toString() {
         return "User [id=" + id + ", email=" + email + ", password=" + password + ", fullName=" + fullName
                 + ", address=" + address + ", phone=" + phone + ", avatar=" + avatar + "]";
+    }
+
+    public List<Comment> getComments() {
+        return comments;
+    }
+
+    public void setComments(List<Comment> comments) {
+        this.comments = comments;
     }
 
 }
