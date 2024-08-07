@@ -263,6 +263,7 @@
 
         //sort order
         let sortValue = $('input[name="radio-sort"]:checked').val();
+        let ValueStar = $('input[name="radio-star"]:checked').val();
 
         const currentUrl = new URL(window.location.href);
         const searchParams = currentUrl.searchParams;
@@ -270,6 +271,12 @@
         // Add or update query parameters
         searchParams.set('page', '1');
         searchParams.set('sort', sortValue);
+
+        if (ValueStar != null) {
+            searchParams.set('valueStar', ValueStar);
+        }
+
+
 
         searchParams.delete('factory')
         searchParams.delete('target')
@@ -289,10 +296,7 @@
         window.location.href = currentUrl.toString();
     });
 
-    // $('#btnConfirmComment').click(function (event) {
-    //     let sortValue = $('input[name="radio-sort"]:checked').val();
 
-    // })
 
     //handle auto checkbox after page loading
     // Parse the URL parameters
@@ -328,6 +332,10 @@
         $(`input[type="radio"][name="radio-sort"][value="${sort}"]`).prop('checked', true);
     }
 
+    if (params.has('valueStar')) {
+        const valueStar = params.get('valueStar');
+        $(`input[type="radio"][name="radio-star"][value="${valueStar}"]`).prop('checked', true);
+    }
 
     //////////////////////////
     //handle add to cart with ajax

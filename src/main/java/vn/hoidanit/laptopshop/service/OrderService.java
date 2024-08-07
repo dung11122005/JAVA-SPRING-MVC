@@ -83,7 +83,10 @@ public class OrderService {
         List<OrderDetail> orderDetails = this.orderDetailRepository.findAll();
         List<Long> numbers = new ArrayList<>();
         for (OrderDetail od : orderDetails) {
-            numbers.add(od.getProduct().getId());
+            for (int i = 0; i < od.getQuantity(); i++) {
+                numbers.add(od.getProduct().getId());
+            }
+
         }
         // Tạo một Map để lưu trữ số và số lần xuất hiện
         Map<Long, Integer> countMap = new HashMap<>();

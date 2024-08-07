@@ -125,13 +125,53 @@
                                         <h5 class="fw-bold mb-3">
                                             <fmt:formatNumber type="number" value="${product.price}" /> đ
                                         </h5>
-                                        <div class="d-flex mb-4">
-                                            <i class="fa fa-star text-secondary"></i>
-                                            <i class="fa fa-star text-secondary"></i>
-                                            <i class="fa fa-star text-secondary"></i>
-                                            <i class="fa fa-star text-secondary"></i>
-                                            <i class="fa fa-star"></i>
-                                        </div>
+
+                                        <c:if test="${product.sta == '5'}">
+                                            <div class="d-flex mb-4">
+                                                <i class="fa fa-star text-secondary"></i>
+                                                <i class="fa fa-star text-secondary"></i>
+                                                <i class="fa fa-star text-secondary"></i>
+                                                <i class="fa fa-star text-secondary"></i>
+                                                <i class="fa fa-star text-secondary"></i>
+                                            </div>
+                                        </c:if>
+                                        <c:if test="${product.sta == '4'}">
+                                            <div class="d-flex mb-4">
+                                                <i class="fa fa-star text-secondary"></i>
+                                                <i class="fa fa-star text-secondary"></i>
+                                                <i class="fa fa-star text-secondary"></i>
+                                                <i class="fa fa-star text-secondary"></i>
+                                                <i class="fa fa-star"></i>
+                                            </div>
+                                        </c:if>
+                                        <c:if test="${product.sta == '3'}">
+                                            <div class="d-flex mb-4">
+                                                <i class="fa fa-star text-secondary"></i>
+                                                <i class="fa fa-star text-secondary"></i>
+                                                <i class="fa fa-star text-secondary"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                            </div>
+                                        </c:if>
+                                        <c:if test="${product.sta == '2'}">
+                                            <div class="d-flex mb-4">
+                                                <i class="fa fa-star text-secondary"></i>
+                                                <i class="fa fa-star text-secondary"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                            </div>
+                                        </c:if>
+                                        <c:if test="${product.sta == '1'}">
+                                            <div class="d-flex mb-4">
+                                                <i class="fa fa-star text-secondary"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                            </div>
+                                        </c:if>
+
                                         <p class="mb-4">${product.shortDesc}</p>
 
                                         <div class="input-group quantity mb-5" style="width: 100px;">
@@ -383,19 +423,58 @@
                                                     <h6 style="font-size: 15px;" class="mb-2">
                                                         <a href="/product/${product.id}">${product.name}</a>
                                                     </h6>
-                                                    <div class="d-flex mb-2">
-                                                        <i class="fa fa-star text-secondary"></i>
-                                                        <i class="fa fa-star text-secondary"></i>
-                                                        <i class="fa fa-star text-secondary"></i>
-                                                        <i class="fa fa-star text-secondary"></i>
-                                                        <i class="fa fa-star"></i>
-                                                    </div>
+                                                    <c:if test="${product.sta == '5'}">
+                                                        <div class="d-flex mb-2">
+                                                            <i class="fas fa-star text-secondary"></i>
+                                                            <i class="fas fa-star text-secondary"></i>
+                                                            <i class="fas fa-star text-secondary"></i>
+                                                            <i class="fas fa-star text-secondary"></i>
+                                                            <i class="fas fa-star text-secondary"></i>
+                                                        </div>
+                                                    </c:if>
+                                                    <c:if test="${product.sta == '4'}">
+                                                        <div class="d-flex mb-2">
+                                                            <i class="fas fa-star text-secondary"></i>
+                                                            <i class="fas fa-star text-secondary"></i>
+                                                            <i class="fas fa-star text-secondary"></i>
+                                                            <i class="fas fa-star text-secondary"></i>
+                                                            <i class="fas fa-star"></i>
+                                                        </div>
+                                                    </c:if>
+                                                    <c:if test="${product.sta == '3'}">
+                                                        <div class="d-flex mb-2">
+                                                            <i class="fas fa-star text-secondary"></i>
+                                                            <i class="fas fa-star text-secondary"></i>
+                                                            <i class="fas fa-star text-secondary"></i>
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="fas fa-star"></i>
+                                                        </div>
+                                                    </c:if>
+                                                    <c:if test="${product.sta == '2'}">
+                                                        <div class="d-flex mb-2">
+                                                            <i class="fas fa-star text-secondary"></i>
+                                                            <i class="fas fa-star text-secondary"></i>
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="fas fa-star"></i>
+                                                        </div>
+                                                    </c:if>
+                                                    <c:if test="${product.sta == '1'}">
+                                                        <div class="d-flex mb-2">
+                                                            <i class="fas fa-star text-secondary"></i>
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="fas fa-star"></i>
+                                                        </div>
+                                                    </c:if>
+
                                                     <div class="d-flex mb-2">
                                                         <h5 class="fw-bold me-2">
                                                             <fmt:formatNumber type="number" value="${product.price}" />
                                                             đ
                                                         </h5>
-                                                        <h5 class="text-danger text-decoration-line-through">4.11 $</h5>
+
                                                     </div>
                                                 </div>
                                             </div>

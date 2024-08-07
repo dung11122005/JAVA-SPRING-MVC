@@ -235,13 +235,51 @@
                                             </div>
                                             <div class="col-6">
                                                 <a href="/product/${product.id}" class="h5">${product.name}</a>
-                                                <div class="d-flex my-3">
-                                                    <i class="fas fa-star text-primary"></i>
-                                                    <i class="fas fa-star text-primary"></i>
-                                                    <i class="fas fa-star text-primary"></i>
-                                                    <i class="fas fa-star text-primary"></i>
-                                                    <i class="fas fa-star"></i>
-                                                </div>
+                                                <c:if test="${product.sta == '5'}">
+                                                    <div class="d-flex my-3">
+                                                        <i class="fas fa-star text-secondary"></i>
+                                                        <i class="fas fa-star text-secondary"></i>
+                                                        <i class="fas fa-star text-secondary"></i>
+                                                        <i class="fas fa-star text-secondary"></i>
+                                                        <i class="fas fa-star text-secondary"></i>
+                                                    </div>
+                                                </c:if>
+                                                <c:if test="${product.sta == '4'}">
+                                                    <div class="d-flex my-3">
+                                                        <i class="fas fa-star text-secondary"></i>
+                                                        <i class="fas fa-star text-secondary"></i>
+                                                        <i class="fas fa-star text-secondary"></i>
+                                                        <i class="fas fa-star text-secondary"></i>
+                                                        <i class="fas fa-star"></i>
+                                                    </div>
+                                                </c:if>
+                                                <c:if test="${product.sta == '3'}">
+                                                    <div class="d-flex my-3">
+                                                        <i class="fas fa-star text-secondary"></i>
+                                                        <i class="fas fa-star text-secondary"></i>
+                                                        <i class="fas fa-star text-secondary"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                    </div>
+                                                </c:if>
+                                                <c:if test="${product.sta == '2'}">
+                                                    <div class="d-flex my-3">
+                                                        <i class="fas fa-star text-secondary"></i>
+                                                        <i class="fas fa-star text-secondary"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                    </div>
+                                                </c:if>
+                                                <c:if test="${product.sta == '1'}">
+                                                    <div class="d-flex my-3">
+                                                        <i class="fas fa-star text-secondary"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                    </div>
+                                                </c:if>
                                                 <h4 class="mb-3">
                                                     <fmt:formatNumber type="number" value="${product.price}" /> đ
                                                 </h4>
@@ -260,13 +298,52 @@
                                         <img src="/images/product/${product.image}" class="img-fluid rounded" alt="">
                                         <div class="py-4">
                                             <a href="/product/${product.id}" class="h5">${product.name}</a>
-                                            <div class="d-flex my-3 justify-content-center">
-                                                <i class="fas fa-star text-primary"></i>
-                                                <i class="fas fa-star text-primary"></i>
-                                                <i class="fas fa-star text-primary"></i>
-                                                <i class="fas fa-star text-primary"></i>
-                                                <i class="fas fa-star"></i>
-                                            </div>
+                                            <c:if test="${product.sta == '5'}">
+                                                <div class="d-flex my-3 justify-content-center">
+                                                    <i class="fas fa-star text-secondary"></i>
+                                                    <i class="fas fa-star text-secondary"></i>
+                                                    <i class="fas fa-star text-secondary"></i>
+                                                    <i class="fas fa-star text-secondary"></i>
+                                                    <i class="fas fa-star text-secondary"></i>
+                                                </div>
+                                            </c:if>
+                                            <c:if test="${product.sta == '4'}">
+                                                <div class="d-flex my-3 justify-content-center">
+                                                    <i class="fas fa-star text-secondary"></i>
+                                                    <i class="fas fa-star text-secondary"></i>
+                                                    <i class="fas fa-star text-secondary"></i>
+                                                    <i class="fas fa-star text-secondary"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                            </c:if>
+                                            <c:if test="${product.sta == '3'}">
+                                                <div class="d-flex my-3 justify-content-center">
+                                                    <i class="fas fa-star text-secondary"></i>
+                                                    <i class="fas fa-star text-secondary"></i>
+                                                    <i class="fas fa-star text-secondary"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                            </c:if>
+                                            <c:if test="${product.sta == '2'}">
+                                                <div class="d-flex my-3 justify-content-center">
+                                                    <i class="fas fa-star text-secondary"></i>
+                                                    <i class="fas fa-star text-secondary"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                            </c:if>
+                                            <c:if test="${product.sta == '1'}">
+                                                <div class="d-flex my-3 justify-content-center">
+                                                    <i class="fas fa-star text-secondary"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                            </c:if>
+
                                             <h4 class="mb-3">
                                                 <fmt:formatNumber type="number" value="${product.price}" /> đ
                                             </h4>

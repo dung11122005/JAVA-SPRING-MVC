@@ -204,7 +204,7 @@ public class ItemController {
 
         }
 
-        Pageable pageable = PageRequest.of(page - 1, 30);
+        Pageable pageable = PageRequest.of(page - 1, 15);
         if (productCriteriaDTO.getSort() != null && productCriteriaDTO.getSort().isPresent()) {
             String sort = productCriteriaDTO.getSort().get();
             if (sort.equals("gia-tang-dan")) {
