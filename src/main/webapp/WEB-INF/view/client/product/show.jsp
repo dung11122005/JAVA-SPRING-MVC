@@ -266,7 +266,19 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-12 col-md-9 text-center">
+                                    <div style="margin-top: -40px;" class="col-12 col-md-9 text-center">
+
+                                        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
+                                        <div class="position-relative mx-auto mb-5">
+                                            <input name="SearchProduct"
+                                                class="form-control border-2 border-secondary w-75 py-3 px-4 rounded-pill"
+                                                type="text" placeholder="Tìm kiếm">
+                                            <button type="button" id="searchButton"
+                                                class="btn btn-primary border-2 border-secondary py-3 px-4 position-absolute rounded-pill text-white h-100"
+                                                style="top: 0; right: 25%;">Xác nhận</button>
+                                        </div>
+
+
                                         <div class="row g-4">
                                             <c:if test="${totalPages==0}">
                                                 <h3>Không tìm thấy sản phẩm</h3>

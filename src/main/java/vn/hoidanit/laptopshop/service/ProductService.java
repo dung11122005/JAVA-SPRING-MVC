@@ -67,7 +67,9 @@ public class ProductService {
 
         if (productCriteriaDTO.getTarget() == null &&
                 productCriteriaDTO.getFactory() == null &&
-                productCriteriaDTO.getPrice() == null && productCriteriaDTO.getValueStar() == null) {
+                productCriteriaDTO.getPrice() == null &&
+                productCriteriaDTO.getValueStar() == null &&
+                productCriteriaDTO.getSearchValue() == null) {
             return this.productRepository.findAll(page);
         }
 
@@ -86,6 +88,11 @@ public class ProductService {
         }
         if (productCriteriaDTO.getValueStar() != null && productCriteriaDTO.getValueStar().isPresent()) {
             Specification<Product> currentSpecs = ProductSpecs.matchListStar(productCriteriaDTO.getValueStar().get());
+            combinedSpec = combinedSpec.and(currentSpecs);
+        }
+        if (productCriteriaDTO.getSearchValue() != null && productCriteriaDTO.getSearchValue().isPresent()) {
+            Specification<Product> currentSpecs = ProductSpecs
+                    .matchListSearch(productCriteriaDTO.getSearchValue().get());
             combinedSpec = combinedSpec.and(currentSpecs);
         }
         return this.productRepository.findAll(combinedSpec, page);

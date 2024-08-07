@@ -298,6 +298,16 @@
 
 
 
+    $('#searchButton').click(function (event) {
+        let searchValue = $('input[name="SearchProduct"]').val();
+        const currentUrl = new URL(window.location.href);
+        const searchParams = currentUrl.searchParams;
+        searchParams.set('page', '1');
+        searchParams.set('searchValue', searchValue);
+        window.location.href = currentUrl.toString();
+    });
+
+
     //handle auto checkbox after page loading
     // Parse the URL parameters
     const params = new URLSearchParams(window.location.search);

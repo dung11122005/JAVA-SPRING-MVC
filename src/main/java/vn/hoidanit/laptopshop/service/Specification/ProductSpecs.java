@@ -42,6 +42,10 @@ public class ProductSpecs {
         return (root, query, criteriaBuilder) -> criteriaBuilder.in(root.get(Product_.STA)).value(star);
     }
 
+    public static Specification<Product> matchListSearch(String valueSearch) {
+        return (root, query, criteriaBuilder) -> criteriaBuilder.like(root.get(Product_.NAME), "%" + valueSearch + "%");
+    }
+
     // case5
     public static Specification<Product> matchPrice(double min, double max) {
         return (root, query, criteriaBuilder) -> criteriaBuilder.and(
