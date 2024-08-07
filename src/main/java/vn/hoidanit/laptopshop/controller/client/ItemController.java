@@ -245,8 +245,8 @@ public class ItemController {
         if (optionalProduct.isPresent()) {
             product = (Product) optionalProduct.get();
         }
-
-        this.commentService.handleConfirmComment(star, description, idProduct, currentUser, product);
+        int sta = Integer.parseInt(star);
+        this.commentService.handleConfirmComment(sta, description, idProduct, currentUser, product);
         return "redirect:/product/" + idProduct;
     }
 

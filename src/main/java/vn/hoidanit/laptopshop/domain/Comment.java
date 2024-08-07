@@ -16,7 +16,7 @@ public class Comment {
     private long id;
 
     private String description;
-    private String sta;
+    private int sta;
 
     @ManyToOne
     @JoinColumn(name = "product_id")
@@ -32,14 +32,6 @@ public class Comment {
 
     public void setId(long id) {
         this.id = id;
-    }
-
-    public String getSta() {
-        return sta;
-    }
-
-    public void setSta(String sta) {
-        this.sta = sta;
     }
 
     public String getDescription() {
@@ -64,6 +56,14 @@ public class Comment {
 
     public void setUser(User user) {
         this.user = user;
+    }
+
+    public int getSta() {
+        return sta;
+    }
+
+    public void setSta(int sta) {
+        this.sta = sta;
     }
 
 }

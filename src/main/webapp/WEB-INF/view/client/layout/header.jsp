@@ -8,7 +8,8 @@
                     <div class="d-flex justify-content-between">
                         <div class="top-info ps-2">
                             <small class="me-3"><i class="fas fa-map-marker-alt me-2 text-secondary"></i> <a
-                                    href="https://www.google.com/maps/place/320+%C4%90.+Tr%E1%BA%A7n+B%C3%ACnh+Tr%E1%BB%8Dng,+Ph%C6%B0%E1%BB%9Dng+4,+Qu%E1%BA%ADn+5,+H%E1%BB%93+Ch%C3%AD+Minh+72520,+Vi%E1%BB%87t+Nam/@10.7612343,106.6818076,171m/data=!3m1!1e3!4m6!3m5!1s0x31752f1dcd4041b1:0x39f9d63d7b21e6f9!8m2!3d10.7623554!4d106.6793357!16s%2Fg%2F11csg4n2mp?hl=vi-VN&entry=ttu"
+                                    target="_blank"
+                                    href="https://www.google.com/maps/dir/320+%C4%90%C6%B0%E1%BB%9Dng+Tr%E1%BA%A7n+B%C3%ACnh+Tr%E1%BB%8Dng,+Ph%C6%B0%E1%BB%9Dng+4,+District+5,+Ho+Chi+Minh+City/10.7612374,106.6821503/@10.7616989,106.6798783,484m/data=!3m1!1e3!4m19!4m18!1m15!1m1!1s0x31752f1dcd4041b1:0x39f9d63d7b21e6f9!2m2!1d106.6793357!2d10.7623554!3m4!1m2!1d106.6806275!2d10.7631941!3s0x31752f1e9fab04d5:0x2477bfd0af64a12a!3m4!1m2!1d106.6822655!2d10.7609626!3s0x31752f1b891e9cd1:0x4f4eab5a182f285e!1m0!3e2?hl=vi-VN&entry=ttu"
                                     class="text-white">320/32/6 Trần Bình Trọng, P4, Q5, HCM</a></small>
                             <small class="me-3"><i class="fas fa-envelope me-2 text-secondary"></i><a href="#"
                                     class="text-white">hoangtandung2k5@gmail.com</a></small>

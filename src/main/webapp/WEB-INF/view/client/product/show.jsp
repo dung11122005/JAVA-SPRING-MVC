@@ -184,6 +184,57 @@
                                                     <label class="form-check-label" for="price-5">Trên 20 triệu</label>
                                                 </div>
                                             </div>
+                                            <div class="col-lg-12">
+                                                <div class="mb-2"><b>Đánh giá</b></div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" id="sort-1" value="1"
+                                                        name="radio-star">
+                                                    <label class="form-check-label" for="sort-1"><i
+                                                            class="fa fa-star text-secondary"></i>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" id="sort-2" value="2"
+                                                        name="radio-star">
+                                                    <label class="form-check-label" for="sort-2">
+                                                        <i class="fa fa-star text-secondary"></i>
+                                                        <i class="fa fa-star text-secondary"></i>
+                                                    </label>
+                                                </div>
+
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" id="sort-3" value="3"
+                                                        name="radio-star">
+                                                    <label class="form-check-label" for="sort-3">
+                                                        <i class="fa fa-star text-secondary"></i>
+                                                        <i class="fa fa-star text-secondary"></i>
+                                                        <i class="fa fa-star text-secondary"></i>
+
+                                                    </label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" id="sort-4" value="4"
+                                                        name="radio-star">
+                                                    <label class="form-check-label" for="sort-4">
+                                                        <i class="fa fa-star text-secondary"></i>
+                                                        <i class="fa fa-star text-secondary"></i>
+                                                        <i class="fa fa-star text-secondary"></i>
+                                                        <i class="fa fa-star text-secondary"></i>
+
+                                                    </label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" id="sort-5" value="5"
+                                                        name="radio-star">
+                                                    <label class="form-check-label" for="sort-5">
+                                                        <i class="fa fa-star text-secondary"></i>
+                                                        <i class="fa fa-star text-secondary"></i>
+                                                        <i class="fa fa-star text-secondary"></i>
+                                                        <i class="fa fa-star text-secondary"></i>
+                                                        <i class="fa fa-star text-secondary"></i>
+
+                                                    </label>
+                                                </div>
+                                            </div>
                                             <div class="col-12">
                                                 <div class="mb-2"><b>Sắp xếp</b></div>
 

@@ -243,8 +243,8 @@
                                                         <div class="">
                                                             <div class="d-flex justify-content-between">
                                                                 <h5>${comment.user.fullName}</h5>
-                                                                <c:if test="${comment.sta== '5sao'}">
-                                                                    <div class="d-flex mb-3">
+                                                                <c:if test="${comment.sta== '5'}">
+                                                                    <div style="margin-left: 20px;" class="d-flex mb-3">
                                                                         <i class="fa fa-star text-secondary"></i>
                                                                         <i class="fa fa-star text-secondary"></i>
                                                                         <i class="fa fa-star text-secondary"></i>
@@ -252,29 +252,29 @@
                                                                         <i class="fa fa-star text-secondary"></i>
                                                                     </div>
                                                                 </c:if>
-                                                                <c:if test="${comment.sta== '4sao'}">
-                                                                    <div class="d-flex mb-3">
+                                                                <c:if test="${comment.sta== '4'}">
+                                                                    <div style="margin-left: 20px;" class="d-flex mb-3">
                                                                         <i class="fa fa-star text-secondary"></i>
                                                                         <i class="fa fa-star text-secondary"></i>
                                                                         <i class="fa fa-star text-secondary"></i>
                                                                         <i class="fa fa-star text-secondary"></i>
                                                                     </div>
                                                                 </c:if>
-                                                                <c:if test="${comment.sta== '3sao'}">
-                                                                    <div class="d-flex mb-3">
+                                                                <c:if test="${comment.sta== '3'}">
+                                                                    <div style="margin-left: 20px;" class="d-flex mb-3">
                                                                         <i class="fa fa-star text-secondary"></i>
                                                                         <i class="fa fa-star text-secondary"></i>
                                                                         <i class="fa fa-star text-secondary"></i>
                                                                     </div>
                                                                 </c:if>
-                                                                <c:if test="${comment.sta== '2sao'}">
-                                                                    <div class="d-flex mb-3">
+                                                                <c:if test="${comment.sta== '2'}">
+                                                                    <div style="margin-left: 20px;" class="d-flex mb-3">
                                                                         <i class="fa fa-star text-secondary"></i>
                                                                         <i class="fa fa-star text-secondary"></i>
                                                                     </div>
                                                                 </c:if>
-                                                                <c:if test="${comment.sta== '1sao'}">
-                                                                    <div class="d-flex mb-3">
+                                                                <c:if test="${comment.sta== '1'}">
+                                                                    <div style="margin-left: 20px;" class="d-flex mb-3">
                                                                         <i class="fa fa-star text-secondary"></i>
                                                                     </div>
                                                                 </c:if>
@@ -288,17 +288,17 @@
                                     </div>
                                     <form method="post" action="/confirm-comment">
                                         <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
-                                        <h4 class="mb-4 fw-bold">Leave a Reply</h4>
+                                        <h4 class="mb-4 fw-bold">Hãy để lại 1 bình luận</h4>
                                         <div class="col-lg-12 mb-4">
                                             <div class="mb-2"><b>Đánh giá</b></div>
                                             <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" id="sort-1" value="1sao"
+                                                <input class="form-check-input" type="radio" id="sort-1" value="1"
                                                     name="radio-sort">
                                                 <label class="form-check-label" for="sort-1"><i
                                                         class="fa fa-star text-secondary"></i>
                                             </div>
                                             <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" id="sort-2" value="2sao"
+                                                <input class="form-check-input" type="radio" id="sort-2" value="2"
                                                     name="radio-sort">
                                                 <label class="form-check-label" for="sort-2">
                                                     <i class="fa fa-star text-secondary"></i>
@@ -307,7 +307,7 @@
                                             </div>
 
                                             <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" id="sort-3" value="3sao"
+                                                <input class="form-check-input" type="radio" id="sort-3" value="3"
                                                     name="radio-sort">
                                                 <label class="form-check-label" for="sort-3">
                                                     <i class="fa fa-star text-secondary"></i>
@@ -317,7 +317,7 @@
                                                 </label>
                                             </div>
                                             <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" id="sort-4" value="4sao"
+                                                <input class="form-check-input" type="radio" id="sort-4" value="4"
                                                     name="radio-sort">
                                                 <label class="form-check-label" for="sort-4">
                                                     <i class="fa fa-star text-secondary"></i>
@@ -329,7 +329,7 @@
                                             </div>
                                             <div class="form-check form-check-inline">
                                                 <input class="form-check-input" type="radio" id="sort-5" checked
-                                                    value="5sao" name="radio-sort">
+                                                    value="5" name="radio-sort">
                                                 <label class="form-check-label" for="sort-5">
                                                     <i class="fa fa-star text-secondary"></i>
                                                     <i class="fa fa-star text-secondary"></i>
@@ -368,41 +368,7 @@
                                             <span id="search-icon-1" class="input-group-text p-3"><i
                                                     class="fa fa-search"></i></span>
                                         </div>
-                                        <div class="mb-4">
-                                            <h4>Categories</h4>
-                                            <ul class="list-unstyled fruite-categorie">
-                                                <li>
-                                                    <div class="d-flex justify-content-between fruite-name">
-                                                        <a href="#"><i class="fas fa-apple-alt me-2"></i>Apples</a>
-                                                        <span>(3)</span>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="d-flex justify-content-between fruite-name">
-                                                        <a href="#"><i class="fas fa-apple-alt me-2"></i>Oranges</a>
-                                                        <span>(5)</span>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="d-flex justify-content-between fruite-name">
-                                                        <a href="#"><i class="fas fa-apple-alt me-2"></i>Strawbery</a>
-                                                        <span>(2)</span>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="d-flex justify-content-between fruite-name">
-                                                        <a href="#"><i class="fas fa-apple-alt me-2"></i>Banana</a>
-                                                        <span>(8)</span>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="d-flex justify-content-between fruite-name">
-                                                        <a href="#"><i class="fas fa-apple-alt me-2"></i>Pumpkin</a>
-                                                        <span>(5)</span>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
+
                                     </div>
                                     <div class="col-lg-12">
                                         <h4 class="mb-4">Sản phẩm bán chạy nhất</h4>
@@ -436,7 +402,7 @@
                                         </c:forEach>
 
                                         <div class="d-flex justify-content-center my-4">
-                                            <a href="/"
+                                            <a href="/products"
                                                 class="btn border border-secondary px-4 py-3 rounded-pill text-primary w-100">Xem
                                                 thêm</a>
                                         </div>

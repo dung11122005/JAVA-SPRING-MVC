@@ -35,7 +35,8 @@
                             <p class="mb-4">laptop chất lượng là quyết định quan trọng, đặc biệt khi bạn cần một người
                                 bạn đồng hành tin cậy cho công việc, học tập hoặc giải trí.</p>
                             <a href="https://viettelstore.vn/tin-tuc/nen-mua-laptop-hang-nao-tot-nhat-hien-nay"
-                                class="btn border-secondary py-2 px-4 rounded-pill text-primary">Đọc thêm</a>
+                                class="btn border-secondary py-2 px-4 rounded-pill text-primary" target="_blank">Đọc
+                                thêm</a>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
@@ -81,8 +82,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        <span class="text-light"><a href="https://www.facebook.com/cotem.khong.90?locale=vi_VN"><i
-                                    class="fas fa-copyright text-light me-2"></i>Đây là
+                        <span class="text-light"><a href="https://www.facebook.com/cotem.khong.90?locale=vi_VN"
+                                target="_blank"><i class="fas fa-copyright text-light me-2"></i>Đây là
                                 trang web của HOÀNG TẤN DŨNG </a>mọi quyền được bảo lưu</span>
                     </div>
                     <div class="col-md-6 my-auto text-center text-md-end text-white">
@@ -90,7 +91,8 @@
                         <!--/*** If you'd like to use the template without the below author’s credit link/attribution link/backlink, ***/-->
                         <!--/*** you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". ***/-->
                         Được thiết kế bởi <a class="border-bottom"
-                            href="https://www.facebook.com/cotem.khong.90?locale=vi_VN">HOÀNG TẤN DŨNG</a> và phân phối
+                            href="https://www.facebook.com/cotem.khong.90?locale=vi_VN" target="_blank">HOÀNG TẤN
+                            DŨNG</a> và phân phối
                         chỉ với giá sinh viên
                     </div>
                 </div>

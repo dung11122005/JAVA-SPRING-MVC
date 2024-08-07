@@ -47,6 +47,8 @@ public class Product {
     private String factory;
     private String target;
 
+    private int sta = 5;
+
     @OneToMany(mappedBy = "product")
     List<Comment> comments;
 
@@ -143,6 +145,14 @@ public class Product {
 
     public void setComments(List<Comment> comments) {
         this.comments = comments;
+    }
+
+    public int getSta() {
+        return sta;
+    }
+
+    public void setSta(int sta) {
+        this.sta = sta;
     }
 
 }
