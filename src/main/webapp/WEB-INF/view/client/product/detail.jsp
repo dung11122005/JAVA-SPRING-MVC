@@ -298,6 +298,7 @@
                                                                         <i class="fa fa-star text-secondary"></i>
                                                                         <i class="fa fa-star text-secondary"></i>
                                                                         <i class="fa fa-star text-secondary"></i>
+                                                                        <i class="fa fa-star"></i>
                                                                     </div>
                                                                 </c:if>
                                                                 <c:if test="${comment.sta== '3'}">
@@ -305,17 +306,26 @@
                                                                         <i class="fa fa-star text-secondary"></i>
                                                                         <i class="fa fa-star text-secondary"></i>
                                                                         <i class="fa fa-star text-secondary"></i>
+                                                                        <i class="fa fa-star"></i>
+                                                                        <i class="fa fa-star"></i>
                                                                     </div>
                                                                 </c:if>
                                                                 <c:if test="${comment.sta== '2'}">
                                                                     <div style="margin-left: 20px;" class="d-flex mb-3">
                                                                         <i class="fa fa-star text-secondary"></i>
                                                                         <i class="fa fa-star text-secondary"></i>
+                                                                        <i class="fa fa-star"></i>
+                                                                        <i class="fa fa-star"></i>
+                                                                        <i class="fa fa-star"></i>
                                                                     </div>
                                                                 </c:if>
                                                                 <c:if test="${comment.sta== '1'}">
                                                                     <div style="margin-left: 20px;" class="d-flex mb-3">
                                                                         <i class="fa fa-star text-secondary"></i>
+                                                                        <i class="fa fa-star"></i>
+                                                                        <i class="fa fa-star"></i>
+                                                                        <i class="fa fa-star"></i>
+                                                                        <i class="fa fa-star"></i>
                                                                     </div>
                                                                 </c:if>
                                                             </div>

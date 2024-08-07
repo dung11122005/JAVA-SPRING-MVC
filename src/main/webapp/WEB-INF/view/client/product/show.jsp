@@ -266,7 +266,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div style="margin-top: -40px;" class="col-12 col-md-9 text-center">
+                                    <div style="margin-top: -30px;" class="col-12 col-md-9 text-center">
 
                                         <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
                                         <div class="position-relative mx-auto mb-5">
