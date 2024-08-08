@@ -62,22 +62,26 @@ public class HomePageController {
     @GetMapping("/")
     public String getHomePage(Model model,
             @RequestParam("page") Optional<String> pageOptional, HttpServletRequest request) {
-        User currentUser = new User();// null
-        HttpSession session = request.getSession(false);
-        long id = (long) session.getAttribute("id");
-        currentUser.setId(id);
+        try {
+            User currentUser = new User();// null
+            HttpSession session = request.getSession(false);
+            long id = (long) session.getAttribute("id");
+            currentUser.setId(id);
 
-        Cart cart = this.cartRepository.findByUser(currentUser);
-        List<CartDetail> cartDetails = cart == null ? new ArrayList<CartDetail>() : cart.getCartDetails();
-        int sum = 0;
-        for (CartDetail cd : cartDetails) {
-            if (cd != null) {
-                sum++;
+            Cart cart = this.cartRepository.findByUser(currentUser);
+            List<CartDetail> cartDetails = cart == null ? new ArrayList<CartDetail>() : cart.getCartDetails();
+            int sum = 0;
+            for (CartDetail cd : cartDetails) {
+                if (cd != null) {
+                    sum++;
+                }
             }
-        }
-        if (cart != null) {
-            cart.setSum(sum);
-            this.cartRepository.save(cart);
+            if (cart != null) {
+                cart.setSum(sum);
+                this.cartRepository.save(cart);
+            }
+        } catch (Exception e) {
+            // TODO: handle exception
         }
 
         int page = 1;
