@@ -58,7 +58,7 @@ public class ItemController {
         Product pr;
         Product prs = new Product();
 
-        Optional optionalProduct = this.productService.fetchProductById(id);
+        Optional<Product> optionalProduct = this.productService.fetchProductById(id);
         if (optionalProduct.isPresent()) {
             prs = (Product) optionalProduct.get();
         }
@@ -241,7 +241,7 @@ public class ItemController {
         long id = (long) session.getAttribute("id");
         currentUser = this.userService.getUserById(id);
         Product product = new Product();
-        Optional optionalProduct = this.productService.fetchProductById(idProduct);
+        Optional<Product> optionalProduct = this.productService.fetchProductById(idProduct);
         if (optionalProduct.isPresent()) {
             product = (Product) optionalProduct.get();
         }
