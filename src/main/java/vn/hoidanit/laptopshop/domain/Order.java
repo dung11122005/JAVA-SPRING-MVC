@@ -28,6 +28,8 @@ public class Order {
 
     private String status;
 
+    private String image;
+
     // User_id
     @ManyToOne
     @JoinColumn(name = "user_id")
@@ -103,6 +105,14 @@ public class Order {
     @Override
     public String toString() {
         return "Order [id=" + id + ", totalPrice=" + totalPrice + "]";
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 
 }

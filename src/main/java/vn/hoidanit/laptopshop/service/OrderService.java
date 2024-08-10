@@ -12,6 +12,7 @@ import java.util.TreeSet;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 
 import vn.hoidanit.laptopshop.domain.Order;
 import vn.hoidanit.laptopshop.domain.OrderDetail;
@@ -27,13 +28,15 @@ public class OrderService {
     private final OrderRepository orderRepository;
     private final OrderDetailRepository orderDetailRepository;
     private final ProductRepository productRepository;
+    private final UploadService uploadService;
 
     public OrderService(OrderRepository orderRepository,
             OrderDetailRepository orderDetailRepository,
-            ProductRepository productRepository) {
+            ProductRepository productRepository, UploadService uploadService) {
         this.orderRepository = orderRepository;
         this.orderDetailRepository = orderDetailRepository;
         this.productRepository = productRepository;
+        this.uploadService = uploadService;
     }
 
     public List<Order> fetchAllOrders() {
@@ -65,7 +68,22 @@ public class OrderService {
     public void updateOrder(Order order) {
         Optional<Order> orderOptional = this.fetchOrderById(order.getId());
         if (orderOptional.isPresent()) {
+
             Order currentOrder = orderOptional.get();
+            currentOrder.setStatus(order.getStatus());
+            this.orderRepository.save(currentOrder);
+        }
+    }
+
+    public void updateOrder(Order order, MultipartFile file) {
+        Optional<Order> orderOptional = this.fetchOrderById(order.getId());
+        if (orderOptional.isPresent()) {
+            Order currentOrder = orderOptional.get();
+
+            if (!file.isEmpty()) {
+                String img = this.uploadService.handleSaveUploadFile(file, "shipped");
+                currentOrder.setImage(img);
+            }
             currentOrder.setStatus(order.getStatus());
             this.orderRepository.save(currentOrder);
         }
