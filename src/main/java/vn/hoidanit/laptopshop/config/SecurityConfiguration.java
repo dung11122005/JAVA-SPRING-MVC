@@ -64,7 +64,7 @@ public class SecurityConfiguration {
                                 DispatcherType.INCLUDE)
                         .permitAll()
 
-                        .requestMatchers("/", "/login/**", "/register", "/product/**", "/products/**",
+                        .requestMatchers("/", "/laptopshop/login/**", "/register", "/product/**", "/products/**",
                                 "/client/**", "/css/**", "/js/**", "/images/**")
                         .permitAll()
 
@@ -82,8 +82,8 @@ public class SecurityConfiguration {
                 .rememberMe(r -> r.rememberMeServices(rememberMeServices()))
 
                 .formLogin(formLogin -> formLogin
-                        .loginPage("/login")
-                        .failureUrl("/login?error")
+                        .loginPage("/laptopshop/login")
+                        .failureUrl("/laptopshop/login?error")
                         .successHandler(customSuccessHandler())
                         .permitAll())
                 .exceptionHandling(ex -> ex.accessDeniedPage("/access-deny"));
