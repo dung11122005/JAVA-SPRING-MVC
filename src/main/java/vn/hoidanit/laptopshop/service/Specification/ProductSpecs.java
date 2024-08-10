@@ -3,7 +3,6 @@ package vn.hoidanit.laptopshop.service.Specification;
 import java.util.List;
 
 import org.springframework.data.jpa.domain.Specification;
-
 import vn.hoidanit.laptopshop.domain.Product;
 import vn.hoidanit.laptopshop.domain.Product_;
 
