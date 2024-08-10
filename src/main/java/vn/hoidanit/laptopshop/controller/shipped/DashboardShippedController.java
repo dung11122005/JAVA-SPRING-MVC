@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
 import vn.hoidanit.laptopshop.domain.Order;
+import vn.hoidanit.laptopshop.domain.OrderDetail;
 import vn.hoidanit.laptopshop.repository.OrderRepository;
 import vn.hoidanit.laptopshop.service.OrderService;
 import vn.hoidanit.laptopshop.service.UploadService;
@@ -62,6 +63,16 @@ public class DashboardShippedController {
         Order currentOrder = this.orderService.fetchOrderById(id).get();
         model.addAttribute("newOrder", currentOrder);
         return "shipped/dashboard/update";
+    }
+
+    @GetMapping("/shipped/detail/{id}")
+    public String getShippedDetail(Model model, @PathVariable long id) {
+        Order currentOrder = this.orderService.fetchOrderById(id).get();
+        List<OrderDetail> orderDetails = currentOrder == null ? new ArrayList<OrderDetail>()
+                : currentOrder.getOrderDetails();
+        model.addAttribute("orderDetails", orderDetails);
+        model.addAttribute("currentOrder", currentOrder);
+        return "shipped/dashboard/detail";
     }
 
     @PostMapping("/shipped/update")
