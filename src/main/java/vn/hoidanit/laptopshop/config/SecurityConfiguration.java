@@ -31,7 +31,7 @@ public class SecurityConfiguration {
         return new CustomUserDetailsService(userService);
     }
 
-    @Bean
+    @Bean // https://stackoverflow.com/a/62279149
     public DaoAuthenticationProvider authProvider(
             PasswordEncoder passwordEncoder,
             UserDetailsService userDetailsService) {
@@ -42,7 +42,7 @@ public class SecurityConfiguration {
         return authProvider;
     }
 
-    @Bean
+    @Bean // chuyen huong khi login thanh cong
     public AuthenticationSuccessHandler customSuccessHandler() {
         return new CustomSuccessHandler();
     }
@@ -56,7 +56,7 @@ public class SecurityConfiguration {
     }
 
     @Bean
-    SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
+    SecurityFilterChain filterChain(HttpSecurity http) throws Exception { // https://docs.spring.io/spring-security/reference/servlet/configuration/java.html#jc-httpsecurity
         http
                 .authorizeHttpRequests(authorize -> authorize
 
@@ -65,7 +65,7 @@ public class SecurityConfiguration {
                         .permitAll()
 
                         .requestMatchers("/", "/laptopshop/login/**", "/register", "/product/**", "/products/**",
-                                "/client/**", "/css/**", "/js/**", "/images/**")
+                                "/client/**", "/css/**", "/js/**", "/images/**") // https://docs.spring.io/spring-security/reference/servlet/authorization/authorize-http-requests.html#match-requests
                         .permitAll()
 
                         .requestMatchers("/admin/**").hasRole("ADMIN")
@@ -74,15 +74,15 @@ public class SecurityConfiguration {
                         .anyRequest().authenticated())
 
                 .sessionManagement((sessionManagement) -> sessionManagement
-                        .sessionCreationPolicy(SessionCreationPolicy.ALWAYS)
-                        .invalidSessionUrl("/logout?expired")
-                        .maximumSessions(1)
+                        .sessionCreationPolicy(SessionCreationPolicy.ALWAYS) // https://docs.spring.io/spring-security/reference/servlet/authentication/session-management.html#stateless-authentication
+                        .invalidSessionUrl("/logout?expired") // https://docs.spring.io/spring-security/reference/servlet/authentication/session-management.html#_detecting_timeouts
+                        .maximumSessions(1) // https://docs.spring.io/spring-security/reference/servlet/authentication/session-management.html#ns-concurrent-sessions
                         .maxSessionsPreventsLogin(false))
-                .logout(logout -> logout.deleteCookies("JSESSIONID").invalidateHttpSession(true))
+                .logout(logout -> logout.deleteCookies("JSESSIONID").invalidateHttpSession(true)) // https://www.baeldung.com/spring-security-logout
 
-                .rememberMe(r -> r.rememberMeServices(rememberMeServices()))
+                .rememberMe(r -> r.rememberMeServices(rememberMeServices())) // https://www.baeldung.com/spring-security-remember-me
 
-                .formLogin(formLogin -> formLogin
+                .formLogin(formLogin -> formLogin // https://docs.spring.io/spring-security/reference/servlet/authentication/passwords/form.html
                         .loginPage("/laptopshop/login")
                         .failureUrl("/laptopshop/login?error")
                         .successHandler(customSuccessHandler())

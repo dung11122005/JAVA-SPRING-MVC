@@ -14,7 +14,7 @@ import org.springframework.web.servlet.view.JstlView;
 @EnableWebMvc
 public class WebMvcConfig implements WebMvcConfigurer {
     @Bean
-    public ViewResolver viewResolver() {
+    public ViewResolver viewResolver() {// https://www.baeldung.com/spring-mvc-view-resolver-tutorial#internalResourceViewResolver
         final InternalResourceViewResolver bean = new InternalResourceViewResolver();
         bean.setViewClass(JstlView.class);
         bean.setPrefix("/WEB-INF/view/");
@@ -28,7 +28,7 @@ public class WebMvcConfig implements WebMvcConfigurer {
     }
 
     @Override
-    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+    public void addResourceHandlers(ResourceHandlerRegistry registry) { // https://www.baeldung.com/spring-mvc-static-resources#resource-http-request-handler
         registry.addResourceHandler("/css/**").addResourceLocations("/resources/css/");
         registry.addResourceHandler("/js/**").addResourceLocations("/resources/js/");
         registry.addResourceHandler("/images/**").addResourceLocations("/resources/images/");

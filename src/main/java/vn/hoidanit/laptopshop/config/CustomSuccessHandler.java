@@ -26,7 +26,7 @@ public class CustomSuccessHandler implements AuthenticationSuccessHandler {
     @Autowired
     public UserService UserService;
 
-    protected String determineTargetUrl(final Authentication authentication) {
+    protected String determineTargetUrl(final Authentication authentication) { // https://www.baeldung.com/spring-redirect-after-login#success-handler
 
         Map<String, String> roleTargetUrlMap = new HashMap<>();
         roleTargetUrlMap.put("ROLE_USER", "/");
@@ -44,7 +44,7 @@ public class CustomSuccessHandler implements AuthenticationSuccessHandler {
         throw new IllegalStateException();
     }
 
-    protected void clearAuthenticationAttributes(HttpServletRequest request, Authentication authentication) {
+    protected void clearAuthenticationAttributes(HttpServletRequest request, Authentication authentication) { // https://www.baeldung.com/spring-redirect-after-login#success-handler
         HttpSession session = request.getSession(false);
         if (session == null) {
             return;
@@ -71,7 +71,7 @@ public class CustomSuccessHandler implements AuthenticationSuccessHandler {
 
     @Override
     public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response,
-            Authentication authentication) throws IOException, ServletException {
+            Authentication authentication) throws IOException, ServletException { // https://www.baeldung.com/spring-redirect-after-login#success-handler
         String targetUrl = determineTargetUrl(authentication);
 
         if (response.isCommitted()) {
