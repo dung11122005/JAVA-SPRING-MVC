@@ -4,6 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,6 +19,8 @@ import org.springframework.web.multipart.MultipartFile;
 
 import vn.hoidanit.laptopshop.domain.Order;
 import vn.hoidanit.laptopshop.domain.OrderDetail;
+import vn.hoidanit.laptopshop.domain.Order_;
+import vn.hoidanit.laptopshop.domain.Product_;
 import vn.hoidanit.laptopshop.repository.OrderRepository;
 import vn.hoidanit.laptopshop.service.OrderService;
 import vn.hoidanit.laptopshop.service.UploadService;
@@ -35,7 +41,7 @@ public class DashboardShippedController {
     }
 
     @GetMapping("/shipped")
-    public String getDashboard(Model model) {
+    public String getDashboard(Model model, @RequestParam("page") Optional<String> pageOptional) {
 
         List<Order> ods = this.orderService.fetchAllOrders();
 
@@ -44,15 +50,31 @@ public class DashboardShippedController {
         int totalClient = 0;
         if (orders != null) {
             for (Order order : orders) {
-                if (order.getStatus().equals("COMPLETE")) {
+                if (order.getStatus().equals("3COMPLETE")) {
                     sum = sum + order.getTotalPrice();
-                } else if (order.getStatus().equals("SHIPPING")) {
+                } else if (order.getStatus().equals("2SHIPPING")) {
                     totalClient++;
                 }
             }
         }
 
-        model.addAttribute("shipPingOrders", orders);
+        int page = 1;
+        try {
+            if (pageOptional.isPresent()) {
+                page = Integer.parseInt(pageOptional.get());
+            } else {
+                page = 1;
+            }
+        } catch (Exception e) {
+
+        }
+
+        Pageable pageable = PageRequest.of(page - 1, 3, Sort.by(Order_.STATUS).ascending());
+        Page<Order> or = this.orderService.fetchAllOrdersPagination(pageable);
+        List<Order> listOrders = or.getContent();
+        model.addAttribute("shipPingOrders", listOrders);
+        model.addAttribute("currentPage", page);
+        model.addAttribute("totalPages", or.getTotalPages());
         model.addAttribute("sumPrice", sum);
         model.addAttribute("totalClient", totalClient);
         return "shipped/dashboard/show";

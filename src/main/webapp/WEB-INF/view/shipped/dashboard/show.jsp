@@ -15,8 +15,12 @@
                     <link rel="stylesheet" href="/client/css/tailwind.output.css" />
                     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
                     <script src="/client/js/init-alpine.js"></script>
+                    <link href="/css/styles.css" rel="stylesheet" />
                     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css" />
                     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js" defer></script>
+                    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js"
+                        crossorigin="anonymous"></script>
+                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
                     <script src="/client/js/charts-lines.js" defer></script>
                     <script src="/client/js/charts-pie.js" defer></script>
                 </head>
@@ -28,7 +32,8 @@
                         <aside
                             class="z-20 hidden w-64 overflow-y-auto bg-white dark:bg-gray-800 md:block flex-shrink-0">
                             <div class="py-4 text-gray-500 dark:text-gray-400">
-                                <a class="ml-6 text-lg font-bold text-gray-800 dark:text-gray-200" href="/shipped">
+                                <a style="text-decoration: none;"
+                                    class="ml-6 text-lg font-bold text-gray-800 dark:text-gray-200" href="/shipped">
                                     Shipped -laptopshop
                                 </a>
                                 <ul class="mt-6">
@@ -36,7 +41,8 @@
                                         <span
                                             class="absolute inset-y-0 left-0 w-1 bg-purple-600 rounded-tr-lg rounded-br-lg"
                                             aria-hidden="true"></span>
-                                        <a class="inline-flex items-center w-full text-sm font-semibold text-gray-800 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-100"
+                                        <a style="text-decoration: none;"
+                                            class="inline-flex items-center w-full text-sm font-semibold text-gray-800 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-100"
                                             href="/shipped">
                                             <svg class="w-5 h-5" aria-hidden="true" fill="none" stroke-linecap="round"
                                                 stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"
@@ -139,7 +145,7 @@
                                                                     </div>
                                                                     <div>
                                                                         <a href="/shipped/detail/${shipPingOrder.id}"
-                                                                            style="font-size: 17px;"
+                                                                            style="font-size: 17px; text-decoration: none;"
                                                                             class="font-semibold">
                                                                             ${shipPingOrder.user.fullName}
                                                                         </a>
@@ -170,28 +176,29 @@
 
                                                             </td>
                                                             <td class="px-4 py-3 ">
-                                                                <c:if test="${shipPingOrder.status=='SHIPPING'}">
+                                                                <c:if test="${shipPingOrder.status=='2SHIPPING'}">
                                                                     <span
                                                                         class="px-2 py-1 font-semibold leading-tight text-blue-700 bg-blue-100 rounded-full dark:bg-blue-700 dark:text-dark-100">
-                                                                        ${shipPingOrder.status}
+                                                                        SHIPPING
                                                                     </span>
                                                                 </c:if>
-                                                                <c:if test="${shipPingOrder.status=='COMPLETE'}">
+                                                                <c:if test="${shipPingOrder.status=='3COMPLETE'}">
                                                                     <span
                                                                         class="px-2 py-1 font-semibold leading-tight text-green-700 bg-green-100 rounded-full dark:bg-green-700 dark:text-green-100">
-                                                                        ${shipPingOrder.status}
+                                                                        COMPLETE
                                                                     </span>
                                                                 </c:if>
-                                                                <c:if test="${shipPingOrder.status=='CANCEL'}">
+                                                                <c:if test="${shipPingOrder.status=='4CANCEL'}">
                                                                     <span
                                                                         class="px-2 py-1 font-semibold leading-tight text-red-700 bg-red-100 rounded-full dark:bg-red-700 dark:text-red-100">
-                                                                        ${shipPingOrder.status}
+                                                                        CANCEL
                                                                     </span>
                                                                 </c:if>
 
                                                             </td>
                                                             <td class="px-4 py-3 ">
-                                                                <a href="/shipped/update/${shipPingOrder.id}"
+                                                                <a style="text-decoration: none;"
+                                                                    href="/shipped/update/${shipPingOrder.id}"
                                                                     class="px-3 py-1 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-md active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple">Update</a>
                                                             </td>
                                                         </tr>
@@ -200,6 +207,34 @@
 
                                                 </tbody>
                                             </table>
+
+                                            <nav aria-label="Table navigation justify-content-center">
+                                                <ul class="pagination justify-content-center">
+                                                    <li class="page-item">
+                                                        <a class="${1 eq currentPage ? 'disabled page-link':'page-link'}"
+                                                            href="/shipped?page=${currentPage - 1}"
+                                                            aria-label="Previous">
+                                                            <span aria-hidden="true">&laquo;</span>
+                                                        </a>
+                                                    </li>
+                                                    <c:forEach begin="0" end="${totalPages -1}" varStatus="loop">
+                                                        <li class="page-item">
+                                                            <a class="${(loop.index + 1) eq currentPage ? 'active page-link':'page-link'}"
+                                                                href="/shipped?page=${loop.index + 1}">
+                                                                ${loop.index + 1}
+                                                            </a>
+                                                        </li>
+                                                    </c:forEach>
+
+                                                    <li class="page-item">
+                                                        <a class="${totalPages eq currentPage ? 'disabled page-link':'page-link'}"
+                                                            href="/shipped?page=${currentPage + 1}" aria-label="Next">
+                                                            <span aria-hidden="true">&raquo;</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </nav>
+
                                         </div>
 
                                     </div>

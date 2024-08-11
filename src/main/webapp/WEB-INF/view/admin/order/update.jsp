@@ -67,10 +67,10 @@
                                                     <div class="mb-3 col-12 col-md-6">
                                                         <label class="form-label">Status:</label>
                                                         <form:select class="form-select" path="status">
-                                                            <form:option value="PENDING">PENDING</form:option>
-                                                            <form:option value="SHIPPING">SHIPPING</form:option>
-                                                            <form:option value="COMPLETE">COMPLETE</form:option>
-                                                            <form:option value="CANCEL">CANCEL</form:option>
+                                                            <form:option value="1PENDING">PENDING</form:option>
+                                                            <form:option value="2SHIPPING">SHIPPING</form:option>
+                                                            <form:option value="3COMPLETE">COMPLETE</form:option>
+                                                            <form:option value="4CANCEL">CANCEL</form:option>
                                                         </form:select>
                                                     </div>
                                                     <div class="col-12 mb-5">
