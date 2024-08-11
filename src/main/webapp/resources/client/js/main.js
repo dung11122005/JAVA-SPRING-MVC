@@ -308,6 +308,7 @@
     });
 
 
+
     //handle auto checkbox after page loading
     // Parse the URL parameters
     const params = new URLSearchParams(window.location.search);

@@ -11,6 +11,7 @@ public class ProductCriteriaDTO {
     private Optional<String> sort;
     private Optional<String> valueStar;
     private Optional<String> searchValue;
+    private Optional<String> shipSearchValue;
 
     public Optional<String> getPage() {
         return page;
@@ -66,6 +67,14 @@ public class ProductCriteriaDTO {
 
     public void setSearchValue(Optional<String> searchValue) {
         this.searchValue = searchValue;
+    }
+
+    public Optional<String> getShipSearchValue() {
+        return shipSearchValue;
+    }
+
+    public void setShipSearchValue(Optional<String> shipSearchValue) {
+        this.shipSearchValue = shipSearchValue;
     }
 
 }

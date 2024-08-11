@@ -11,6 +11,7 @@ import java.util.TreeSet;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -18,9 +19,11 @@ import vn.hoidanit.laptopshop.domain.Order;
 import vn.hoidanit.laptopshop.domain.OrderDetail;
 import vn.hoidanit.laptopshop.domain.Product;
 import vn.hoidanit.laptopshop.domain.User;
+import vn.hoidanit.laptopshop.domain.dto.ProductCriteriaDTO;
 import vn.hoidanit.laptopshop.repository.OrderDetailRepository;
 import vn.hoidanit.laptopshop.repository.OrderRepository;
 import vn.hoidanit.laptopshop.repository.ProductRepository;
+import vn.hoidanit.laptopshop.service.Specification.ProductSpecs;
 
 @Service
 public class OrderService {
@@ -45,6 +48,22 @@ public class OrderService {
 
     public Page<Order> fetchAllOrdersPagination(Pageable page) {
         return this.orderRepository.findAll(page);
+    }
+
+    public Page<Order> fetchShipProductPaginationWithSpec(Pageable page, ProductCriteriaDTO productCriteriaDTO) {
+
+        if (productCriteriaDTO.getShipSearchValue() == null) {
+            return this.orderRepository.findAll(page);
+        }
+
+        Specification<Order> combinedSpec = Specification.where(null);
+        if (productCriteriaDTO.getShipSearchValue() != null && productCriteriaDTO.getShipSearchValue().isPresent()) {
+            Specification<Order> currentSpecs = ProductSpecs
+                    .matchListShipSearch(productCriteriaDTO.getShipSearchValue().get());
+            combinedSpec = combinedSpec.and(currentSpecs);
+        }
+
+        return this.orderRepository.findAll(combinedSpec, page);
     }
 
     public Optional<Order> fetchOrderById(long id) {

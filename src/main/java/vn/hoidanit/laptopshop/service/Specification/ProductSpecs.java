@@ -3,6 +3,9 @@ package vn.hoidanit.laptopshop.service.Specification;
 import java.util.List;
 
 import org.springframework.data.jpa.domain.Specification;
+
+import vn.hoidanit.laptopshop.domain.Order;
+import vn.hoidanit.laptopshop.domain.Order_;
 import vn.hoidanit.laptopshop.domain.Product;
 import vn.hoidanit.laptopshop.domain.Product_;
 
@@ -43,6 +46,11 @@ public class ProductSpecs {
 
     public static Specification<Product> matchListSearch(String valueSearch) {
         return (root, query, criteriaBuilder) -> criteriaBuilder.like(root.get(Product_.NAME), "%" + valueSearch + "%");
+    }
+
+    public static Specification<Order> matchListShipSearch(String valueShipSearch) {
+        return (root, query, criteriaBuilder) -> criteriaBuilder.like(root.get(Order_.RECEIVER_ADDRESS),
+                "%" + valueShipSearch + "%");
     }
 
     // case5

@@ -21,8 +21,15 @@
                     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js"
                         crossorigin="anonymous"></script>
                     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+                    <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery-toast-plugin/1.3.2/jquery.toast.min.css"
+                        rel="stylesheet">
                     <script src="/client/js/charts-lines.js" defer></script>
                     <script src="/client/js/charts-pie.js" defer></script>
+                    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+                        rel="stylesheet">
+                    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
                 </head>
 
                 <body>
@@ -111,10 +118,13 @@
                                             </div>
                                         </div>
                                     </div>
-
+                                    <c:if test="${totalPages==0}">
+                                        <h4 style="color: red;" class="mb-3">Không tìm thấy địa chỉ tương ứng</h4>
+                                    </c:if>
                                     <!-- New Table -->
                                     <div class="w-full overflow-hidden rounded-lg shadow-xs">
                                         <div class="w-full overflow-x-auto">
+
                                             <table class="w-full whitespace-no-wrap">
                                                 <thead>
                                                     <tr
@@ -207,34 +217,35 @@
 
                                                 </tbody>
                                             </table>
-
-                                            <nav aria-label="Table navigation justify-content-center">
-                                                <ul class="pagination justify-content-center">
-                                                    <li class="page-item">
-                                                        <a class="${1 eq currentPage ? 'disabled page-link':'page-link'}"
-                                                            href="/shipped?page=${currentPage - 1}"
-                                                            aria-label="Previous">
-                                                            <span aria-hidden="true">&laquo;</span>
-                                                        </a>
-                                                    </li>
-                                                    <c:forEach begin="0" end="${totalPages -1}" varStatus="loop">
+                                            <c:if test="${totalPages!=0}">
+                                                <nav aria-label="Table navigation justify-content-center">
+                                                    <ul class="pagination justify-content-center">
                                                         <li class="page-item">
-                                                            <a class="${(loop.index + 1) eq currentPage ? 'active page-link':'page-link'}"
-                                                                href="/shipped?page=${loop.index + 1}">
-                                                                ${loop.index + 1}
+                                                            <a class="${1 eq currentPage ? 'disabled page-link':'page-link'}"
+                                                                href="/shipped?page=${currentPage - 1}${queryString}"
+                                                                aria-label="Previous">
+                                                                <span aria-hidden="true">&laquo;</span>
                                                             </a>
                                                         </li>
-                                                    </c:forEach>
+                                                        <c:forEach begin="0" end="${totalPages -1}" varStatus="loop">
+                                                            <li class="page-item">
+                                                                <a class="${(loop.index + 1) eq currentPage ? 'active page-link':'page-link'}"
+                                                                    href="/shipped?page=${loop.index + 1}${queryString}">
+                                                                    ${loop.index + 1}
+                                                                </a>
+                                                            </li>
+                                                        </c:forEach>
 
-                                                    <li class="page-item">
-                                                        <a class="${totalPages eq currentPage ? 'disabled page-link':'page-link'}"
-                                                            href="/shipped?page=${currentPage + 1}" aria-label="Next">
-                                                            <span aria-hidden="true">&raquo;</span>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </nav>
-
+                                                        <li class="page-item">
+                                                            <a class="${totalPages eq currentPage ? 'disabled page-link':'page-link'}"
+                                                                href="/shipped?page=${currentPage + 1}${queryString}"
+                                                                aria-label="Next">
+                                                                <span aria-hidden="true">&raquo;</span>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </nav>
+                                            </c:if>
                                         </div>
 
                                     </div>
@@ -242,6 +253,17 @@
                             </main>
                         </div>
                     </div>
+                    <script src="/client/js/main.js"></script>
+                    <script>
+                        $('#shipSearchButton').click(function (event) {
+                            let searchValue = $('input[name="shipSearchProduct"]').val();
+                            const currentUrl = new URL(window.location.href);
+                            const searchParams = currentUrl.searchParams;
+                            searchParams.set('page', '1');
+                            searchParams.set('shipSearchValue', searchValue);
+                            window.location.href = currentUrl.toString();
+                        });
+                    </script>
                 </body>
 
                 </html>

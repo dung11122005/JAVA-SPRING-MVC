@@ -17,12 +17,16 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
+import jakarta.servlet.http.HttpServletRequest;
 import vn.hoidanit.laptopshop.domain.Order;
 import vn.hoidanit.laptopshop.domain.OrderDetail;
 import vn.hoidanit.laptopshop.domain.Order_;
+import vn.hoidanit.laptopshop.domain.Product;
 import vn.hoidanit.laptopshop.domain.Product_;
+import vn.hoidanit.laptopshop.domain.dto.ProductCriteriaDTO;
 import vn.hoidanit.laptopshop.repository.OrderRepository;
 import vn.hoidanit.laptopshop.service.OrderService;
+import vn.hoidanit.laptopshop.service.ProductService;
 import vn.hoidanit.laptopshop.service.UploadService;
 
 @Controller
@@ -31,17 +35,20 @@ public class DashboardShippedController {
     private final OrderService orderService;
     private final UploadService uploadService;
     private final OrderRepository orderRepository;
+    private final ProductService productService;
 
     public DashboardShippedController(OrderService orderService,
             UploadService uploadService,
-            OrderRepository orderRepository) {
+            OrderRepository orderRepository,
+            ProductService productService) {
         this.orderService = orderService;
         this.uploadService = uploadService;
         this.orderRepository = orderRepository;
+        this.productService = productService;
     }
 
     @GetMapping("/shipped")
-    public String getDashboard(Model model, @RequestParam("page") Optional<String> pageOptional) {
+    public String getDashboard(Model model, ProductCriteriaDTO productCriteriaDTO, HttpServletRequest request) {
 
         List<Order> ods = this.orderService.fetchAllOrders();
 
@@ -60,23 +67,30 @@ public class DashboardShippedController {
 
         int page = 1;
         try {
-            if (pageOptional.isPresent()) {
-                page = Integer.parseInt(pageOptional.get());
+            if (productCriteriaDTO.getPage().isPresent()) {
+                page = Integer.parseInt(productCriteriaDTO.getPage().get());
             } else {
-                page = 1;
+
             }
         } catch (Exception e) {
 
         }
 
-        Pageable pageable = PageRequest.of(page - 1, 3, Sort.by(Order_.STATUS).ascending());
-        Page<Order> or = this.orderService.fetchAllOrdersPagination(pageable);
-        List<Order> listOrders = or.getContent();
+        Pageable pageable = PageRequest.of(page - 1, 10, Sort.by(Order_.STATUS).ascending());
+        Page<Order> or = this.orderService.fetchShipProductPaginationWithSpec(pageable, productCriteriaDTO);
+
+        List<Order> listOrders = or.getContent().size() > 0 ? or.getContent() : new ArrayList<Order>();
+        String qs = request.getQueryString();
+        if (qs != null && !qs.isBlank()) {
+            // remove page
+            qs = qs.replace("page=" + page, "");
+        }
         model.addAttribute("shipPingOrders", listOrders);
         model.addAttribute("currentPage", page);
         model.addAttribute("totalPages", or.getTotalPages());
         model.addAttribute("sumPrice", sum);
         model.addAttribute("totalClient", totalClient);
+        model.addAttribute("queryString", qs);
         return "shipped/dashboard/show";
     }
 
