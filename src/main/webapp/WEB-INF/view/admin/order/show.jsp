@@ -55,16 +55,20 @@
                                                             </td>
                                                             <td>${order.user.fullName}</td>
                                                             <c:if test="${order.status=='1PENDING'}">
-                                                                <td>PENDING</td>
+                                                                <td style="color: rgb(245, 192, 17); font-weight: 600;">
+                                                                    PENDING</td>
                                                             </c:if>
                                                             <c:if test="${order.status=='2SHIPPING'}">
-                                                                <td>SHIPPING</td>
+                                                                <td style="color: rgb(0, 157, 255); font-weight: 600;">
+                                                                    SHIPPING</td>
                                                             </c:if>
                                                             <c:if test="${order.status=='3COMPLETE'}">
-                                                                <td>COMPLETE</td>
+                                                                <td style="color: rgb(6, 197, 98); font-weight: 600;">
+                                                                    COMPLETE</td>
                                                             </c:if>
                                                             <c:if test="${order.status=='4CANCEL'}">
-                                                                <td>CANCEL</td>
+                                                                <td style="color: rgb(255, 51, 51); font-weight: 600;">
+                                                                    CANCEL</td>
                                                             </c:if>
                                                             <td>
                                                                 <a href="/admin/order/${order.id}"
