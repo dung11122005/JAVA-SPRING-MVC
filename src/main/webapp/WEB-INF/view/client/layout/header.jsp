@@ -52,6 +52,14 @@
                                 <!-- https://stackoverflow.com/a/21329436/22612096 -->
 
                                 <c:if test="${not empty pageContext.request.userPrincipal}">
+
+                                    <a href="/cart" class="position-relative me-4 my-auto">
+                                        <i style="font-size: 32px;" class="far fa-bell"></i>
+                                        <span id="sumCart"
+                                            class="position-absolute bg-secondary rounded-circle d-flex align-items-center justify-content-center text-dark px-1"
+                                            style="top: -5px; left: 15px; height: 20px; min-width: 20px;">${sessionScope.sum}</span>
+                                    </a>
+
                                     <a href="/cart" class="position-relative me-4 my-auto">
                                         <i class="fa fa-shopping-bag fa-2x"></i>
                                         <span id="sumCart"
@@ -84,7 +92,7 @@
                                                 <form method="post" action="/logout">
                                                     <input type="hidden" name="${_csrf.parameterName}"
                                                         value="${_csrf.token}" />
-                                                    <button class="dropdown-item" href="#">Đăng xuất</button>
+                                                    <button class="dropdown-item">Đăng xuất</button>
                                                 </form>
                                             </li>
                                         </ul>
