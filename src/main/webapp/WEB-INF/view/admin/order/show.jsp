@@ -33,7 +33,6 @@
                                         <div class="col-12 mx-auto">
                                             <div class="d-flex justify-content-between">
                                                 <h3>Table Orders</h3>
-
                                             </div>
                                             <hr />
                                             <table class="table table-bordered table-hover table">
@@ -55,7 +54,18 @@
                                                                     value="${order.totalPrice}" /> đ
                                                             </td>
                                                             <td>${order.user.fullName}</td>
-                                                            <td>${order.status}</td>
+                                                            <c:if test="${order.status=='1PENDING'}">
+                                                                <td>PENDING</td>
+                                                            </c:if>
+                                                            <c:if test="${order.status=='2SHIPPING'}">
+                                                                <td>SHIPPING</td>
+                                                            </c:if>
+                                                            <c:if test="${order.status=='3COMPLETE'}">
+                                                                <td>COMPLETE</td>
+                                                            </c:if>
+                                                            <c:if test="${order.status=='4CANCEL'}">
+                                                                <td>CANCEL</td>
+                                                            </c:if>
                                                             <td>
                                                                 <a href="/admin/order/${order.id}"
                                                                     class="btn btn-success">View</a>
