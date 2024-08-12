@@ -52,13 +52,37 @@
                                 <!-- https://stackoverflow.com/a/21329436/22612096 -->
 
                                 <c:if test="${not empty pageContext.request.userPrincipal}">
+                                    <div class="dropdown my-auto dropdown-hover">
+                                        <a href="#" class="position-relative me-4 my-auto" role="button"
+                                            id="dropdownMenuLink" aria-expanded="false" data-bs-toggle="dropdown"
+                                            data-bs-hover="true">
+                                            <i style="font-size: 32px;" class="far fa-bell"></i>
+                                        </a>
+                                        <div style="width: 370px; height: 300px; overflow-y:auto ;"
+                                            class="container2 dropdown-menu dropdown-menu-end p-4"
+                                            aria-labelledby="dropdownMenuLink">
+                                            <!-- <c:if test="${sessionScope.listOrder == null}">
+                                                <h5 style="margin: 60px 60px ;">
+                                                    Không có thông báo
+                                                </h5>
+                                            </c:if> -->
+                                            <!-- <c:if test="${sessionScope.listOrder != null}">
+                                                <c:forEach var="listOrder" items="${sessionScope.listOrder}">
+                                                    <li class="d-flex align-items-center flex-column"
+                                                        style="min-width: 300px;">
+                                                        <img style="width: 150px; height: 150px; border-radius: 50%; overflow: hidden;  display: flex;
+                                                        justify-content: center; align-items: center; object-fit: cover;"
+                                                            src="/images/avatar/logoshop.jpg" />
+                                                        <div class="text-center my-3">
+                                                            <c:out value="${sessionScope.fullName}" />
+                                                        </div>
+                                                    </li>
+                                                </c:forEach>
+                                            </c:if> -->
 
-                                    <a href="/cart" class="position-relative me-4 my-auto">
-                                        <i style="font-size: 32px;" class="far fa-bell"></i>
-                                        <span id="sumCart"
-                                            class="position-absolute bg-secondary rounded-circle d-flex align-items-center justify-content-center text-dark px-1"
-                                            style="top: -5px; left: 15px; height: 20px; min-width: 20px;">${sessionScope.sum}</span>
-                                    </a>
+                                        </div>
+                                    </div>
+
 
                                     <a href="/cart" class="position-relative me-4 my-auto">
                                         <i class="fa fa-shopping-bag fa-2x"></i>

@@ -50,6 +50,7 @@
                         right: 0px;
                     }
                 </style>
+
                 <style>
                     .page-link.disabled {
                         color: var(--bs-pagination-disabled-color);
@@ -426,6 +427,7 @@
 
                 <!-- Template Javascript -->
                 <script src="/client/js/main.js"></script>
+
                 <script
                     src="https://cdnjs.cloudflare.com/ajax/libs/jquery-toast-plugin/1.3.2/jquery.toast.min.js"></script>
             </body>
