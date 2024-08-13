@@ -61,28 +61,63 @@
                                         <div style="width: 370px; height: 300px; overflow-y:auto ;"
                                             class="container2 dropdown-menu dropdown-menu-end p-4"
                                             aria-labelledby="dropdownMenuLink">
-                                            <!-- <c:if test="${sessionScope.listOrder == null}">
+                                            <c:if test="${sessionScope.listOrder == null}">
                                                 <h5 style="margin: 60px 60px ;">
                                                     Không có thông báo
                                                 </h5>
-                                            </c:if> -->
-                                            <!-- <c:if test="${sessionScope.listOrder != null}">
-                                                <c:forEach var="listOrder" items="${sessionScope.listOrder}">
-                                                    <li class="d-flex align-items-center flex-column"
-                                                        style="min-width: 300px;">
-                                                        <img style="width: 150px; height: 150px; border-radius: 50%; overflow: hidden;  display: flex;
-                                                        justify-content: center; align-items: center; object-fit: cover;"
-                                                            src="/images/avatar/logoshop.jpg" />
-                                                        <div class="text-center my-3">
-                                                            <c:out value="${sessionScope.fullName}" />
-                                                        </div>
-                                                    </li>
-                                                </c:forEach>
-                                            </c:if> -->
+                                            </c:if>
 
+                                            <c:if test="${sessionScope.listOrder != null}">
+                                                <c:forEach var="listOrder" items="${sessionScope.listOrder}">
+                                                    <c:if test="${listOrder.status=='2SHIPPING'}">
+                                                        <div class="d-flex mb-1">
+                                                            <img style="width: 65px; height: 65px; margin-right: 15px;"
+                                                                src="/images/avatar/logoshop.jpg"
+                                                                class="img-fluid rounded" alt="Image">
+                                                            <h6 style="color: black; font-size: 20px;">Đơn hàng bạn
+                                                                vừa đặt có mã
+                                                                <a href="/order-history">${listOrder.id}</a> đã được xác
+                                                                nhận.
+                                                                <br />
+                                                                <p style="color: rgb(99, 99, 99); font-size: 15px;"> Bạn
+                                                                    sẽ nhận được sau 5 - 7 ngày.</p>
+                                                            </h6>
+                                                        </div>
+                                                    </c:if>
+                                                    <c:if test="${listOrder.status=='3COMPLETE'}">
+                                                        <div class="d-flex mb-1">
+                                                            <img style="width: 65px; height: 65px; margin-right: 15px;"
+                                                                src="/images/avatar/logoshop.jpg"
+                                                                class="img-fluid rounded" alt="Image">
+                                                            <h6 style="color: black; font-size: 20px;">Đơn hàng của bạn
+                                                                có mã
+                                                                <a href="/order-history">${listOrder.id}</a> đã được
+                                                                giao.
+                                                                <br />
+                                                                <p style="color: rgb(99, 99, 99); font-size: 15px;"> Cảm
+                                                                    ơn bạn đã tin tưởng shop.</p>
+                                                            </h6>
+                                                        </div>
+                                                    </c:if>
+                                                    <c:if test="${listOrder.status=='4CANCEL'}">
+                                                        <div class="d-flex mb-1">
+                                                            <img style="width: 65px; height: 65px; margin-right: 15px;"
+                                                                src="/images/avatar/logoshop.jpg"
+                                                                class="img-fluid rounded" alt="Image">
+                                                            <h6 style="color: rgb(246, 55, 55); font-size: 20px;">Đơn
+                                                                hàng của bạn
+                                                                có mã
+                                                                <a href="/order-history">${listOrder.id}</a> đã bị HỦY
+                                                                <br />
+                                                                <p style="color: rgb(99, 99, 99); font-size: 15px;">vui
+                                                                    lòng liên hệ 19001900 để biết thêm chi tiết.</p>
+                                                            </h6>
+                                                        </div>
+                                                    </c:if>
+                                                </c:forEach>
+                                            </c:if>
                                         </div>
                                     </div>
-
 
                                     <a href="/cart" class="position-relative me-4 my-auto">
                                         <i class="fa fa-shopping-bag fa-2x"></i>
@@ -121,7 +156,9 @@
                                             </li>
                                         </ul>
                                     </div>
+
                                 </c:if>
+
                                 <c:if test="${ empty pageContext.request.userPrincipal}">
 
                                     <a href="/laptopshop/login" class="a-login position-relative me-4 my-auto">
@@ -136,4 +173,4 @@
                     </nav>
                 </div>
             </div>
-            <!-- Navbar End -->
+            <!-- Navbar End

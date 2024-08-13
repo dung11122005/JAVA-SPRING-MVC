@@ -18,16 +18,19 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
 import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpSession;
 import vn.hoidanit.laptopshop.domain.Order;
 import vn.hoidanit.laptopshop.domain.OrderDetail;
 import vn.hoidanit.laptopshop.domain.Order_;
 import vn.hoidanit.laptopshop.domain.Product;
 import vn.hoidanit.laptopshop.domain.Product_;
+import vn.hoidanit.laptopshop.domain.User;
 import vn.hoidanit.laptopshop.domain.dto.ProductCriteriaDTO;
 import vn.hoidanit.laptopshop.repository.OrderRepository;
 import vn.hoidanit.laptopshop.service.OrderService;
 import vn.hoidanit.laptopshop.service.ProductService;
 import vn.hoidanit.laptopshop.service.UploadService;
+import vn.hoidanit.laptopshop.service.UserService;
 
 @Controller
 public class DashboardShippedController {
@@ -36,15 +39,18 @@ public class DashboardShippedController {
     private final UploadService uploadService;
     private final OrderRepository orderRepository;
     private final ProductService productService;
+    private final UserService userService;
 
     public DashboardShippedController(OrderService orderService,
             UploadService uploadService,
             OrderRepository orderRepository,
-            ProductService productService) {
+            ProductService productService,
+            UserService userService) {
         this.orderService = orderService;
         this.uploadService = uploadService;
         this.orderRepository = orderRepository;
         this.productService = productService;
+        this.userService = userService;
     }
 
     @GetMapping("/shipped")
@@ -113,12 +119,16 @@ public class DashboardShippedController {
 
     @PostMapping("/shipped/update")
     public String handleShippedUpdate(@ModelAttribute("newOrder") Order order,
-            @RequestParam("hoidanitFile") MultipartFile file) {
+            @RequestParam("hoidanitFile") MultipartFile file, HttpServletRequest request) {
+        HttpSession session = request.getSession(false);
         if (!file.isEmpty()) {
             this.orderService.updateOrder(order, file);
         } else {
             this.orderService.updateOrder(order);
         }
+        long id = (long) session.getAttribute("id");
+        User user = this.userService.getUserById(id);
+        session.setAttribute("listOrder", user.getOrders());
         return "redirect:/shipped";
     }
 

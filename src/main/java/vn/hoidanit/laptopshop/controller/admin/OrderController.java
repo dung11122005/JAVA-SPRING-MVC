@@ -15,17 +15,25 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import vn.hoidanit.laptopshop.domain.Order;
 import vn.hoidanit.laptopshop.domain.Order_;
+import vn.hoidanit.laptopshop.domain.User;
 import vn.hoidanit.laptopshop.service.OrderService;
+import vn.hoidanit.laptopshop.service.UserService;
+
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpSession;
 
 @Controller
 public class OrderController {
 
     private final OrderService orderService;
+    private final UserService userService;
 
-    public OrderController(OrderService orderService) {
+    public OrderController(OrderService orderService, UserService userService) {
         this.orderService = orderService;
+        this.userService = userService;
     }
 
     @GetMapping("/admin/order")
@@ -81,8 +89,12 @@ public class OrderController {
     }
 
     @PostMapping("/admin/order/update")
-    public String handleUpdateOrder(@ModelAttribute("newOrder") Order order) {
+    public String handleUpdateOrder(@ModelAttribute("newOrder") Order order, HttpServletRequest request) {
+        HttpSession session = request.getSession(false);
         this.orderService.updateOrder(order);
+        long id = (long) session.getAttribute("id");
+        User user = this.userService.getUserById(id);
+        session.setAttribute("listOrder", user.getOrders());
         return "redirect:/admin/order";
     }
 
