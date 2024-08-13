@@ -70,7 +70,7 @@
                                             <c:if test="${sessionScope.listOrder != null}">
                                                 <c:forEach var="listOrder" items="${sessionScope.listOrder}">
                                                     <c:if test="${listOrder.status=='2SHIPPING'}">
-                                                        <div class="d-flex mb-1">
+                                                        <div class="d-flex">
                                                             <img style="width: 65px; height: 65px; margin-right: 15px;"
                                                                 src="/images/avatar/logoshop.jpg"
                                                                 class="img-fluid rounded" alt="Image">
