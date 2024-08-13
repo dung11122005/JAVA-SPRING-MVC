@@ -152,9 +152,9 @@ public class HomePageController {
         User currentUser = new User();// null
         HttpSession session = request.getSession(false);
         long id = (long) session.getAttribute("id");
-        currentUser.setId(id);
+        currentUser = this.userService.getUserById(id);
 
-        List<Order> orders = this.orderService.fetchOrderByUser(currentUser);
+        List<Order> orders = this.userService.getOrdersSortedById(currentUser);
         model.addAttribute("orders", orders);
 
         return "client/cart/order-history";

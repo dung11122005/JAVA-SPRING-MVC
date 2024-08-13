@@ -1,11 +1,15 @@
 package vn.hoidanit.laptopshop.service;
 
+import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import vn.hoidanit.laptopshop.domain.Order;
 import vn.hoidanit.laptopshop.domain.Role;
 import vn.hoidanit.laptopshop.domain.User;
 import vn.hoidanit.laptopshop.domain.dto.RegisterDTO;
@@ -38,6 +42,16 @@ public class UserService {
 
     public List<User> getAllUserByEmail(String email) {
         return this.userRepository.findOneByEmail(email);
+    }
+
+    public List<Order> getOrdersSortedById(User user) {
+        List<Order> orders = new ArrayList<>();
+        if (user.getOrders() != null) {
+            orders = user.getOrders(); // Chuyển thành List nếu là Set
+            orders.sort(Comparator.comparing(Order::getId).reversed()); // Sắp xếp giảm dần theo id
+        }
+
+        return orders;
     }
 
     public User handleSaveUser(User user) {

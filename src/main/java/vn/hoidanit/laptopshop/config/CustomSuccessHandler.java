@@ -27,7 +27,7 @@ import vn.hoidanit.laptopshop.service.UserService;
 public class CustomSuccessHandler implements AuthenticationSuccessHandler {
     // cách làm khó debug
     @Autowired
-    public UserService UserService;
+    public UserService userService;
 
     protected String determineTargetUrl(final Authentication authentication) { // https://www.baeldung.com/spring-redirect-after-login#success-handler
 
@@ -56,7 +56,7 @@ public class CustomSuccessHandler implements AuthenticationSuccessHandler {
 
         String email = authentication.getName();
 
-        User user = this.UserService.getUserByEmail(email);
+        User user = this.userService.getUserByEmail(email);
 
         if (user != null) {
             session.setAttribute("fullName", user.getFullName());
@@ -65,7 +65,7 @@ public class CustomSuccessHandler implements AuthenticationSuccessHandler {
             session.setAttribute("phone", user.getPhone());
             session.setAttribute("id", user.getId());
             session.setAttribute("email", user.getEmail());
-            session.setAttribute("listOrder", user.getOrders());
+            session.setAttribute("listOrder", this.userService.getOrdersSortedById(user));
             int sum = user.getCart() == null ? 0 : user.getCart().getSum();
             session.setAttribute("sum", sum);
         }
