@@ -67,7 +67,8 @@ public class HomePageController {
             HttpSession session = request.getSession(false);
             long id = (long) session.getAttribute("id");
             currentUser.setId(id);
-
+            User user = this.userService.getUserById(id);
+            session.setAttribute("listOrder", this.userService.getOrdersSortedById(user));
             Cart cart = this.cartRepository.findByUser(currentUser);
             List<CartDetail> cartDetails = cart == null ? new ArrayList<CartDetail>() : cart.getCartDetails();
             int sum = 0;
@@ -104,6 +105,7 @@ public class HomePageController {
         model.addAttribute("productCarousel", productCarousel);
         model.addAttribute("currentPage", page);
         model.addAttribute("totalPages", prs.getTotalPages());
+
         return "client/homepage/show";
     }
 

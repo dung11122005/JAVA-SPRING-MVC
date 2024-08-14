@@ -87,119 +87,139 @@
                                         <li class="breadcrumb-item active">Trạng thái đơn hàng</li>
                                     </ol>
                                 </div>
-                                <div class="row g-4">
-                                    <div class="col-md-6 col-lg-3">
-                                        <c:if test="${order.status=='1PENDING'}">
-                                            <div class="featurs-item text-center rounded bg-light p-4">
-                                                <div
-                                                    class="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
-                                                    <i style="color: rgb(4, 159, 255); font-size: 60px;"
-                                                        class="far fa-thumbs-up"></i>
+                                <c:if test="${order.status!='4CANCEL'}">
+                                    <div class="row g-4">
+                                        <div class="col-md-6 col-lg-3">
+                                            <c:if test="${order.status=='1PENDING'}">
+                                                <div class="featurs-item text-center rounded bg-light p-4">
+                                                    <div
+                                                        class="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
+                                                        <i style="color: rgb(4, 159, 255); font-size: 60px;"
+                                                            class="far fa-thumbs-up"></i>
+                                                    </div>
+                                                    <div class="featurs-content text-center">
+                                                        <h5>ĐẶT HÀNG THÀNH CÔNG</h5>
+                                                        <p class="mb-0">Đơn hàng sẽ sớm được xác nhận</p>
+                                                    </div>
                                                 </div>
-                                                <div class="featurs-content text-center">
-                                                    <h5>ĐẶT HÀNG THÀNH CÔNG</h5>
-                                                    <p class="mb-0">Đơn hàng sẽ sớm được xác nhận</p>
+                                            </c:if>
+                                            <c:if test="${order.status != '1PENDING'}">
+                                                <div class="featurs-item text-center rounded bg-light p-4">
+                                                    <div
+                                                        class="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
+                                                        <i style="color: white; font-size: 60px;"
+                                                            class="far fa-thumbs-up"></i>
+                                                    </div>
+                                                    <div class="featurs-content text-center">
+                                                        <h5>ĐẶT HÀNG THÀNH CÔNG</h5>
+                                                        <p class="mb-0">Đơn hàng sẽ sớm được xác nhận</p>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </c:if>
-                                        <c:if test="${order.status != '1PENDING'}">
-                                            <div class="featurs-item text-center rounded bg-light p-4">
-                                                <div
-                                                    class="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
-                                                    <i style="color: white; font-size: 60px;"
-                                                        class="far fa-thumbs-up"></i>
+                                            </c:if>
+                                        </div>
+                                        <div class="col-md-6 col-lg-3">
+                                            <c:if test="${order.status == '2SHIPPING'}">
+                                                <div class="featurs-item text-center rounded bg-light p-4">
+                                                    <div
+                                                        class="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
+                                                        <i style="color: rgb(4, 159, 255); font-size: 60px;"
+                                                            class="far fa-calendar-check"></i>
+                                                    </div>
+                                                    <div class="featurs-content text-center">
+                                                        <h5>HÀNG ĐƯỢC XÁC NHẬN</h5>
+                                                        <p class="mb-0">Hàng đến tay bạn sau 5 - 7 ngày</p>
+                                                    </div>
                                                 </div>
-                                                <div class="featurs-content text-center">
-                                                    <h5>ĐẶT HÀNG THÀNH CÔNG</h5>
-                                                    <p class="mb-0">Đơn hàng sẽ sớm được xác nhận</p>
+                                            </c:if>
+                                            <c:if test="${order.status != '2SHIPPING'}">
+                                                <div class="featurs-item text-center rounded bg-light p-4">
+                                                    <div
+                                                        class="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
+                                                        <i style="color: white; font-size: 60px;"
+                                                            class="far fa-calendar-check"></i>
+                                                    </div>
+                                                    <div class="featurs-content text-center">
+                                                        <h5>HÀNG ĐƯỢC XÁC NHẬN</h5>
+                                                        <p class="mb-0">Hàng đến tay bạn sau 5 - 7 ngày</p>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </c:if>
+                                            </c:if>
+                                        </div>
+                                        <div class="col-md-6 col-lg-3">
+                                            <c:if test="${order.status == '2SHIPPING'}">
+                                                <div class="featurs-item text-center rounded bg-light p-4">
+                                                    <div
+                                                        class="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
+                                                        <i style="color: rgb(4, 159, 255); font-size: 60px;"
+                                                            class="fas fa-truck"></i>
+                                                    </div>
+                                                    <div class="featurs-content text-center">
+                                                        <h5>ĐANG ĐƯỢC VẬN CHUYỂN</h5>
+                                                        <p class="mb-0">Đơn hàng sắp đến tay bạn</p>
+                                                    </div>
+                                                </div>
+                                            </c:if>
+                                            <c:if test="${order.status != '2SHIPPING'}">
+                                                <div class="featurs-item text-center rounded bg-light p-4">
+                                                    <div
+                                                        class="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
+                                                        <i style="color: white; font-size: 60px;"
+                                                            class="fas fa-truck"></i>
+                                                    </div>
+                                                    <div class="featurs-content text-center">
+                                                        <h5>ĐANG ĐƯỢC VẬN CHUYỂN</h5>
+                                                        <p class="mb-0">Đơn hàng sắp đến tay bạn</p>
+                                                    </div>
+                                                </div>
+                                            </c:if>
+                                        </div>
+                                        <div class="col-md-6 col-lg-3">
+                                            <c:if test="${order.status == '3COMPLETE'}">
+                                                <div class="featurs-item text-center rounded bg-light p-4">
+                                                    <div
+                                                        class="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
+                                                        <i style="color: rgb(4, 159, 255); font-size: 60px;"
+                                                            class="fas fa-people-carry"></i>
+                                                    </div>
+                                                    <div class="featurs-content text-center">
+                                                        <h5>HÀNG ĐÃ ĐƯỢC GIAO</h5>
+                                                        <p class="mb-0">Đổi trả miễn phí</p>
+                                                    </div>
+                                                </div>
+                                            </c:if>
+                                            <c:if test="${order.status != '3COMPLETE'}">
+                                                <div class="featurs-item text-center rounded bg-light p-4">
+                                                    <div
+                                                        class="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
+                                                        <i style="color: white; font-size: 60px;"
+                                                            class="fas fa-people-carry"></i>
+                                                    </div>
+                                                    <div class="featurs-content text-center">
+                                                        <h5>HÀNG ĐÃ ĐƯỢC GIAO</h5>
+                                                        <p class="mb-0">Đổi trả miễn phí</p>
+                                                    </div>
+                                                </div>
+                                            </c:if>
+                                        </div>
                                     </div>
-                                    <div class="col-md-6 col-lg-3">
-                                        <c:if test="${order.status == '2SHIPPING'}">
+                                </c:if>
+                                <c:if test="${order.status=='4CANCEL'}">
+                                    <div class="row g-4 justify-content-center">
+                                        <div class="col-md-6 col-lg-3">
                                             <div class="featurs-item text-center rounded bg-light p-4">
                                                 <div
                                                     class="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
-                                                    <i style="color: rgb(4, 159, 255); font-size: 60px;"
-                                                        class="far fa-calendar-check"></i>
+                                                    <i style="font-size: 60px; color: red;" class="fas fa-times"></i>
                                                 </div>
                                                 <div class="featurs-content text-center">
-                                                    <h5>HÀNG ĐƯỢC XÁC NHẬN</h5>
-                                                    <p class="mb-0">Hàng đến tay bạn sau 5 - 7 ngày</p>
+                                                    <h5>ĐƠN HÀNG BỊ HỦY</h5>
+                                                    <p class="mb-0">Liên hệ 19001900 để biết thêm</p>
                                                 </div>
                                             </div>
-                                        </c:if>
-                                        <c:if test="${order.status != '2SHIPPING'}">
-                                            <div class="featurs-item text-center rounded bg-light p-4">
-                                                <div
-                                                    class="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
-                                                    <i style="color: white; font-size: 60px;"
-                                                        class="far fa-calendar-check"></i>
-                                                </div>
-                                                <div class="featurs-content text-center">
-                                                    <h5>HÀNG ĐƯỢC XÁC NHẬN</h5>
-                                                    <p class="mb-0">Hàng đến tay bạn sau 5 - 7 ngày</p>
-                                                </div>
-                                            </div>
-                                        </c:if>
+
+                                        </div>
                                     </div>
-                                    <div class="col-md-6 col-lg-3">
-                                        <c:if test="${order.status == '2SHIPPING'}">
-                                            <div class="featurs-item text-center rounded bg-light p-4">
-                                                <div
-                                                    class="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
-                                                    <i style="color: rgb(4, 159, 255); font-size: 60px;"
-                                                        class="fas fa-truck"></i>
-                                                </div>
-                                                <div class="featurs-content text-center">
-                                                    <h5>ĐANG ĐƯỢC VẬN CHUYỂN</h5>
-                                                    <p class="mb-0">Đơn hàng sắp đến tay bạn</p>
-                                                </div>
-                                            </div>
-                                        </c:if>
-                                        <c:if test="${order.status != '2SHIPPING'}">
-                                            <div class="featurs-item text-center rounded bg-light p-4">
-                                                <div
-                                                    class="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
-                                                    <i style="color: white; font-size: 60px;" class="fas fa-truck"></i>
-                                                </div>
-                                                <div class="featurs-content text-center">
-                                                    <h5>ĐANG ĐƯỢC VẬN CHUYỂN</h5>
-                                                    <p class="mb-0">Đơn hàng sắp đến tay bạn</p>
-                                                </div>
-                                            </div>
-                                        </c:if>
-                                    </div>
-                                    <div class="col-md-6 col-lg-3">
-                                        <c:if test="${order.status == '3COMPLETE'}">
-                                            <div class="featurs-item text-center rounded bg-light p-4">
-                                                <div
-                                                    class="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
-                                                    <i style="color: rgb(4, 159, 255); font-size: 60px;"
-                                                        class="fas fa-people-carry"></i>
-                                                </div>
-                                                <div class="featurs-content text-center">
-                                                    <h5>HÀNG ĐÃ ĐƯỢC GIAO</h5>
-                                                    <p class="mb-0">Đổi trả miễn phí</p>
-                                                </div>
-                                            </div>
-                                        </c:if>
-                                        <c:if test="${order.status != '3COMPLETE'}">
-                                            <div class="featurs-item text-center rounded bg-light p-4">
-                                                <div
-                                                    class="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
-                                                    <i style="color: white; font-size: 60px;"
-                                                        class="fas fa-people-carry"></i>
-                                                </div>
-                                                <div class="featurs-content text-center">
-                                                    <h5>HÀNG ĐÃ ĐƯỢC GIAO</h5>
-                                                    <p class="mb-0">Đổi trả miễn phí</p>
-                                                </div>
-                                            </div>
-                                        </c:if>
-                                    </div>
-                                </div>
+                                </c:if>
                                 <div class="table-responsive mt-5">
                                     <table class="table">
                                         <thead>
