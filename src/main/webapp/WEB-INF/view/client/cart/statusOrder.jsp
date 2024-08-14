@@ -283,6 +283,35 @@
                                             </c:forEach>
                                         </tbody>
                                     </table>
+                                    <div class="col-12 col-md-6 mt-5">
+                                        <div class="bg-light rounded">
+                                            <div class="p-4">
+                                                <h1 class="display-6 mb-4">Thông Tin <span class="fw-normal">Thanh
+                                                        Toán</span>
+                                                </h1>
+
+                                                <div class="d-flex justify-content-between">
+                                                    <h5 class="mb-0 me-4">Phí vận chuyển</h5>
+                                                    <div class="">
+                                                        <p class="mb-0">0 đ</p>
+                                                    </div>
+                                                </div>
+                                                <div class="mt-3 d-flex justify-content-between">
+                                                    <h5 class="mb-0 me-4">Hình thức</h5>
+                                                    <div class="">
+                                                        <p class="mb-0">Thanh toán khi nhận hàng (COD)</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="py-4 mb-4 border-top  d-flex justify-content-between">
+                                                <h5 class="mb-0 ps-4 me-4">Tổng số tiền</h5>
+                                                <p class="mb-0 pe-4">
+                                                    <fmt:formatNumber type="number" value="${order.totalPrice}" /> đ
+                                                </p>
+                                            </div>
+
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 
