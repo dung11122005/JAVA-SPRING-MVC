@@ -69,6 +69,21 @@
 
                                             <c:if test="${sessionScope.listOrder != null}">
                                                 <c:forEach var="listOrder" items="${sessionScope.listOrder}">
+                                                    <c:if test="${listOrder.status=='1PENDING'}">
+                                                        <div class="d-flex">
+                                                            <img style="width: 65px; height: 65px; margin-right: 15px;"
+                                                                src="/images/avatar/logoshop.jpg"
+                                                                class="img-fluid rounded" alt="Image">
+                                                            <h6 style="color: black; font-size: 20px;">Đặt hàng thành
+                                                                công. Đơn hàng của bạn có mã
+                                                                <a
+                                                                    href="/statusOrder/${listOrder.id}">${listOrder.id}</a>
+                                                                <br />
+                                                                <p style="color: rgb(99, 99, 99); font-size: 15px;">
+                                                                    Đơn hàng sẽ sớm được xác nhận.</p>
+                                                            </h6>
+                                                        </div>
+                                                    </c:if>
                                                     <c:if test="${listOrder.status=='2SHIPPING'}">
                                                         <div class="d-flex">
                                                             <img style="width: 65px; height: 65px; margin-right: 15px;"
@@ -76,7 +91,9 @@
                                                                 class="img-fluid rounded" alt="Image">
                                                             <h6 style="color: black; font-size: 20px;">Đơn hàng bạn
                                                                 vừa đặt có mã
-                                                                <a href="/order-history">${listOrder.id}</a> đã được xác
+                                                                <a
+                                                                    href="/statusOrder/${listOrder.id}">${listOrder.id}</a>
+                                                                đã được xác
                                                                 nhận.
                                                                 <br />
                                                                 <p style="color: rgb(99, 99, 99); font-size: 15px;"> Bạn
@@ -91,7 +108,9 @@
                                                                 class="img-fluid rounded" alt="Image">
                                                             <h6 style="color: black; font-size: 20px;">Đơn hàng của bạn
                                                                 có mã
-                                                                <a href="/order-history">${listOrder.id}</a> đã được
+                                                                <a
+                                                                    href="/statusOrder/${listOrder.id}">${listOrder.id}</a>
+                                                                đã được
                                                                 giao.
                                                                 <br />
                                                                 <p style="color: rgb(99, 99, 99); font-size: 15px;"> Cảm
@@ -107,7 +126,9 @@
                                                             <h6 style="color: rgb(246, 55, 55); font-size: 20px;">Đơn
                                                                 hàng của bạn
                                                                 có mã
-                                                                <a href="/order-history">${listOrder.id}</a> đã bị HỦY
+                                                                <a
+                                                                    href="/statusOrder/${listOrder.id}">${listOrder.id}</a>
+                                                                đã bị HỦY
                                                                 <br />
                                                                 <p style="color: rgb(99, 99, 99); font-size: 15px;">vui
                                                                     lòng liên hệ 19001900 để biết thêm chi tiết.</p>

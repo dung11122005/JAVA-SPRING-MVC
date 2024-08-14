@@ -17,6 +17,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import vn.hoidanit.laptopshop.domain.Cart;
 import vn.hoidanit.laptopshop.domain.CartDetail;
 import vn.hoidanit.laptopshop.domain.Comment;
+import vn.hoidanit.laptopshop.domain.Order;
+import vn.hoidanit.laptopshop.domain.OrderDetail;
 import vn.hoidanit.laptopshop.domain.Product;
 import vn.hoidanit.laptopshop.domain.Product_;
 import vn.hoidanit.laptopshop.domain.User;
@@ -163,6 +165,18 @@ public class ItemController {
     @GetMapping("/thanks")
     public String getThankYouPage(Model model) {
         return "client/cart/thanks";
+    }
+
+    @GetMapping("/statusOrder/{id}")
+    public String getStatusOrderYouPage(Model model, @PathVariable long id) {
+        Optional<Order> opOrder = this.orderService.fetchOrderById(id);
+        if (opOrder.isPresent()) {
+            Order order = opOrder.get();
+            List<OrderDetail> orderDetails = order.getOrderDetails();
+            model.addAttribute("order", order);
+            model.addAttribute("orderDetails", orderDetails);
+        }
+        return "client/cart/statusOrder";
     }
 
     @PostMapping("/place-order")

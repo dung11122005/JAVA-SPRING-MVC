@@ -86,47 +86,50 @@
                                 <div class="col-md-6 col-lg-3">
                                     <div class="featurs-item text-center rounded bg-light p-4">
                                         <div class="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
+                                            <i style="color: rgb(4, 159, 255); font-size: 60px;"
+                                                class="far fa-thumbs-up"></i>
+                                        </div>
+                                        <div class="featurs-content text-center">
+                                            <h5>ĐẶT HÀNG THÀNH CÔNG</h5>
+                                            <p class="mb-0">Đơn hàng sẽ sớm được xác nhận</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-3">
+                                    <div class="featurs-item text-center rounded bg-light p-4">
+                                        <div class="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
+                                            <i style="color: white; font-size: 60px;" class="far fa-calendar-check"></i>
+                                        </div>
+                                        <div class="featurs-content text-center">
+                                            <h5>HÀNG ĐƯỢC XÁC NHẬN</h5>
+                                            <p class="mb-0">Hàng đến tay bạn sau 5 - 7 ngày</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-3">
+                                    <div class="featurs-item text-center rounded bg-light p-4">
+                                        <div class="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
+
                                             <i class="fas fa-car-side fa-3x text-white"></i>
                                         </div>
                                         <div class="featurs-content text-center">
-                                            <h5>Free Shipping</h5>
-                                            <p class="mb-0">Hỏa tốc trong 2h</p>
+                                            <h5>ĐANG ĐƯỢC VẬN CHUYỂN</h5>
+                                            <p class="mb-0">Đơn hàng sắp đến tay bạn</p>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-lg-3">
                                     <div class="featurs-item text-center rounded bg-light p-4">
                                         <div class="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
-                                            <i class="fas fa-user-shield fa-3x text-white"></i>
+                                            <i style="color: white; font-size: 60px;" class="fas fa-people-carry"></i>
                                         </div>
                                         <div class="featurs-content text-center">
-                                            <h5>Security Payment</h5>
-                                            <p class="mb-0">Giao dịch an toàn</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-lg-3">
-                                    <div class="featurs-item text-center rounded bg-light p-4">
-                                        <div class="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
-                                            <i class="fas fa-exchange-alt fa-3x text-white"></i>
-                                        </div>
-                                        <div class="featurs-content text-center">
-                                            <h5>30 Day Return</h5>
+                                            <h5>HÀNG ĐÃ ĐƯỢC GIAO</h5>
                                             <p class="mb-0">Đổi trả miễn phí</p>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-6 col-lg-3">
-                                    <div class="featurs-item text-center rounded bg-light p-4">
-                                        <div class="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
-                                            <i class="fa fa-phone-alt fa-3x text-white"></i>
-                                        </div>
-                                        <div class="featurs-content text-center">
-                                            <h5>24/7 Support</h5>
-                                            <p class="mb-0">Hỗ trợ nhiệt tình</p>
-                                        </div>
-                                    </div>
-                                </div>
+
                             </div>
                         </div>
                     </div>
