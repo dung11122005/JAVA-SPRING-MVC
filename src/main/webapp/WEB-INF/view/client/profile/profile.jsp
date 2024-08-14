@@ -81,7 +81,7 @@
                     <!-- Cart Page Start -->
                     <div style="margin-top: 120px;" class="container-fluid">
                         <div class="container py-5">
-                            <div class="mb-3">
+                            <div>
                                 <nav aria-label="breadcrumb">
                                     <ol class="breadcrumb">
                                         <li class="breadcrumb-item"><a href="/">Home</a></li>
@@ -89,10 +89,21 @@
                                     </ol>
                                 </nav>
                             </div>
-                            <section style="background-color: #eee;">
+                            <div style="width: 20px;" class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    hiến thị thêm
+                                </button>
+                                <div style="left: 0px; width: 200px;" class="dropdown-menu"
+                                    aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="#">Địa chỉ</a>
+                                    <a class="dropdown-item" href="/purchase">Đơn mua</a>
+                                    <a class="dropdown-item" href="#">Kho voucher</a>
+                                </div>
+                            </div>
+                            <section>
+
                                 <div class="container py-5">
-
-
                                     <div class="row">
                                         <div class="col-lg-5">
                                             <div class="card mb-4">
@@ -149,19 +160,6 @@
                                                         <button style="color: white;" class="btn btn-primary">Xác
                                                             nhận</button>
                                                     </form:form>
-
-                                                </div>
-
-                                            </div>
-                                            <div style="text-align: center;" class="card mb-lg-0">
-                                                <div class="card-body p-0">
-                                                    <h2 style="padding-top: 25px;" class="mb-3 text-secondary">100% Sản
-                                                        Phẩm
-                                                        Chính Hãng
-                                                    </h2>
-                                                    <h3 style="font-size: 50px;" class="mb-3 display-3 text-primary">
-                                                        Hàng cao cấp <br /> rẻ vô địch
-                                                    </h3>
                                                 </div>
                                             </div>
                                         </div>
@@ -169,7 +167,8 @@
                                         <div class="col-lg-7">
                                             <div class="d-flex mb-3">
                                                 <button style="display: block; color: white;" class="btn btn-primary"
-                                                    id="openbuttonUpdatedform">Cập nhật thông tin
+                                                    id="openbuttonUpdatedform">Cập nhật
+                                                    thông tin
 
                                                 </button>
                                                 <button style="display: none; color: white;" class="btn btn-primary"
@@ -263,11 +262,8 @@
                                                     </ul>
                                                 </div>
                                             </div>
-
                                         </div>
-
                                     </div>
-
                                 </div>
                             </section>
 

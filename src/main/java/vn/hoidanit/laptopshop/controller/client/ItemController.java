@@ -264,4 +264,29 @@ public class ItemController {
         return "redirect:/product/" + idProduct;
     }
 
+    @GetMapping("/purchase")
+    public String getPurchaseYouPage(Model model, HttpServletRequest request) {
+        HttpSession session = request.getSession(false);
+        long id = (long) session.getAttribute("id");
+        User user = this.userService.getUserById(id);
+        model.addAttribute("purchases", user.getOrders());
+        model.addAttribute("PENDING", null);
+        model.addAttribute("SHIPPING", null);
+        model.addAttribute("COMPLETE", null);
+        model.addAttribute("CANCEL", null);
+
+        for (Order order : user.getOrders()) {
+            if (order.getStatus() == "1PENDING") {
+                model.addAttribute("PENDING", "1PENDING");
+            } else if (order.getStatus() == "2SHIPPING") {
+                model.addAttribute("SHIPPING", "2SHIPPING");
+            } else if (order.getStatus() == "3COMPLETE") {
+                model.addAttribute("COMPLETE", "3COMPLETE");
+            } else if (order.getStatus() == "4CANCEL") {
+                model.addAttribute("CANCEL", "4CANCEL");
+            }
+        }
+        return "client/profile/purchase";
+    }
+
 }
