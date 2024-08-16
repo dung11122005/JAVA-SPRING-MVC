@@ -138,84 +138,86 @@
                                                         <th class="px-4 py-3">Action</th>
                                                     </tr>
                                                 </thead>
+
                                                 <tbody class="bg-white divide-y dark:divide-gray-700 dark:bg-gray-800">
                                                     <c:forEach var="shipPingOrder" items="${shipPingOrders}">
-
-                                                        <tr class="text-gray-700 dark:text-gray-400">
-                                                            <td class="px-4 py-3">
-                                                                <div class="flex items-center text-sm">
-                                                                    <!-- Avatar with inset shadow -->
-                                                                    <div
-                                                                        class="relative hidden w-8 h-8 mr-3 rounded-full md:block">
-                                                                        <img class="object-cover w-full h-full rounded-full"
-                                                                            src="/images/avatar/${shipPingOrder.user.avatar}"
-                                                                            alt="" loading="lazy" />
-                                                                        <div class="absolute inset-0 rounded-full shadow-inner"
-                                                                            aria-hidden="true"></div>
+                                                        <c:if test="${shipPingOrder.status!='1PENDING'}">
+                                                            <tr class="text-gray-700 dark:text-gray-400">
+                                                                <td class="px-4 py-3">
+                                                                    <div class="flex items-center text-sm">
+                                                                        <!-- Avatar with inset shadow -->
+                                                                        <div
+                                                                            class="relative hidden w-8 h-8 mr-3 rounded-full md:block">
+                                                                            <img class="object-cover w-full h-full rounded-full"
+                                                                                src="/images/avatar/${shipPingOrder.user.avatar}"
+                                                                                alt="" loading="lazy" />
+                                                                            <div class="absolute inset-0 rounded-full shadow-inner"
+                                                                                aria-hidden="true"></div>
+                                                                        </div>
+                                                                        <div>
+                                                                            <a href="/shipped/detail/${shipPingOrder.id}"
+                                                                                style="font-size: 17px; text-decoration: none;"
+                                                                                class="font-semibold">
+                                                                                ${shipPingOrder.user.fullName}
+                                                                            </a>
+                                                                        </div>
                                                                     </div>
-                                                                    <div>
-                                                                        <a href="/shipped/detail/${shipPingOrder.id}"
-                                                                            style="font-size: 17px; text-decoration: none;"
-                                                                            class="font-semibold">
-                                                                            ${shipPingOrder.user.fullName}
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                            </td>
-                                                            <td class="px-4 py-3 ">
-                                                                <p style="font-size: 17px;">
-                                                                    ${shipPingOrder.receiverPhone}
-                                                                </p>
-                                                            </td>
-                                                            <td class="px-4 py-3 ">
-                                                                <p style="font-size: 17px;">
-                                                                    ${shipPingOrder.receiverAddress}
-                                                                </p>
-                                                            </td>
-                                                            <td class="px-4 py-3 ">
-                                                                <p style="font-size: 17px;">
-                                                                    ${shipPingOrder.receiverName}
-                                                                </p>
-                                                            </td>
-                                                            <td class="px-4 py-3 ">
-                                                                <p style="font-size: 17px;">
-                                                                    <fmt:formatNumber type="number"
-                                                                        value=" ${shipPingOrder.totalPrice}" /> đ
-                                                                </p>
-                                                                </p>
+                                                                </td>
+                                                                <td class="px-4 py-3 ">
+                                                                    <p style="font-size: 17px;">
+                                                                        ${shipPingOrder.receiverPhone}
+                                                                    </p>
+                                                                </td>
+                                                                <td class="px-4 py-3 ">
+                                                                    <p style="font-size: 17px;">
+                                                                        ${shipPingOrder.receiverAddress}
+                                                                    </p>
+                                                                </td>
+                                                                <td class="px-4 py-3 ">
+                                                                    <p style="font-size: 17px;">
+                                                                        ${shipPingOrder.receiverName}
+                                                                    </p>
+                                                                </td>
+                                                                <td class="px-4 py-3 ">
+                                                                    <p style="font-size: 17px;">
+                                                                        <fmt:formatNumber type="number"
+                                                                            value=" ${shipPingOrder.totalPrice}" /> đ
+                                                                    </p>
+                                                                    </p>
 
-                                                            </td>
-                                                            <td class="px-4 py-3 ">
-                                                                <c:if test="${shipPingOrder.status=='2SHIPPING'}">
-                                                                    <span
-                                                                        class="px-2 py-1 font-semibold leading-tight text-blue-700 bg-blue-100 rounded-full dark:bg-blue-700 dark:text-dark-100">
-                                                                        SHIPPING
-                                                                    </span>
-                                                                </c:if>
-                                                                <c:if test="${shipPingOrder.status=='3COMPLETE'}">
-                                                                    <span
-                                                                        class="px-2 py-1 font-semibold leading-tight text-green-700 bg-green-100 rounded-full dark:bg-green-700 dark:text-green-100">
-                                                                        COMPLETE
-                                                                    </span>
-                                                                </c:if>
-                                                                <c:if test="${shipPingOrder.status=='4CANCEL'}">
-                                                                    <span
-                                                                        class="px-2 py-1 font-semibold leading-tight text-red-700 bg-red-100 rounded-full dark:bg-red-700 dark:text-red-100">
-                                                                        CANCEL
-                                                                    </span>
-                                                                </c:if>
+                                                                </td>
+                                                                <td class="px-4 py-3 ">
+                                                                    <c:if test="${shipPingOrder.status=='2SHIPPING'}">
+                                                                        <span
+                                                                            class="px-2 py-1 font-semibold leading-tight text-blue-700 bg-blue-100 rounded-full dark:bg-blue-700 dark:text-dark-100">
+                                                                            SHIPPING
+                                                                        </span>
+                                                                    </c:if>
+                                                                    <c:if test="${shipPingOrder.status=='3COMPLETE'}">
+                                                                        <span
+                                                                            class="px-2 py-1 font-semibold leading-tight text-green-700 bg-green-100 rounded-full dark:bg-green-700 dark:text-green-100">
+                                                                            COMPLETE
+                                                                        </span>
+                                                                    </c:if>
+                                                                    <c:if test="${shipPingOrder.status=='4CANCEL'}">
+                                                                        <span
+                                                                            class="px-2 py-1 font-semibold leading-tight text-red-700 bg-red-100 rounded-full dark:bg-red-700 dark:text-red-100">
+                                                                            CANCEL
+                                                                        </span>
+                                                                    </c:if>
 
-                                                            </td>
-                                                            <td class="px-4 py-3 ">
-                                                                <a style="text-decoration: none;"
-                                                                    href="/shipped/update/${shipPingOrder.id}"
-                                                                    class="px-3 py-1 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-md active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple">Update</a>
-                                                            </td>
-                                                        </tr>
-
+                                                                </td>
+                                                                <td class="px-4 py-3 ">
+                                                                    <a style="text-decoration: none;"
+                                                                        href="/shipped/update/${shipPingOrder.id}"
+                                                                        class="px-3 py-1 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-md active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple">Update</a>
+                                                                </td>
+                                                            </tr>
+                                                        </c:if>
                                                     </c:forEach>
 
                                                 </tbody>
+
                                             </table>
                                             <c:if test="${totalPages!=0}">
                                                 <nav aria-label="Table navigation justify-content-center">

@@ -259,7 +259,7 @@ public class ProductService {
                 order.setReceiverName(receiverName);
                 order.setReceiverAddress(receiverAddress);
                 order.setReceiverPhone(receiverPhone);
-                order.setStatus("PENDING");
+                order.setStatus("1PENDING");
 
                 double sum = 0;
                 for (CartDetail cd : cartDetails) {
