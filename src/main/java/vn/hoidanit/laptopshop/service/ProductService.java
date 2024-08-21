@@ -1,13 +1,28 @@
 package vn.hoidanit.laptopshop.service;
 
+import java.io.IOException;
+import java.io.StringReader;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+import co.elastic.clients.elasticsearch.ElasticsearchClient;
+import co.elastic.clients.elasticsearch.core.IndexRequest;
+import co.elastic.clients.elasticsearch.core.IndexResponse;
+import co.elastic.clients.elasticsearch.core.SearchResponse;
+import co.elastic.clients.elasticsearch.core.search.Hit;
+import co.elastic.clients.elasticsearch.indices.CreateIndexRequest;
+import co.elastic.clients.elasticsearch.indices.CreateIndexResponse;
+import co.elastic.clients.elasticsearch.indices.GetIndexResponse;
 import jakarta.servlet.http.HttpSession;
 import vn.hoidanit.laptopshop.domain.Cart;
 import vn.hoidanit.laptopshop.domain.CartDetail;
@@ -31,6 +46,7 @@ public class ProductService {
     private final UserService userService;
     private final OrderRepository orderRepository;
     private final OrderDetailRepository orderDetailRepository;
+    private final ElasticsearchClient elasticsearchClient;
 
     public ProductService(
             ProductRepository productRepository,
@@ -38,13 +54,15 @@ public class ProductService {
             CartDetailRepository cartDetailRepository,
             UserService userService,
             OrderRepository orderRepository,
-            OrderDetailRepository orderDetailRepository) {
+            OrderDetailRepository orderDetailRepository,
+            ElasticsearchClient elasticsearchClient) {
         this.productRepository = productRepository;
         this.cartDetailRepository = cartDetailRepository;
         this.cartRepository = cartRepository;
         this.userService = userService;
         this.orderDetailRepository = orderDetailRepository;
         this.orderRepository = orderRepository;
+        this.elasticsearchClient = elasticsearchClient;
     }
 
     public Product createProduct(Product pr) {
@@ -63,13 +81,68 @@ public class ProductService {
         return this.productRepository.findAll(page);
     }
 
+    public Page<Product> ProductPaginationElastictSearch(Pageable pageable, List<Product> products) {
+
+        // Tạo đối tượng Pageable
+        // Pageable pageable = PageRequest.of(page.getPageNumber(), page.getPageSize());
+
+        // Xác định chỉ số bắt đầu và kết thúc của sublist
+        int start = Math.min((int) pageable.getOffset(), products.size());
+        int end = Math.min((start + pageable.getPageSize()), products.size());
+
+        // Tạo sublist từ danh sách products
+        List<Product> subList = products.subList(start, end);
+
+        // Tạo PageImpl với sublist và pageable
+        Page<Product> productElasticSearch = new PageImpl<>(subList, pageable, products.size());
+        return productElasticSearch;
+    }
+
+    public List<Product> findElasticSearch(List<Product> products, String name) {
+        List<Product> productsEltS = new ArrayList<Product>();
+
+        // createIndexIfNotExists("products");
+        try {
+            for (Product product : products) {
+                ObjectMapper objectMapper = new ObjectMapper();
+                String jsonString = objectMapper.writeValueAsString(product);
+                StringReader stringReader = new StringReader(jsonString);
+                IndexRequest<Product> request = IndexRequest.of(i -> i
+                        .index("products") // Tên chỉ mục
+                        .id(String.valueOf(product.getId())) // ID của tài liệu
+                        .withJson(stringReader) // Dữ liệu tài liệu
+                );
+
+                IndexResponse response = elasticsearchClient.index(request);
+            }
+
+            SearchResponse<Product> searchResponse = elasticsearchClient.search(s -> s
+                    .index("products")
+                    .query(q -> q
+                            .fuzzy(f -> f
+                                    .field("name")
+                                    .value(name)
+                                    .fuzziness("AUTO"))),
+                    Product.class);
+
+            for (Hit<Product> hit : searchResponse.hits().hits()) {
+                // Lấy tài liệu từ hit và thêm vào danh sách sản phẩm
+                Product product = hit.source();
+                productsEltS.add(product);
+            }
+            // System.out.println(">>>>>>>>>> productsEltS " + productsEltS);
+        } catch (Exception e) {
+            System.err.println("Error >>>>>>>>>>>> index >>: " + e.getMessage()); // In thông báo lỗi ra console
+        }
+        return productsEltS;
+    }
+
     public Page<Product> fetchProductPaginationWithSpec(Pageable page, ProductCriteriaDTO productCriteriaDTO) {
 
         if (productCriteriaDTO.getTarget() == null &&
                 productCriteriaDTO.getFactory() == null &&
                 productCriteriaDTO.getPrice() == null &&
-                productCriteriaDTO.getValueStar() == null &&
-                productCriteriaDTO.getSearchValue() == null) {
+                productCriteriaDTO.getValueStar() == null) {
             return this.productRepository.findAll(page);
         }
 
@@ -90,11 +163,13 @@ public class ProductService {
             Specification<Product> currentSpecs = ProductSpecs.matchListStar(productCriteriaDTO.getValueStar().get());
             combinedSpec = combinedSpec.and(currentSpecs);
         }
-        if (productCriteriaDTO.getSearchValue() != null && productCriteriaDTO.getSearchValue().isPresent()) {
-            Specification<Product> currentSpecs = ProductSpecs
-                    .matchListSearch(productCriteriaDTO.getSearchValue().get());
-            combinedSpec = combinedSpec.and(currentSpecs);
-        }
+        // if (productCriteriaDTO.getSearchValue() != null &&
+        // productCriteriaDTO.getSearchValue().isPresent()) {
+
+        // Specification<Product> currentSpecs = ProductSpecs
+        // .matchListSearch(productCriteriaDTO.getSearchValue().get());
+        // combinedSpec = combinedSpec.and(currentSpecs);
+        // }
         return this.productRepository.findAll(combinedSpec, page);
     }
 

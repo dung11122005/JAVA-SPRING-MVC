@@ -229,7 +229,16 @@ public class ItemController {
         }
 
         Page<Product> pr = this.productService.fetchProductPaginationWithSpec(pageable, productCriteriaDTO);
-
+        try {
+            if (productCriteriaDTO.getSearchValue().isPresent() && productCriteriaDTO.getSearchValue().get() != null) {
+                List<Product> products = this.productService.fetchProducts();
+                List<Product> productsElasticSearch = this.productService.findElasticSearch(products,
+                        productCriteriaDTO.getSearchValue().get());
+                pr = this.productService.ProductPaginationElastictSearch(pageable, productsElasticSearch);
+            }
+        } catch (Exception e) {
+            // TODO: handle exception
+        }
         List<Product> listproduct = pr.getContent().size() > 0 ? pr.getContent() : new ArrayList<Product>();
 
         String qs = request.getQueryString();
