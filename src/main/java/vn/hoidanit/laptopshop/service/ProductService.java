@@ -103,18 +103,18 @@ public class ProductService {
 
         // createIndexIfNotExists("products");
         try {
-            for (Product product : products) {
-                ObjectMapper objectMapper = new ObjectMapper();
-                String jsonString = objectMapper.writeValueAsString(product);
-                StringReader stringReader = new StringReader(jsonString);
-                IndexRequest<Product> request = IndexRequest.of(i -> i
-                        .index("products") // Tên chỉ mục
-                        .id(String.valueOf(product.getId())) // ID của tài liệu
-                        .withJson(stringReader) // Dữ liệu tài liệu
-                );
+            // for (Product product : products) {
+            // ObjectMapper objectMapper = new ObjectMapper();
+            // String jsonString = objectMapper.writeValueAsString(product);
+            // StringReader stringReader = new StringReader(jsonString);
+            // IndexRequest<Product> request = IndexRequest.of(i -> i
+            // .index("products") // Tên chỉ mục
+            // .id(String.valueOf(product.getId())) // ID của tài liệu
+            // .withJson(stringReader) // Dữ liệu tài liệu
+            // );
 
-                IndexResponse response = elasticsearchClient.index(request);
-            }
+            // IndexResponse response = elasticsearchClient.index(request);
+            // }
 
             SearchResponse<Product> searchResponse = elasticsearchClient.search(s -> s
                     .index("products")
