@@ -1,5 +1,13 @@
 package vn.hoidanit.laptopshop.controller.client;
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 
+/**
+ * @author heaty566
+ */
 public class Constants {
     public static String GOOGLE_CLIENT_ID = "149764116472-at1e5po7mio5rlqsl9fu08a1evc3n8r0.apps.googleusercontent.com";
 

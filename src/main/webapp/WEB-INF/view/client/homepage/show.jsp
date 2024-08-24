@@ -113,7 +113,8 @@
                                                     <div class="col-md-6 col-lg-4 col-xl-3">
                                                         <div class="rounded position-relative fruite-item">
                                                             <div class="fruite-img">
-                                                                <img src="/images/product/${product.image}"
+                                                                <img loading="lazy"
+                                                                    src="/images/product/${product.image}"
                                                                     class="img-fluid w-100 rounded-top" alt="">
                                                             </div>
                                                             <div class="text-white bg-secondary px-3 py-1 rounded position-absolute"
@@ -195,7 +196,7 @@
                                 <div class="col-md-6 col-lg-4">
                                     <a href="/product/${product.id}">
                                         <div class="service-item bg-secondary rounded border border-secondary">
-                                            <img src="/images/product/${product.image}"
+                                            <img loading="lazy" src="/images/product/${product.image}"
                                                 class="img-fluid rounded-top w-100" alt="">
                                             <div class="px-4 rounded-bottom">
                                                 <div class="service-content bg-primary text-center p-4 rounded">
@@ -230,7 +231,7 @@
                                     <div class="p-4 rounded bg-light">
                                         <div class="row align-items-center">
                                             <div class="col-6">
-                                                <img src="/images/product/${product.image}" style="width: 165px; height: 165px; border-radius: 50%; overflow: hidden;  display: flex;
+                                                <img loading="lazy" src="/images/product/${product.image}" style="width: 165px; height: 165px; border-radius: 50%; overflow: hidden;  display: flex;
                                                 justify-content: center; align-items: center; object-fit: cover;"
                                                     class="img-fluid rounded-circle" alt="">
                                             </div>
@@ -296,7 +297,8 @@
                             <c:forEach var="product" items="${bestProducts}" begin="3" end="6">
                                 <div class="col-md-6 col-lg-6 col-xl-3">
                                     <div class="text-center">
-                                        <img src="/images/product/${product.image}" class="img-fluid rounded" alt="">
+                                        <img loading="lazy" src="/images/product/${product.image}"
+                                            class="img-fluid rounded" alt="">
                                         <div class="py-4">
                                             <a href="/product/${product.id}" class="h5">${product.name}</a>
                                             <c:if test="${product.sta == '5'}">
@@ -380,7 +382,7 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="position-relative">
-                                        <img src="/images/product/1711079954090-apple-01.png"
+                                        <img loading="lazy" src="/images/product/1711079954090-apple-01.png"
                                             class="img-fluid w-100 rounded" alt="">
 
                                         <div class="d-flex align-items-center justify-content-center bg-white rounded-circle position-absolute text-center"

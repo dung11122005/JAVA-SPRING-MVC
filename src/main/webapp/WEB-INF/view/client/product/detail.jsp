@@ -114,8 +114,8 @@
                                     <div class="col-lg-6">
                                         <div class="border rounded">
                                             <a href="#">
-                                                <img src="/images/product/${product.image}" class="img-fluid rounded"
-                                                    alt="Image">
+                                                <img loading="lazy" src="/images/product/${product.image}"
+                                                    class="img-fluid rounded" alt="Image">
                                             </a>
                                         </div>
                                     </div>
@@ -276,7 +276,7 @@
                                                 aria-labelledby="nav-mission-tab">
                                                 <c:forEach var="comment" items="${comments}">
                                                     <div class="d-flex">
-                                                        <img src="/images/avatar/${comment.user.avatar}"
+                                                        <img loading="lazy" src="/images/avatar/${comment.user.avatar}"
                                                             class="img-fluid rounded-circle p-3" style="width: 100px; height: 100px;overflow: hidden;  display: flex;
                                                 justify-content: center; align-items: center; object-fit: cover;"
                                                             alt="">
@@ -426,7 +426,7 @@
                                             <div class="d-flex align-items-center justify-content-start">
                                                 <div class="rounded"
                                                     style="width: 100px; height: 85px; margin-right: 10px;">
-                                                    <img src="/images/product/${product.image}"
+                                                    <img loading="lazy" src="/images/product/${product.image}"
                                                         class="img-fluid rounded" alt="Image">
                                                 </div>
                                                 <div>
@@ -498,8 +498,8 @@
                                     </div>
                                     <div class="col-lg-12">
                                         <div class="position-relative">
-                                            <img src="/client/img/banner-fruits.jpg" class="img-fluid w-100 rounded"
-                                                alt="">
+                                            <img loading="lazy" src="/client/img/banner-fruits.jpg"
+                                                class="img-fluid w-100 rounded" alt="">
                                             <div class="position-absolute"
                                                 style="top: 50%; right: 10px; transform: translateY(-50%);">
                                                 <h3 class="text-secondary fw-bold">Fresh <br> Fruits <br> Banner</h3>

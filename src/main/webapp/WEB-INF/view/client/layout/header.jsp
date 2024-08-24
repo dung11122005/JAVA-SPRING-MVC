@@ -71,7 +71,8 @@
                                                 <c:forEach var="listOrder" items="${sessionScope.listOrder}">
                                                     <c:if test="${listOrder.status=='1PENDING'}">
                                                         <div class="d-flex">
-                                                            <img style="width: 65px; height: 65px; margin-right: 15px;"
+                                                            <img loading="lazy"
+                                                                style="width: 65px; height: 65px; margin-right: 15px;"
                                                                 src="/images/avatar/logoshop.jpg"
                                                                 class="img-fluid rounded" alt="Image">
                                                             <h6 style="color: black; font-size: 20px;">Đặt hàng thành
@@ -86,7 +87,8 @@
                                                     </c:if>
                                                     <c:if test="${listOrder.status=='2SHIPPING'}">
                                                         <div class="d-flex">
-                                                            <img style="width: 65px; height: 65px; margin-right: 15px;"
+                                                            <img loading="lazy"
+                                                                style="width: 65px; height: 65px; margin-right: 15px;"
                                                                 src="/images/avatar/logoshop.jpg"
                                                                 class="img-fluid rounded" alt="Image">
                                                             <h6 style="color: black; font-size: 20px;">Đơn hàng bạn
@@ -103,7 +105,8 @@
                                                     </c:if>
                                                     <c:if test="${listOrder.status=='3COMPLETE'}">
                                                         <div class="d-flex mb-1">
-                                                            <img style="width: 65px; height: 65px; margin-right: 15px;"
+                                                            <img loading="lazy"
+                                                                style="width: 65px; height: 65px; margin-right: 15px;"
                                                                 src="/images/avatar/logoshop.jpg"
                                                                 class="img-fluid rounded" alt="Image">
                                                             <h6 style="color: black; font-size: 20px;">Đơn hàng của bạn
@@ -120,7 +123,8 @@
                                                     </c:if>
                                                     <c:if test="${listOrder.status=='4CANCEL'}">
                                                         <div class="d-flex mb-1">
-                                                            <img style="width: 65px; height: 65px; margin-right: 15px;"
+                                                            <img loading="lazy"
+                                                                style="width: 65px; height: 65px; margin-right: 15px;"
                                                                 src="/images/avatar/logoshop.jpg"
                                                                 class="img-fluid rounded" alt="Image">
                                                             <h6 style="color: rgb(246, 55, 55); font-size: 20px;">Đơn
@@ -156,7 +160,7 @@
                                         <ul class="dropdown-menu dropdown-menu-end p-4"
                                             aria-labelledby="dropdownMenuLink">
                                             <li class="d-flex align-items-center flex-column" style="min-width: 300px;">
-                                                <img style="width: 150px; height: 150px; border-radius: 50%; overflow: hidden;  display: flex;
+                                                <img loading="lazy" style="width: 150px; height: 150px; border-radius: 50%; overflow: hidden;  display: flex;
                                                 justify-content: center; align-items: center; object-fit: cover;"
                                                     src="/images/avatar/${sessionScope.avatar}" />
                                                 <div class="text-center my-3">

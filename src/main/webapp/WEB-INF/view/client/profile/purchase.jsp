@@ -143,7 +143,8 @@
                                                                 <c:forEach var="orderDetail"
                                                                     items="${purchase.orderDetails}">
                                                                     <div class="d-flex align-items-center mb-2">
-                                                                        <img src="/images/product/${orderDetail.product.image}"
+                                                                        <img loading="lazy"
+                                                                            src="/images/product/${orderDetail.product.image}"
                                                                             class="img-fluid me-5 rounded-circle"
                                                                             style="width: 80px; height: 80px; overflow: hidden;  display: flex;
                                                             justify-content: center; align-items: center; object-fit: cover;" alt="">
@@ -216,7 +217,8 @@
                                                                 <c:forEach var="orderDetail"
                                                                     items="${purchase.orderDetails}">
                                                                     <div class="d-flex align-items-center mb-2">
-                                                                        <img src="/images/product/${orderDetail.product.image}"
+                                                                        <img loading="lazy"
+                                                                            src="/images/product/${orderDetail.product.image}"
                                                                             class="img-fluid me-5 rounded-circle"
                                                                             style="width: 80px; height: 80px; overflow: hidden;  display: flex;
                                                             justify-content: center; align-items: center; object-fit: cover;" alt="">
@@ -285,7 +287,8 @@
                                                                 <c:forEach var="orderDetail"
                                                                     items="${purchase.orderDetails}">
                                                                     <div class="d-flex align-items-center mb-2">
-                                                                        <img src="/images/product/${orderDetail.product.image}"
+                                                                        <img loading="lazy"
+                                                                            src="/images/product/${orderDetail.product.image}"
                                                                             class="img-fluid me-5 rounded-circle"
                                                                             style="width: 80px; height: 80px; overflow: hidden;  display: flex;
                                                             justify-content: center; align-items: center; object-fit: cover;" alt="">
@@ -353,7 +356,8 @@
                                                                 <c:forEach var="orderDetail"
                                                                     items="${purchase.orderDetails}">
                                                                     <div class="d-flex align-items-center mb-2">
-                                                                        <img src="/images/product/${orderDetail.product.image}"
+                                                                        <img loading="lazy"
+                                                                            src="/images/product/${orderDetail.product.image}"
                                                                             class="img-fluid me-5 rounded-circle"
                                                                             style="width: 80px; height: 80px; overflow: hidden;  display: flex;
                                                             justify-content: center; align-items: center; object-fit: cover;" alt="">
@@ -421,7 +425,8 @@
                                                                 <c:forEach var="orderDetail"
                                                                     items="${purchase.orderDetails}">
                                                                     <div class="d-flex align-items-center mb-2">
-                                                                        <img src="/images/product/${orderDetail.product.image}"
+                                                                        <img loading="lazy"
+                                                                            src="/images/product/${orderDetail.product.image}"
                                                                             class="img-fluid me-5 rounded-circle"
                                                                             style="width: 80px; height: 80px; overflow: hidden;  display: flex;
                                                             justify-content: center; align-items: center; object-fit: cover;" alt="">

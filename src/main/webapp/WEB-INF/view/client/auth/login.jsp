@@ -48,7 +48,8 @@
                         <div class="container-fluid h-custom">
                             <div class="row d-flex justify-content-center align-items-center h-100">
                                 <div class="col-md-9 col-lg-6 col-xl-5">
-                                    <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
+                                    <img loading="lazy"
+                                        src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
                                         class="img-fluid" alt="Sample image">
                                 </div>
                                 <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
@@ -65,7 +66,7 @@
                                     </div>
                                     <div
                                         class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
-                                        <a href="https://accounts.google.com/o/oauth2/auth?scope=profile&redirect_uri=http://localhost:8080/laptopshop/login&response_type=code&client_id=149764116472-at1e5po7mio5rlqsl9fu08a1evc3n8r0.apps.googleusercontent.com&approval_prompt=force"
+                                        <a href="https://accounts.google.com/o/oauth2/auth?scope=email&redirect_uri=http://localhost:8080/laptopshop/login&response_type=code&client_id=149764116472-at1e5po7mio5rlqsl9fu08a1evc3n8r0.apps.googleusercontent.com&approval_prompt=force"
                                             class="btn btn-lg btn-ligth" style="margin-right: 25px;">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                 fill="currentColor" class="bi bi-google" viewBox="0 0 16 16">

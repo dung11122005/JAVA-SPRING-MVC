@@ -9,8 +9,8 @@
                         <c:forEach var="product" items="${productCarousel}" end="6">
                             <div class="border border-primary rounded position-relative vesitable-item">
                                 <div class="vesitable-img">
-                                    <img src="/images/product/${product.image}" class="img-fluid w-100 rounded-top"
-                                        alt="">
+                                    <img loading="lazy" src="/images/product/${product.image}"
+                                        class="img-fluid w-100 rounded-top" alt="">
                                 </div>
                                 <div class="text-white bg-primary px-3 py-1 rounded position-absolute"
                                     style="top: 10px; right: 10px;">Laptop</div>

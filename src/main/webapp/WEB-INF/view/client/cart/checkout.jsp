@@ -95,7 +95,8 @@
                                             <tr>
                                                 <th scope="row">
                                                     <div class="d-flex align-items-center">
-                                                        <img src="/images/product/${cartDetail.product.image}"
+                                                        <img loading="lazy"
+                                                            src="/images/product/${cartDetail.product.image}"
                                                             class="img-fluid me-5 rounded-circle" style="width: 80px; height: 80px; overflow: hidden;  display: flex;
                                                 justify-content: center; align-items: center; object-fit: cover;"
                                                             alt="">
@@ -175,10 +176,16 @@
                                                     </div>
                                                     <div class="mt-3 d-flex justify-content-between">
                                                         <h5 class="mb-0 me-4">Hình thức</h5>
-                                                        <div class="">
+                                                        <!-- <div class="">
                                                             <p class="mb-0">Thanh toán khi nhận hàng (COD)</p>
-                                                        </div>
+                                                        </div> -->
+                                                        <select class="form-select" aria-label="Default select example">
+                                                            <option value="COD">Thanh toán khi nhận
+                                                                hàng (COD)</option>
+                                                            <option value="VNPAY">Thanh qua VNPAY</option>
+                                                        </select>
                                                     </div>
+
                                                 </div>
                                                 <div
                                                     class="py-4 mb-4 border-top border-bottom d-flex justify-content-between">

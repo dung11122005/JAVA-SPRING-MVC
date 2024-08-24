@@ -67,7 +67,7 @@
                             <p>Địa chỉ: 320/32/6 Trần Bình Trọng, P4, Q5, HCM</p>
                             <p>Email: hoangtandung2k5@gmail.com</p>
                             <p>Phone: +0123 4567 8910</p>
-                            <img src="/client/img/payment.png" class="img-fluid" alt="">
+                            <img loading="lazy" src="/client/img/payment.png" class="img-fluid" alt="">
                         </div>
                     </div>
                 </div>

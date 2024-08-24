@@ -108,8 +108,8 @@
                                         <div class="col-lg-5">
                                             <div class="card mb-4">
                                                 <div class="card-body text-center">
-                                                    <img src="images/avatar/${sessionScope.avatar}" alt="avatar"
-                                                        class="rounded-circle img-fluid"
+                                                    <img loading="lazy" src="images/avatar/${sessionScope.avatar}"
+                                                        alt="avatar" class="rounded-circle img-fluid"
                                                         style="width: 150px; height: 150px; object-fit: cover; ">
                                                     <h5 class="my-3">${sessionScope.fullName}</h5>
                                                     <p class="text-muted mb-1">Email:
@@ -154,7 +154,7 @@
                                                                 accept=".png, .jpg, .jpeg" name="hoidanitFile" />
                                                         </div>
                                                         <div class="col-12 mb-3">
-                                                            <img style="max-height: 250px;display: none;"
+                                                            <img loading="lazy" style="max-height: 250px;display: none;"
                                                                 alt="avatar preview" id="avatarPreview">
                                                         </div>
                                                         <button style="color: white;" class="btn btn-primary">Xác
