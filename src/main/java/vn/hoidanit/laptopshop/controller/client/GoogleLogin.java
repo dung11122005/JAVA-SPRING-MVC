@@ -13,12 +13,14 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.fluent.Request;
+import org.springframework.web.bind.annotation.RestController;
 import org.apache.http.client.fluent.Form;
 
 /**
  * @author heaty566
  */
 
+@RestController
 @WebServlet(urlPatterns = "/login")
 public class GoogleLogin extends HttpServlet {
     /**
