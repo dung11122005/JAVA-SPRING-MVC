@@ -2,7 +2,7 @@
 Template này được sử dụng cho series Java Spring MVC (dự án laptopshop) của tác giả Hoàng Tấn Dũng
 
 ## Về tác giả
-Mọi thông tin về Tác giả Hỏi Dân IT, các bạn có thể tìm kiếm tại đây:
+Mọi thông tin về Tác giả Hoàng Tấn Dũng, các bạn có thể tìm kiếm tại đây:
 
 Youtube “Hoàng Tấn Dũng” : https://www.youtube.com/@crushoicaucutevai7460/featured
 
