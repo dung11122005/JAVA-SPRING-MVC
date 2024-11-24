@@ -1,7 +1,9 @@
 # ![Icon](https://img.icons8.com/?size=35&id=104233&format=png&color=000000) Laptop Shop
+
 Dự án này được code bằng Java (dự án laptopshop) và độc quyền thuộc về tác giả Hoàng Tấn Dũng
 
-## Về tác giả
+## ![Icon](https://img.icons8.com/?size=20&id=21838&format=png&color=000000) Về tác giả
+
 Mọi thông tin về Tác giả Hoàng Tấn Dũng, các bạn có thể tìm kiếm tại đây:
 
 Youtube “Hoàng Tấn Dũng” : https://www.youtube.com/@crushoicaucutevai7460/featured
