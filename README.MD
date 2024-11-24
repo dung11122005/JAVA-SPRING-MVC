@@ -1,5 +1,5 @@
-# Java Spring Starter template
-Template này được sử dụng cho series Java Spring MVC (dự án laptopshop) của tác giả Hoàng Tấn Dũng
+# ![Icon](https://img.icons8.com/?size=40&id=104233&format=png&color=000000) Laptop Shop
+Dự án này được code bằng Java (dự án laptopshop) và độc quyền thuộc về tác giả Hoàng Tấn Dũng
 
 ## Về tác giả
 Mọi thông tin về Tác giả Hoàng Tấn Dũng, các bạn có thể tìm kiếm tại đây:
@@ -14,11 +14,17 @@ Fanpage “Hoàng Tấn Dũng” : https://www.facebook.com/cotem.khong.90?local
   - **Spring Security**: Đảm bảo bảo mật cho ứng dụng với các tính năng xác thực và phân quyền.
   - **Spring Data JPA**: Quản lý cơ sở dữ liệu dễ dàng thông qua ORM Hibernate.
   - **Spring MVC**: Tách biệt logic và giao diện, áp dụng kiến trúc MVC chuẩn.
+
 - **JSP (JavaServer Pages)**: Giao diện người dùng được render trên server với **JSTL** để xử lý dữ liệu động.
+
 - **MySQL**: Cơ sở dữ liệu quan hệ để lưu trữ thông tin người dùng, sản phẩm và đơn hàng.
+
 - **Elasticsearch**: Công cụ tìm kiếm và phân tích dữ liệu mạnh mẽ, hỗ trợ lọc sản phẩm theo nhiều tiêu chí.
+
 - **VNPay**: Tích hợp thanh toán trực tuyến, mang lại trải nghiệm liền mạch cho người dùng.
+
 - **Session**: Quản lý trạng thái người dùng, duy trì phiên đăng nhập an toàn.
+
 - **Phân trang**: Giúp tối ưu hóa hiệu năng khi hiển thị danh sách dữ liệu lớn.
 
 ## ![Icon](https://img.icons8.com/?size=25&id=9YgKo9PXNHu4&format=png&color=000000) Chức năng chính
