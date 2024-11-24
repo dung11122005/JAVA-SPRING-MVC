@@ -60,7 +60,7 @@ Fanpage “Hoàng Tấn Dũng” : https://www.facebook.com/cotem.khong.90?local
 ### **5. Tối ưu hiệu năng**
 - Chức năng phân trang được triển khai cho các danh sách lớn (ví dụ: danh sách sản phẩm, đơn hàng)
 
-## **Cách chạy ứng dụng**
+## ![Icon](https://img.icons8.com/?size=30&id=108805&format=png&color=000000) Cách chạy ứng dụng
 
 1. **Cài đặt yêu cầu hệ thống**:
    - **Java 17+**.
