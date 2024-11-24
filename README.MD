@@ -8,7 +8,7 @@ Youtube “Hoàng Tấn Dũng” : https://www.youtube.com/@crushoicaucutevai746
 
 Fanpage “Hoàng Tấn Dũng” : https://www.facebook.com/cotem.khong.90?locale=vi_VN
 
-## ![Icon](https://img.icons8.com/?size=20&id=43259&format=png&color=000000) Công nghệ sử dụng
+## ![Icon](https://img.icons8.com/?size=25&id=43259&format=png&color=000000) Công nghệ sử dụng
 
 - **Java Spring Boot**: Framework mạnh mẽ để xây dựng backend.
 
@@ -28,7 +28,7 @@ Fanpage “Hoàng Tấn Dũng” : https://www.facebook.com/cotem.khong.90?local
 
 - **Phân trang**: Giúp tối ưu hóa hiệu năng khi hiển thị danh sách dữ liệu lớn.
 
-## ![Icon](https://img.icons8.com/?size=25&id=9YgKo9PXNHu4&format=png&color=000000) Chức năng chính
+## ![Icon](https://img.icons8.com/?size=30&id=111139&format=png&color=000000) Chức năng chính
 
 ### **1. Đăng ký, đăng nhập và quản lý phiên**
 - Người dùng có thể đăng ký và đăng nhập tài khoản
@@ -82,7 +82,7 @@ Fanpage “Hoàng Tấn Dũng” : https://www.facebook.com/cotem.khong.90?local
 - Triển khai lên server thực tế để ứng dụng có thể được sử dụng trong môi trường production.
 - Cải thiện giao diện người dùng với các framework hiện đại như Bootstrap hoặc TailwindCSS.
 
-## ![Icon](https://img.icons8.com/?size=25&id=9YgKo9PXNHu4&format=png&color=000000) Ảnh chụp dự án
+## ![Icon](https://img.icons8.com/?size=30&id=9YgKo9PXNHu4&format=png&color=000000) Ảnh chụp dự án
 
 ### 1. Home page
 ![Home page](https://scontent.fsgn5-5.fna.fbcdn.net/v/t39.30808-6/468357345_122150395466291068_7389740609774153854_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=hdxCm2JfJ4gQ7kNvgEml1r2&_nc_zt=23&_nc_ht=scontent.fsgn5-5.fna&_nc_gid=AfKqFbmhc5mUnjS4Yvf9l5W&oh=00_AYCtpwwxV3jJ_Pbgw5yiGPCZbhzwrUT6NibMjBuVWiO3mw&oe=67486076)
