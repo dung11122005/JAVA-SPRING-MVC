@@ -78,9 +78,8 @@ Fanpage “Hoàng Tấn Dũng” : https://www.facebook.com/cotem.khong.90?local
    - Mở trình duyệt và truy cập: `http://localhost:8080`.
 
 ## **Có Thể Mở rộng**
-- Có thể tích hợp cổng thanh toán VnPay
+- Có thể tích hợp cổng thanh toán `VnPay, PayPal, Stripe`.
 - Triển khai lên server thực tế để ứng dụng có thể được sử dụng trong môi trường production.
-- Tích hợp thêm các cổng thanh toán quốc tế như PayPal, Stripe.
 - Cải thiện giao diện người dùng với các framework hiện đại như Bootstrap hoặc TailwindCSS.
 
 ## ![Icon](https://img.icons8.com/?size=25&id=9YgKo9PXNHu4&format=png&color=000000) Ảnh chụp dự án
