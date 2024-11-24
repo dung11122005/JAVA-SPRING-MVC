@@ -114,7 +114,7 @@ Fanpage “Hoàng Tấn Dũng” : https://www.facebook.com/cotem.khong.90?local
 ### 10. Trang xem trạng thái đơn hàng
 ![Trang xem trạng thái đơn hàng](https://scontent.fsgn5-9.fna.fbcdn.net/v/t39.30808-6/468209050_122150395838291068_6232282994774543635_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=QxBoYXOCkTQQ7kNvgGhLpoR&_nc_zt=23&_nc_ht=scontent.fsgn5-9.fna&_nc_gid=Aeaxzxa-bTpzGDZ0PEnRTE_&oh=00_AYC_OnVDk3ocbLRw4Ckgj0fCr8v0bRF826CRq_W9oUmycg&oe=674854BD)
 
-### 11. Trang xem trạng thái đơn hàng
+### 11. Trang đơn mua và trạng thái mọi đơn hàng
 ![Trang đơn mua và trạng thái mọi đơn hàng](https://scontent.fsgn5-3.fna.fbcdn.net/v/t39.30808-6/468101604_122150404358291068_4077510413719410014_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_ohc=mc9_eAafD3AQ7kNvgHJgj9i&_nc_zt=23&_nc_ht=scontent.fsgn5-3.fna&_nc_gid=Ar3b-AWRedLwoJht-Xy8jjm&oh=00_AYAu7hAJM5G4UbHWI5dMI3fw03n2HLrl42Xn8Mv2Z3OI2Q&oe=67486CEB)
 
 ### 12. Trang lịch sử đặt hàng và thông báo
