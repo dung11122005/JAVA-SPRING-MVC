@@ -1,4 +1,4 @@
-# ![Icon](https://img.icons8.com/?size=40&id=104233&format=png&color=000000) Laptop Shop
+# ![Icon](https://img.icons8.com/?size=35&id=104233&format=png&color=000000) Laptop Shop
 Dự án này được code bằng Java (dự án laptopshop) và độc quyền thuộc về tác giả Hoàng Tấn Dũng
 
 ## Về tác giả
@@ -52,14 +52,11 @@ Fanpage “Hoàng Tấn Dũng” : https://www.facebook.com/cotem.khong.90?local
 - Lọc sản phẩm theo một hoặc nhiều tiêu chí cùng lúc (ví dụ: giá, thương hiệu, danh mục)
 - Tích hợp **Elasticsearch** để tăng tốc độ tìm kiếm và độ chính xác
 
-### **4. Thanh toán**
-- Tích hợp cổng thanh toán **VNPay**, hỗ trợ thanh toán trực tuyến dễ dàng và an toàn.
-
-### **5. Quản lý đơn hàng**
+### **4. Quản lý đơn hàng**
 - Người dùng xem trạng thái đơn hàng hiện tại và lịch sử đặt hàng.
 - Shipped cập nhật trạng thái giao hàng, hỗ trợ thông báo cho người dùng.
 
-### **6. Tối ưu hiệu năng**
+### **5. Tối ưu hiệu năng**
 - Chức năng phân trang được triển khai cho các danh sách lớn (ví dụ: danh sách sản phẩm, đơn hàng)
 
 ## **Cách chạy ứng dụng**
@@ -80,6 +77,7 @@ Fanpage “Hoàng Tấn Dũng” : https://www.facebook.com/cotem.khong.90?local
    - Mở trình duyệt và truy cập: `http://localhost:8080`.
 
 ## **Có Thể Mở rộng**
+- Có thể tích hợp cổng thanh toán VnPay
 - Triển khai lên server thực tế để ứng dụng có thể được sử dụng trong môi trường production.
 - Tích hợp thêm các cổng thanh toán quốc tế như PayPal, Stripe.
 - Cải thiện giao diện người dùng với các framework hiện đại như Bootstrap hoặc TailwindCSS.
