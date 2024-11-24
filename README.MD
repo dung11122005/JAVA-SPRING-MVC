@@ -96,20 +96,29 @@ Fanpage “Hoàng Tấn Dũng” : https://www.facebook.com/cotem.khong.90?local
 ### 4. Tìm sản phẩm bằng elasticsearch và filter
 ![Tìm sản phẩm bằng elasticsearch và filter](https://scontent.fsgn5-5.fna.fbcdn.net/v/t39.30808-6/468208935_122150395790291068_4090862263106330607_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_ohc=gLSh2RO5GC4Q7kNvgFrAWsx&_nc_zt=23&_nc_ht=scontent.fsgn5-5.fna&_nc_gid=AXe9MjNKJOf9z-t4Z2CUx-J&oh=00_AYCOSsFy5GBlKSjaypCcT7KF2nDibStPLIEEzODVbtniAA&oe=67485606)
 
-### 5. Admin page
+### 5. Trang cá nhân
+![Trang cá nhân](https://scontent.fsgn5-8.fna.fbcdn.net/v/t39.30808-6/468147034_122150404394291068_4181066319066834074_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_ohc=naI0xjV-mc0Q7kNvgHHk-U1&_nc_zt=23&_nc_ht=scontent.fsgn5-8.fna&_nc_gid=Ao7OQaRPbAz-lAtAUCwavMZ&oh=00_AYCySTt37pTPuAL63Cu2bUw2l2IAg4rfwEo9W-j2gkisRA&oe=674870CF)
+
+### 6. Admin page
 ![Admin page](https://scontent.fsgn5-8.fna.fbcdn.net/v/t39.30808-6/468234143_122150395580291068_9046488646030231393_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_ohc=RS1EmQpX6UMQ7kNvgExWAQF&_nc_zt=23&_nc_ht=scontent.fsgn5-8.fna&_nc_gid=AVfroCUIlKUrlmWdviNSH9P&oh=00_AYDZ36zm6RuNZAJ61MK1HW8-vPBjxkdDTJVgJ1GcAOwJdw&oe=67485C34)
 
-### 6. Trang CRUD người dùng, sản phẩm và cập nhật trạng thái đặt hàng
+### 7. Trang CRUD người dùng, sản phẩm và cập nhật trạng thái đặt hàng
 ![Trang CRUD người dùng, sản phẩm và cập nhật trạng thái đặt hàng](https://scontent.fsgn5-9.fna.fbcdn.net/v/t39.30808-6/468089144_122150395646291068_7903849632802435327_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=M4HVBPN2xQEQ7kNvgGXUMl_&_nc_zt=23&_nc_ht=scontent.fsgn5-9.fna&_nc_gid=A3dku5r_BLMwwpmx3aCHXrW&oh=00_AYBRJ2AxRB_wpqYULf2N2nTvly617xpgejOgWsGuxyTLPw&oe=67486ECA)
 
-### 7. Trang giỏ hàng
+### 8. Trang giỏ hàng
 ![Trang giỏ hàng](https://scontent.fsgn5-14.fna.fbcdn.net/v/t39.30808-6/468088169_122150395700291068_5132530246234596603_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_ohc=ka3p7X0Cgl0Q7kNvgGcpwrQ&_nc_zt=23&_nc_ht=scontent.fsgn5-14.fna&_nc_gid=A0dVfUHKI01YRhgUVrTgaBu&oh=00_AYD8jm9ZfWwdxbifoEBZD-m1TSKC2zNgI8t14z2mFzRv4Q&oe=67486E7F)
 
-### 8. Trang thanh toán đơn hàng
+### 9. Trang thanh toán đơn hàng
 ![Trang thanh toán đơn hàng](https://scontent.fsgn5-14.fna.fbcdn.net/v/t39.30808-6/468206587_122150395616291068_8985177916908040915_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_ohc=evEHW4MgxlwQ7kNvgEomIkS&_nc_zt=23&_nc_ht=scontent.fsgn5-14.fna&_nc_gid=AF3N2P7dRcITJTJos5iYImJ&oh=00_AYBQNg_1AYzpqn8ausnm8_5xopetd9KjD5VW0HIsxOsQ5g&oe=67487097)
 
-### 9. Trang xem trạng thái đơn hàng
+### 10. Trang xem trạng thái đơn hàng
 ![Trang xem trạng thái đơn hàng](https://scontent.fsgn5-9.fna.fbcdn.net/v/t39.30808-6/468209050_122150395838291068_6232282994774543635_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=QxBoYXOCkTQQ7kNvgGhLpoR&_nc_zt=23&_nc_ht=scontent.fsgn5-9.fna&_nc_gid=Aeaxzxa-bTpzGDZ0PEnRTE_&oh=00_AYC_OnVDk3ocbLRw4Ckgj0fCr8v0bRF826CRq_W9oUmycg&oe=674854BD)
 
-### 10. Trang lịch sử đặt hàng và thông báo
+### 11. Trang xem trạng thái đơn hàng
+![Trang đơn mua và trạng thái mọi đơn hàng](https://scontent.fsgn5-3.fna.fbcdn.net/v/t39.30808-6/468101604_122150404358291068_4077510413719410014_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_ohc=mc9_eAafD3AQ7kNvgHJgj9i&_nc_zt=23&_nc_ht=scontent.fsgn5-3.fna&_nc_gid=Ar3b-AWRedLwoJht-Xy8jjm&oh=00_AYAu7hAJM5G4UbHWI5dMI3fw03n2HLrl42Xn8Mv2Z3OI2Q&oe=67486CEB)
+
+### 12. Trang lịch sử đặt hàng và thông báo
 ![Trang lịch sử đặt hàng và thông báo](https://scontent.fsgn5-5.fna.fbcdn.net/v/t39.30808-6/468348612_122150395748291068_7764951022912230753_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_ohc=mnVj4Hg_SCcQ7kNvgHpriqm&_nc_zt=23&_nc_ht=scontent.fsgn5-5.fna&_nc_gid=AetCniP0swNm4pAkcDCg25-&oh=00_AYAcNxuL9KHSZIApExpS7NfKcld6d1ilx5Nd1DOTTb-1Gw&oe=674868E1)
+
+### 13. Trang login
+![Trang login](https://scontent.fsgn5-5.fna.fbcdn.net/v/t39.30808-6/468140263_122150404334291068_8950719682990869513_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=XPaKFnAQkcgQ7kNvgG_rrv6&_nc_zt=23&_nc_ht=scontent.fsgn5-5.fna&_nc_gid=A1IJQJnUwq8voKBcbB2UPHc&oh=00_AYAwK8BeC7Pdeo_gaee8Cgd7UvHheF7wASesoM-AgSYIVw&oe=67488D7A)
