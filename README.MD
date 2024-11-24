@@ -11,8 +11,11 @@ Fanpage “Hoàng Tấn Dũng” : https://www.facebook.com/cotem.khong.90?local
 ## ![Icon](https://img.icons8.com/?size=20&id=43259&format=png&color=000000) Công nghệ sử dụng
 
 - **Java Spring Boot**: Framework mạnh mẽ để xây dựng backend.
+
   - **Spring Security**: Đảm bảo bảo mật cho ứng dụng với các tính năng xác thực và phân quyền.
+
   - **Spring Data JPA**: Quản lý cơ sở dữ liệu dễ dàng thông qua ORM Hibernate.
+  
   - **Spring MVC**: Tách biệt logic và giao diện, áp dụng kiến trúc MVC chuẩn.
 
 - **JSP (JavaServer Pages)**: Giao diện người dùng được render trên server với **JSTL** để xử lý dữ liệu động.
