@@ -183,8 +183,8 @@
                                                             aria-label="Default select example">
                                                             <option value="COD">Thanh toán khi nhận
                                                                 hàng (COD)</option>
-                                                            <option value="VNPAY">Thanh qua VNPAY</option>
-                                                            <option value="MOMO">Thanh qua MOMO</option>
+                                                            <option value="VNPAY">Thanh toán qua VNPAY</option>
+                                                            <option value="MOMO">Thanh toán qua MOMO</option>
                                                         </select>
                                                     </div>
 
