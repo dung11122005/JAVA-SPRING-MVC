@@ -121,15 +121,15 @@ Fanpage “Hoàng Tấn Dũng” : https://www.facebook.com/cotem.khong.90?local
 
 ### 2. Trang sản phẩm
 
-![Trang sản phẩm](https://scontent.fsgn5-9.fna.fbcdn.net/v/t39.30808-6/468042969_122150395520291068_3844525518319800104_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=nooZlwie2k8Q7kNvgECwnTN&_nc_zt=23&_nc_ht=scontent.fsgn5-9.fna&_nc_gid=AcpqIqh-EOlW8yQIJG-rxmR&oh=00_AYBX7s-hJCku2Tvpdh-67b1828B9HqtAi3WSnV2WWC2mvA&oe=6748602D)
+![Trang sản phẩm](https://scontent.fsgn5-9.fna.fbcdn.net/v/t39.30808-6/468042969_122150395520291068_3844525518319800104_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=MqOZ83b7npYQ7kNvgH_dxBt&_nc_zt=23&_nc_ht=scontent.fsgn5-9.fna&_nc_gid=AzNvteC_2YuEdnhPgMcUVv4&oh=00_AYDqsW7kwYam66zCe94fxll_AVnj93cvGBJ_j5wYgL0PjA&oe=6758A2AD)
 
 ### 3. Trang chi tiết sản phẩm
 
-![Trang chi tiết sản phẩm](https://scontent.fsgn5-10.fna.fbcdn.net/v/t39.30808-6/468088207_122150395496291068_7213254627608566744_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_ohc=RU-Ywlmu0lwQ7kNvgG4mnqL&_nc_zt=23&_nc_ht=scontent.fsgn5-10.fna&_nc_gid=Ae_lSnTmJ-78nhyaPMpeNyn&oh=00_AYCaT11zNKMlBrRBztzaK2Rrr43QHqT6KbFqFiZATEqBug&oe=67487F1F)
+![Trang chi tiết sản phẩm](https://scontent.fsgn5-10.fna.fbcdn.net/v/t39.30808-6/468088207_122150395496291068_7213254627608566744_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_ohc=wPZHf95MjCEQ7kNvgHT6Cp_&_nc_zt=23&_nc_ht=scontent.fsgn5-10.fna&_nc_gid=AZzDyy_llxC3pOn0iwVypW7&oh=00_AYDaVVJxH6ahUTNz1bwlEDp-YbhtrambCJuHHE-QIQdpAg&oe=6758895F)
 
 ### 4. Tìm sản phẩm bằng elasticsearch và filter
 
-![Tìm sản phẩm bằng elasticsearch và filter](https://scontent.fsgn5-5.fna.fbcdn.net/v/t39.30808-6/468208935_122150395790291068_4090862263106330607_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_ohc=gLSh2RO5GC4Q7kNvgFrAWsx&_nc_zt=23&_nc_ht=scontent.fsgn5-5.fna&_nc_gid=AXe9MjNKJOf9z-t4Z2CUx-J&oh=00_AYCOSsFy5GBlKSjaypCcT7KF2nDibStPLIEEzODVbtniAA&oe=67485606)
+![Tìm sản phẩm bằng elasticsearch và filter](https://scontent.fsgn5-5.fna.fbcdn.net/v/t39.30808-6/468208935_122150395790291068_4090862263106330607_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_ohc=SQYJwta6iRgQ7kNvgHhRYtt&_nc_zt=23&_nc_ht=scontent.fsgn5-5.fna&_nc_gid=A_0ZkidTX7QxTf7XKcDAYPD&oh=00_AYBPGG_cRxEqJqf1VpVqbeJbzRL5NDDduSLXW8VR9jO9aQ&oe=67589886)
 
 ### 5. Trang cá nhân
 
@@ -141,7 +141,7 @@ Fanpage “Hoàng Tấn Dũng” : https://www.facebook.com/cotem.khong.90?local
 
 ### 7. Trang CRUD người dùng, sản phẩm và cập nhật trạng thái đặt hàng
 
-![Trang CRUD người dùng, sản phẩm và cập nhật trạng thái đặt hàng](https://scontent.fsgn5-9.fna.fbcdn.net/v/t39.30808-6/468089144_122150395646291068_7903849632802435327_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=M4HVBPN2xQEQ7kNvgGXUMl_&_nc_zt=23&_nc_ht=scontent.fsgn5-9.fna&_nc_gid=A3dku5r_BLMwwpmx3aCHXrW&oh=00_AYBRJ2AxRB_wpqYULf2N2nTvly617xpgejOgWsGuxyTLPw&oe=67486ECA)
+![Trang CRUD người dùng, sản phẩm và cập nhật trạng thái đặt hàng](https://scontent.fsgn5-9.fna.fbcdn.net/v/t39.30808-6/468089144_122150395646291068_7903849632802435327_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=9SsO7xAuQ7cQ7kNvgHNpzms&_nc_zt=23&_nc_ht=scontent.fsgn5-9.fna&_nc_gid=AFSZmj6R4-tpKMZVAEwHi4M&oh=00_AYCzqE9fYl_PB1vWOiXk8iMAVfIBTs7ItET2LrT5RQ13hA&oe=6758B14A)
 
 ### 8. Trang giỏ hàng
 
@@ -149,7 +149,7 @@ Fanpage “Hoàng Tấn Dũng” : https://www.facebook.com/cotem.khong.90?local
 
 ### 9. Trang thanh toán đơn hàng
 
-![Trang thanh toán đơn hàng](https://scontent.fsgn5-14.fna.fbcdn.net/v/t39.30808-6/468206587_122150395616291068_8985177916908040915_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_ohc=evEHW4MgxlwQ7kNvgEomIkS&_nc_zt=23&_nc_ht=scontent.fsgn5-14.fna&_nc_gid=AF3N2P7dRcITJTJos5iYImJ&oh=00_AYBQNg_1AYzpqn8ausnm8_5xopetd9KjD5VW0HIsxOsQ5g&oe=67487097)
+![Trang thanh toán đơn hàng](https://scontent.fsgn5-14.fna.fbcdn.net/v/t39.30808-6/468206587_122150395616291068_8985177916908040915_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_ohc=3YkuMf3c4xYQ7kNvgH0dzsk&_nc_zt=23&_nc_ht=scontent.fsgn5-14.fna&_nc_gid=A-XjJRBYYhik55V-c-SLXMq&oh=00_AYCrJioDVxM1TrxK5x1sbISWMGN_FUGE-qCNTzoDxVZ29w&oe=6758B317)
 
 ### 10. Thanh toán bằng momo
 
