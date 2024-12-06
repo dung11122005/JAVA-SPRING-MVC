@@ -133,11 +133,11 @@ Fanpage “Hoàng Tấn Dũng” : https://www.facebook.com/cotem.khong.90?local
 
 ### 5. Trang cá nhân
 
-![Trang cá nhân](https://scontent.fsgn5-8.fna.fbcdn.net/v/t39.30808-6/468147034_122150404394291068_4181066319066834074_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_ohc=naI0xjV-mc0Q7kNvgHHk-U1&_nc_zt=23&_nc_ht=scontent.fsgn5-8.fna&_nc_gid=Ao7OQaRPbAz-lAtAUCwavMZ&oh=00_AYCySTt37pTPuAL63Cu2bUw2l2IAg4rfwEo9W-j2gkisRA&oe=674870CF)
+![Trang cá nhân](https://scontent.fsgn5-8.fna.fbcdn.net/v/t39.30808-6/468147034_122150404394291068_4181066319066834074_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_ohc=KVMeM7DtzQcQ7kNvgHiuGKw&_nc_zt=23&_nc_ht=scontent.fsgn5-8.fna&_nc_gid=AqoodQnsGuQ_uWeJSwiWRhG&oh=00_AYA1xY5VehIDlYriBuzF-79JtygnXviYMoYr_VBkSTNufg&oe=6758B34F)
 
 ### 6. Admin page
 
-![Admin page](https://scontent.fsgn5-8.fna.fbcdn.net/v/t39.30808-6/468234143_122150395580291068_9046488646030231393_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_ohc=RS1EmQpX6UMQ7kNvgExWAQF&_nc_zt=23&_nc_ht=scontent.fsgn5-8.fna&_nc_gid=AVfroCUIlKUrlmWdviNSH9P&oh=00_AYDZ36zm6RuNZAJ61MK1HW8-vPBjxkdDTJVgJ1GcAOwJdw&oe=67485C34)
+![Admin page](https://scontent.fsgn5-8.fna.fbcdn.net/v/t39.30808-6/468234143_122150395580291068_9046488646030231393_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_ohc=IOwdG6iRp7MQ7kNvgGBc9vd&_nc_zt=23&_nc_ht=scontent.fsgn5-8.fna&_nc_gid=AxViO7M9dCZGZZfypHDKxF-&oh=00_AYA6VS2AJQqLCMbt9y5itP6dAqM5nT93Qkpad_Uovy2sIA&oe=67589EB4)
 
 ### 7. Trang CRUD người dùng, sản phẩm và cập nhật trạng thái đặt hàng
 
@@ -161,16 +161,16 @@ Fanpage “Hoàng Tấn Dũng” : https://www.facebook.com/cotem.khong.90?local
 
 ### 12. Trang xem trạng thái đơn hàng
 
-![Trang xem trạng thái đơn hàng](https://scontent.fsgn5-9.fna.fbcdn.net/v/t39.30808-6/468209050_122150395838291068_6232282994774543635_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=QxBoYXOCkTQQ7kNvgGhLpoR&_nc_zt=23&_nc_ht=scontent.fsgn5-9.fna&_nc_gid=Aeaxzxa-bTpzGDZ0PEnRTE_&oh=00_AYC_OnVDk3ocbLRw4Ckgj0fCr8v0bRF826CRq_W9oUmycg&oe=674854BD)
+![Trang xem trạng thái đơn hàng](https://scontent.fsgn5-9.fna.fbcdn.net/v/t39.30808-6/468209050_122150395838291068_6232282994774543635_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=nVuuAaPoLvoQ7kNvgEnf0yd&_nc_zt=23&_nc_ht=scontent.fsgn5-9.fna&_nc_gid=AR7kNFrqoR5C4V2Xu0uLp9k&oh=00_AYDkKhLrAd0HDnnBScgG8uy9TKVpx_S6biPPLI1WBmtDhg&oe=6758973D)
 
 ### 13. Trang đơn mua và trạng thái mọi đơn hàng
 
-![Trang đơn mua và trạng thái mọi đơn hàng](https://scontent.fsgn5-3.fna.fbcdn.net/v/t39.30808-6/468101604_122150404358291068_4077510413719410014_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_ohc=mc9_eAafD3AQ7kNvgHJgj9i&_nc_zt=23&_nc_ht=scontent.fsgn5-3.fna&_nc_gid=Ar3b-AWRedLwoJht-Xy8jjm&oh=00_AYAu7hAJM5G4UbHWI5dMI3fw03n2HLrl42Xn8Mv2Z3OI2Q&oe=67486CEB)
+![Trang đơn mua và trạng thái mọi đơn hàng](https://scontent.fsgn5-3.fna.fbcdn.net/v/t39.30808-6/468101604_122150404358291068_4077510413719410014_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_ohc=X9Fm0vaOVToQ7kNvgE6wtT3&_nc_zt=23&_nc_ht=scontent.fsgn5-3.fna&_nc_gid=AzgbSMcGmU3xWuVO7Sttjz8&oh=00_AYBrbMI0V5DjPAiSxQVYCBQSdU7JD9iNWSbX7WxSo_LCcQ&oe=6758AF6B)
 
 ### 14. Trang lịch sử đặt hàng và thông báo
 
-![Trang lịch sử đặt hàng và thông báo](https://scontent.fsgn5-5.fna.fbcdn.net/v/t39.30808-6/468348612_122150395748291068_7764951022912230753_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_ohc=mnVj4Hg_SCcQ7kNvgHpriqm&_nc_zt=23&_nc_ht=scontent.fsgn5-5.fna&_nc_gid=AetCniP0swNm4pAkcDCg25-&oh=00_AYAcNxuL9KHSZIApExpS7NfKcld6d1ilx5Nd1DOTTb-1Gw&oe=674868E1)
+![Trang lịch sử đặt hàng và thông báo](https://scontent.fsgn5-5.fna.fbcdn.net/v/t39.30808-6/468348612_122150395748291068_7764951022912230753_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_ohc=BkO1Tf_F6qEQ7kNvgEWPhJM&_nc_zt=23&_nc_ht=scontent.fsgn5-5.fna&_nc_gid=AgK8WHYs0CNys57xp0odgE8&oh=00_AYAwke_uNBd2ejDaMT64JynJRqYRJ6ALphUOqkhNpPLjTg&oe=6758AB61)
 
 ### 15. Trang login
 
-![Trang login](https://scontent.fsgn5-5.fna.fbcdn.net/v/t39.30808-6/468140263_122150404334291068_8950719682990869513_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=XPaKFnAQkcgQ7kNvgG_rrv6&_nc_zt=23&_nc_ht=scontent.fsgn5-5.fna&_nc_gid=A1IJQJnUwq8voKBcbB2UPHc&oh=00_AYAwK8BeC7Pdeo_gaee8Cgd7UvHheF7wASesoM-AgSYIVw&oe=67488D7A)
+![Trang login](https://scontent.fsgn5-5.fna.fbcdn.net/v/t39.30808-6/468140263_122150404334291068_8950719682990869513_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=aaDwRn52oUgQ7kNvgF7PiaQ&_nc_zt=23&_nc_ht=scontent.fsgn5-5.fna&_nc_gid=ACLdbYShkb1OFP4IOS0oQda&oh=00_AYAO6ef2VjsvtPTYs9O8WeC2UZ_WkE89NDWdVopJI0fIhg&oe=675897BA)
