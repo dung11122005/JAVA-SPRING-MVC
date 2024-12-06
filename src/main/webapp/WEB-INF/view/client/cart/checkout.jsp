@@ -179,10 +179,12 @@
                                                         <!-- <div class="">
                                                             <p class="mb-0">Thanh toán khi nhận hàng (COD)</p>
                                                         </div> -->
-                                                        <select class="form-select" aria-label="Default select example">
+                                                        <select class="form-select" name="paymentMethod"
+                                                            aria-label="Default select example">
                                                             <option value="COD">Thanh toán khi nhận
                                                                 hàng (COD)</option>
                                                             <option value="VNPAY">Thanh qua VNPAY</option>
+                                                            <option value="MOMO">Thanh qua MOMO</option>
                                                         </select>
                                                     </div>
 

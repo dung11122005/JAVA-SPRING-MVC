@@ -151,18 +151,26 @@ Fanpage “Hoàng Tấn Dũng” : https://www.facebook.com/cotem.khong.90?local
 
 ![Trang thanh toán đơn hàng](https://scontent.fsgn5-14.fna.fbcdn.net/v/t39.30808-6/468206587_122150395616291068_8985177916908040915_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_ohc=evEHW4MgxlwQ7kNvgEomIkS&_nc_zt=23&_nc_ht=scontent.fsgn5-14.fna&_nc_gid=AF3N2P7dRcITJTJos5iYImJ&oh=00_AYBQNg_1AYzpqn8ausnm8_5xopetd9KjD5VW0HIsxOsQ5g&oe=67487097)
 
-### 10. Trang xem trạng thái đơn hàng
+### 10. Thanh toán bằng momo
+
+![Thanh toán bằng momo](https://scontent.fsgn5-10.fna.fbcdn.net/v/t39.30808-6/469378052_122152056806291068_4912573978544031294_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_ohc=h7Qvm6tuxPAQ7kNvgEsfzFh&_nc_zt=23&_nc_ht=scontent.fsgn5-10.fna&_nc_gid=ARc9b_8vJU53WEOK9BTpvIw&oh=00_AYB3TXpxKH6WCMQwT4hp0oW_t2gcxVvF2mH9KAqbWdnajg&oe=675888A9)
+
+### 11. Thanh toán bằng momo
+
+![Thanh toán bằng momo](https://scontent.fsgn5-10.fna.fbcdn.net/v/t39.30808-6/469453182_122152056830291068_136764137432722680_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_ohc=XrJORRG1FcsQ7kNvgGbEY6w&_nc_zt=23&_nc_ht=scontent.fsgn5-10.fna&_nc_gid=AhO1CrV4FW7rxYXrV29Qszi&oh=00_AYAaULWxfpURXco9k4QGeH6viotp1fPdreS4w-Fg3bJetw&oe=6758915A)
+
+### 12. Trang xem trạng thái đơn hàng
 
 ![Trang xem trạng thái đơn hàng](https://scontent.fsgn5-9.fna.fbcdn.net/v/t39.30808-6/468209050_122150395838291068_6232282994774543635_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=QxBoYXOCkTQQ7kNvgGhLpoR&_nc_zt=23&_nc_ht=scontent.fsgn5-9.fna&_nc_gid=Aeaxzxa-bTpzGDZ0PEnRTE_&oh=00_AYC_OnVDk3ocbLRw4Ckgj0fCr8v0bRF826CRq_W9oUmycg&oe=674854BD)
 
-### 11. Trang đơn mua và trạng thái mọi đơn hàng
+### 13. Trang đơn mua và trạng thái mọi đơn hàng
 
 ![Trang đơn mua và trạng thái mọi đơn hàng](https://scontent.fsgn5-3.fna.fbcdn.net/v/t39.30808-6/468101604_122150404358291068_4077510413719410014_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_ohc=mc9_eAafD3AQ7kNvgHJgj9i&_nc_zt=23&_nc_ht=scontent.fsgn5-3.fna&_nc_gid=Ar3b-AWRedLwoJht-Xy8jjm&oh=00_AYAu7hAJM5G4UbHWI5dMI3fw03n2HLrl42Xn8Mv2Z3OI2Q&oe=67486CEB)
 
-### 12. Trang lịch sử đặt hàng và thông báo
+### 14. Trang lịch sử đặt hàng và thông báo
 
 ![Trang lịch sử đặt hàng và thông báo](https://scontent.fsgn5-5.fna.fbcdn.net/v/t39.30808-6/468348612_122150395748291068_7764951022912230753_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_ohc=mnVj4Hg_SCcQ7kNvgHpriqm&_nc_zt=23&_nc_ht=scontent.fsgn5-5.fna&_nc_gid=AetCniP0swNm4pAkcDCg25-&oh=00_AYAcNxuL9KHSZIApExpS7NfKcld6d1ilx5Nd1DOTTb-1Gw&oe=674868E1)
 
-### 13. Trang login
+### 15. Trang login
 
 ![Trang login](https://scontent.fsgn5-5.fna.fbcdn.net/v/t39.30808-6/468140263_122150404334291068_8950719682990869513_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=XPaKFnAQkcgQ7kNvgG_rrv6&_nc_zt=23&_nc_ht=scontent.fsgn5-5.fna&_nc_gid=A1IJQJnUwq8voKBcbB2UPHc&oh=00_AYAwK8BeC7Pdeo_gaee8Cgd7UvHheF7wASesoM-AgSYIVw&oe=67488D7A)

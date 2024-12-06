@@ -315,6 +315,28 @@ public class ProductService {
         }
     }
 
+    public long calculateTotalPrice(User user) {
+        // Lấy giỏ hàng của người dùng
+        Cart cart = this.cartRepository.findByUser(user);
+
+        // Tổng giá trị thanh toán
+        long totalPrice = 0;
+
+        if (cart != null) {
+            List<CartDetail> cartDetails = cart.getCartDetails();
+
+            if (cartDetails != null) {
+                for (CartDetail cd : cartDetails) {
+                    if (cd.getCheckbox() != 0) { // Chỉ tính sản phẩm được chọn
+                        totalPrice += cd.getPrice() * cd.getQuantity();
+                    }
+                }
+            }
+        }
+
+        return totalPrice;
+    }
+
     public void handlePlaceOrder(
             User user, HttpSession session,
             String receiverName, String receiverAddress, String receiverPhone) {

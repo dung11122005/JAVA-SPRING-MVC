@@ -8,6 +8,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,20 +20,29 @@ import vn.hoidanit.laptopshop.domain.CartDetail;
 import vn.hoidanit.laptopshop.domain.Comment;
 import vn.hoidanit.laptopshop.domain.Order;
 import vn.hoidanit.laptopshop.domain.OrderDetail;
+import vn.hoidanit.laptopshop.domain.PaymentRequest;
 import vn.hoidanit.laptopshop.domain.Product;
 import vn.hoidanit.laptopshop.domain.Product_;
 import vn.hoidanit.laptopshop.domain.User;
 import vn.hoidanit.laptopshop.domain.dto.ProductCriteriaDTO;
 import vn.hoidanit.laptopshop.service.CommentService;
 import vn.hoidanit.laptopshop.service.OrderService;
+import vn.hoidanit.laptopshop.service.PaymentService;
 import vn.hoidanit.laptopshop.service.ProductService;
 import vn.hoidanit.laptopshop.service.UserService;
 
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
+import net.minidev.json.JSONObject;
+
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 @Controller
 public class ItemController {
@@ -41,15 +51,18 @@ public class ItemController {
     private final OrderService orderService;
     private final UserService userService;
     private final CommentService commentService;
+    private final PaymentService paymentService;
 
     public ItemController(ProductService productService,
             OrderService orderService,
             UserService userService,
-            CommentService commentService) {
+            CommentService commentService,
+            PaymentService paymentService) {
         this.productService = productService;
         this.orderService = orderService;
         this.userService = userService;
         this.commentService = commentService;
+        this.paymentService = paymentService;
     }
 
     @GetMapping("/product/{id}")
@@ -163,7 +176,40 @@ public class ItemController {
     }
 
     @GetMapping("/thanks")
-    public String getThankYouPage(Model model) {
+    public String getThankYouPage(
+            @RequestParam(value = "orderId", required = false) String orderId,
+            @RequestParam(value = "resultCode", required = false) Integer resultCode,
+            @RequestParam(value = "message", required = false) String message,
+            HttpServletRequest request,
+            Model model) throws Exception {
+
+        // Kiểm tra trạng thái giao dịch từ resultCode
+        // Kiểm tra trạng thái giao dịch từ resultCode
+        if (resultCode != null && resultCode != 0) {
+            // Nếu resultCode không phải 0, cho biết giao dịch thất bại
+            return "client/cart/failure";
+        } else {
+            // Nếu không có resultCode trả về, kiểm tra trạng thái giao dịch qua
+            // payment-status
+            HttpSession session = request.getSession(false);
+            String momoOrderId = (String) session.getAttribute("momoOrderId");
+            String momoRequestId = (String) session.getAttribute("momoRequestId");
+
+            if (momoOrderId != null && momoRequestId != null) {
+                // Gọi phương thức checkPaymentStatus để kiểm tra trạng thái giao dịch
+                String transactionStatus = paymentService.queryTransactionStatus(momoOrderId, momoRequestId);
+
+                ObjectMapper objectMapper = new ObjectMapper();
+                JsonNode jsonResponse = objectMapper.readTree(transactionStatus);
+
+                int resultCodeFromApi = jsonResponse.path("resultCode").asInt();
+                if (resultCodeFromApi == 0) {
+                    return "client/cart/thanks";
+                } else {
+                    return "client/cart/failure";
+                }
+            }
+        }
         return "client/cart/thanks";
     }
 
@@ -184,14 +230,55 @@ public class ItemController {
             HttpServletRequest request,
             @RequestParam("receiverName") String receiverName,
             @RequestParam("receiverAddress") String receiverAddress,
-            @RequestParam("receiverPhone") String receiverPhone) {
+            @RequestParam("receiverPhone") String receiverPhone,
+            @RequestParam("paymentMethod") String paymentMethod,
+            RedirectAttributes redirectAttributes) throws Exception {
         User currentUser = new User();// null
         HttpSession session = request.getSession(false);
         long id = (long) session.getAttribute("id");
         currentUser.setId(id);
 
-        this.productService.handlePlaceOrder(currentUser, session, receiverName, receiverAddress, receiverPhone);
+        // Giả sử bạn đã tạo một `orderId` và `orderInfo` từ quá trình đặt hàng
+        String time = String.valueOf(System.currentTimeMillis());
+        String orderId = "MOMO" + time;
+        String orderInfo = "Payment for order " + orderId;
+        String amount = Long.toString(this.productService.calculateTotalPrice(currentUser));
+        String requestId = "MOMO" + time + "001";
 
+        // Điều hướng thanh toán
+        if ("MOMO".equalsIgnoreCase(paymentMethod)) {
+            // Tạo yêu cầu thanh toán MOMO
+            PaymentRequest paymentRequest = new PaymentRequest();
+            paymentRequest.setAmount(amount);
+            paymentRequest.setOrderId(orderId);
+            paymentRequest.setOrderInfo(orderInfo);
+            paymentRequest.setRequestId(requestId);
+            paymentRequest.setExtraData("");
+
+            // Gửi yêu cầu đến MOMO và nhận URL thanh toán
+            String response = paymentService.createPayment(paymentRequest);
+
+            // Phân tích JSON phản hồi
+            ObjectMapper objectMapper = new ObjectMapper();
+            JsonNode jsonResponse = objectMapper.readTree(response);
+
+            // Lấy URL thanh toán từ JSON
+            String paymentUrl = jsonResponse.path("payUrl").asText();
+
+            // Kiểm tra nếu URL hợp lệ
+            if (paymentUrl != null && !paymentUrl.isEmpty()) {
+                // Trả về URL thanh toán và chuyển hướng người dùng đến đó
+                // Lưu orderId và requestId vào session để kiểm tra sau
+                session.setAttribute("momoOrderId", orderId);
+                session.setAttribute("momoRequestId", requestId);
+
+                return "redirect:" + paymentUrl;
+            }
+        } else if ("VNPAY".equalsIgnoreCase(paymentMethod)) {
+            return "redirect:/payment/vnpay";
+        }
+        // this.productService.handlePlaceOrder(currentUser, session,
+        // receiverName,receiverAddress, receiverPhone);
         return "redirect:/thanks";
     }
 
