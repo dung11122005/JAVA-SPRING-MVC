@@ -117,19 +117,19 @@ Fanpage “Hoàng Tấn Dũng” : https://www.facebook.com/cotem.khong.90?local
 
 ### 1. Home page
 
-![Home page](https://scontent.fsgn5-5.fna.fbcdn.net/v/t39.30808-6/468357345_122150395466291068_7389740609774153854_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=hdxCm2JfJ4gQ7kNvgEml1r2&_nc_zt=23&_nc_ht=scontent.fsgn5-5.fna&_nc_gid=AfKqFbmhc5mUnjS4Yvf9l5W&oh=00_AYCtpwwxV3jJ_Pbgw5yiGPCZbhzwrUT6NibMjBuVWiO3mw&oe=67486076)
+![Home page](https://github.com/dung11122005/image_github/blob/master/laptopshop/Screenshot%202024-11-24%20090156.png)
 
 ### 2. Trang sản phẩm
 
-![Trang sản phẩm](https://scontent.fsgn5-9.fna.fbcdn.net/v/t39.30808-6/468042969_122150395520291068_3844525518319800104_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=MqOZ83b7npYQ7kNvgH_dxBt&_nc_zt=23&_nc_ht=scontent.fsgn5-9.fna&_nc_gid=AzNvteC_2YuEdnhPgMcUVv4&oh=00_AYDqsW7kwYam66zCe94fxll_AVnj93cvGBJ_j5wYgL0PjA&oe=6758A2AD)
+![Trang sản phẩm](https://github.com/dung11122005/image_github/blob/master/laptopshop/Screenshot%202024-11-24%20090227.png)
 
 ### 3. Trang chi tiết sản phẩm
 
-![Trang chi tiết sản phẩm](https://scontent.fsgn5-10.fna.fbcdn.net/v/t39.30808-6/468088207_122150395496291068_7213254627608566744_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_ohc=wPZHf95MjCEQ7kNvgHT6Cp_&_nc_zt=23&_nc_ht=scontent.fsgn5-10.fna&_nc_gid=AZzDyy_llxC3pOn0iwVypW7&oh=00_AYDaVVJxH6ahUTNz1bwlEDp-YbhtrambCJuHHE-QIQdpAg&oe=6758895F)
+![Trang chi tiết sản phẩm](https://github.com/dung11122005/image_github/blob/master/laptopshop/Screenshot%202024-11-24%20090256.png)
 
 ### 4. Tìm sản phẩm bằng elasticsearch và filter
 
-![Tìm sản phẩm bằng elasticsearch và filter](https://scontent.fsgn5-5.fna.fbcdn.net/v/t39.30808-6/468208935_122150395790291068_4090862263106330607_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_ohc=SQYJwta6iRgQ7kNvgHhRYtt&_nc_zt=23&_nc_ht=scontent.fsgn5-5.fna&_nc_gid=A_0ZkidTX7QxTf7XKcDAYPD&oh=00_AYBPGG_cRxEqJqf1VpVqbeJbzRL5NDDduSLXW8VR9jO9aQ&oe=67589886)
+![Tìm sản phẩm bằng elasticsearch và filter](https://github.com/dung11122005/image_github/blob/master/laptopshop/Screenshot%202024-11-24%20090647.png)
 
 ### 5. Trang cá nhân
 
