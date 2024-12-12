@@ -10,7 +10,7 @@ Youtube “Hoàng Tấn Dũng” : https://www.youtube.com/@crushoicaucutevai746
 
 Fanpage “Hoàng Tấn Dũng” : https://www.facebook.com/cotem.khong.90?locale=vi_VN
 
-## ![Icon](https://img.icons8.com/?size=25&id=43259&format=png&color=000000) Công nghệ sử dụng
+## ![Icon](https://img.icons8.com/?size=25&id=43259&format=png&color=000000) Công nghệ sử dụng và tổng quan dự án
 
 - **Java Spring Boot**: Framework mạnh mẽ để xây dựng backend.
 
@@ -29,6 +29,8 @@ Fanpage “Hoàng Tấn Dũng” : https://www.facebook.com/cotem.khong.90?local
 - **Elasticsearch**: Công cụ tìm kiếm và phân tích dữ liệu mạnh mẽ, hỗ trợ lọc sản phẩm theo nhiều tiêu chí.
 
 - **Phân trang**: Giúp tối ưu hóa hiệu năng khi hiển thị danh sách dữ liệu lớn.
+
+- **Thanh toán Momo**: Giúp thanh toán online nâng cao sự thuận tiện với người dùng.
 
 ## ![Icon](https://img.icons8.com/?size=30&id=111139&format=png&color=000000) Chức năng chính
 
@@ -115,7 +117,7 @@ Fanpage “Hoàng Tấn Dũng” : https://www.facebook.com/cotem.khong.90?local
 
 ## ![Icon](https://img.icons8.com/?size=30&id=9YgKo9PXNHu4&format=png&color=000000) Ảnh chụp dự án
 
-### 1. Home page
+### 1. `Home page`
 
 ![Home page](https://github.com/dung11122005/image_github/blob/master/laptopshop/homepage.png)
 ![Home page](https://github.com/dung11122005/image_github/blob/master/laptopshop/homepage2.png)
@@ -123,75 +125,72 @@ Fanpage “Hoàng Tấn Dũng” : https://www.facebook.com/cotem.khong.90?local
 ![Home page](https://github.com/dung11122005/image_github/blob/master/laptopshop/homepage4.png)
 ![Home page](https://github.com/dung11122005/image_github/blob/master/laptopshop/homepage5.png)
 
-### 2. Trang sản phẩm
+### 2. Trang `sản phẩm`
 
 ![Trang sản phẩm](https://github.com/dung11122005/image_github/blob/master/laptopshop/sanpham.png)
 
-### 3. Trang chi tiết sản phẩm
+### 3. Trang `chi tiết sản phẩm`
 
 ![Trang chi tiết sản phẩm](https://github.com/dung11122005/image_github/blob/master/laptopshop/chi_tiet_sp.png)
 
-### 4. Comment sản phẩm
+### 4. `Comment` sản phẩm
 
 ![comment sản phẩm](https://github.com/dung11122005/image_github/blob/master/laptopshop/cmt.png)
 
-### 5. Tìm sản phẩm bằng elasticsearch và filter
+### 5. `Tìm sản` phẩm bằng `elasticsearch` và `filter`
 
 ![Tìm sản phẩm bằng elasticsearch và filter](https://github.com/dung11122005/image_github/blob/master/laptopshop/search.png)
 
-### 6. Trang cá nhân
+### 6. Trang `cá nhân`
 
 ![Trang cá nhân](https://github.com/dung11122005/image_github/blob/master/laptopshop/trang_ca_nhan.png)
 
-### 7. Upload ảnh
+### 7. `Upload ảnh`
 
 ![Upload ảnh](https://github.com/dung11122005/image_github/blob/master/laptopshop/upload_file.png)
 
-### 8. Admin page
+### 8. `Admin` page
 
 ![Admin page](https://github.com/dung11122005/image_github/blob/master/laptopshop/admin_page.png)
 
-### 9. Trang CRUD người dùng, sản phẩm và cập nhật trạng thái đặt hàng
+### 9. Trang `CRUD` `người dùng`, `sản phẩm` và cập nhật trạng thái `đơn hàng`
 
 ![Trang CRUD người dùng, sản phẩm và cập nhật trạng thái đặt hàng](https://github.com/dung11122005/image_github/blob/master/laptopshop/crud_user_sp.png)
 
-### 10. Shipped page
+### 10. `Shipped` page
 
 ![Shipped page](https://github.com/dung11122005/image_github/blob/master/laptopshop/page_shipper.png)
 
-### 11. Shipped cập nhật trạng thái giao hàng
+### 11. Shipped `cập nhật trạng thái` giao hàng
 
 ![Shipped cập nhật trạng thái giao hàng](https://github.com/dung11122005/image_github/blob/master/laptopshop/update_order.png)
 
-### 12. Trang giỏ hàng
+### 12. Trang `giỏ hàng`
 
 ![Trang giỏ hàng](https://github.com/dung11122005/image_github/blob/master/laptopshop/gio_hang.png)
 
-### 13. Trang thanh toán đơn hàng
+### 13. Trang `thanh toán` đơn hàng
 
 ![Trang thanh toán đơn hàng](https://github.com/dung11122005/image_github/blob/master/laptopshop/trang_thanh_toan.png)
 
-### 14. Thanh toán bằng momo
+### 14. `Thanh toán` bằng `momo`
 
 ![Thanh toán bằng momo](https://github.com/dung11122005/image_github/blob/master/laptopshop/thanh_toan_momo2.png)
-
-### 15. Thanh toán bằng momo
-
 ![Thanh toán bằng momo](https://github.com/dung11122005/image_github/blob/master/laptopshop/thanh_toan_Momo.png)
 
-### 16. Trang xem trạng thái đơn hàng
+### 15. Trang xem `trạng thái đơn hàng`
 
 ![Trang xem trạng thái đơn hàng](https://github.com/dung11122005/image_github/blob/master/laptopshop/status.png)
 
-### 17. Trang đơn mua và trạng thái mọi đơn hàng
+### 16. Trang `đơn mua` và `trạng thái` mọi đơn hàng
 
 ![Trang đơn mua và trạng thái mọi đơn hàng](https://github.com/dung11122005/image_github/blob/master/laptopshop/trang_mua_trang_thai.png)
 
-### 18. Trang lịch sử đặt hàng và thông báo
+### 17. Trang `lịch sử đặt hàng` và `thông báo`
 
 ![Trang lịch sử đặt hàng và thông báo](https://github.com/dung11122005/image_github/blob/master/laptopshop/lich_su_dat_hang.png)
 
-### 19. Trang login
+### 18. Trang `login` và `đăng kí`
 
 ![Trang login](https://github.com/dung11122005/image_github/blob/master/laptopshop/login.png)
 ![Trang login](https://github.com/dung11122005/image_github/blob/master/laptopshop/dang_ki.png)
