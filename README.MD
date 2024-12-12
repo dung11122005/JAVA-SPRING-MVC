@@ -119,6 +119,9 @@ Fanpage “Hoàng Tấn Dũng” : https://www.facebook.com/cotem.khong.90?local
 
 ![Home page](https://github.com/dung11122005/image_github/blob/master/laptopshop/homepage.png)
 ![Home page](https://github.com/dung11122005/image_github/blob/master/laptopshop/homepage2.png)
+![Home page](https://github.com/dung11122005/image_github/blob/master/laptopshop/homepage3.png)
+![Home page](https://github.com/dung11122005/image_github/blob/master/laptopshop/homepage4.png)
+![Home page](https://github.com/dung11122005/image_github/blob/master/laptopshop/homepage5.png)
 
 ### 2. Trang sản phẩm
 
