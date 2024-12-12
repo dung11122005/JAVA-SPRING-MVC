@@ -155,34 +155,43 @@ Fanpage “Hoàng Tấn Dũng” : https://www.facebook.com/cotem.khong.90?local
 
 ![Trang CRUD người dùng, sản phẩm và cập nhật trạng thái đặt hàng](https://github.com/dung11122005/image_github/blob/master/laptopshop/crud_user_sp.png)
 
-### 10. Trang giỏ hàng
+### 10. Shipped page
+
+![Shipped page](https://github.com/dung11122005/image_github/blob/master/laptopshop/page_shipper.png)
+
+### 11. Shipped cập nhật trạng thái giao hàng
+
+![Shipped cập nhật trạng thái giao hàng](https://github.com/dung11122005/image_github/blob/master/laptopshop/update_order.png)
+
+### 12. Trang giỏ hàng
 
 ![Trang giỏ hàng](https://github.com/dung11122005/image_github/blob/master/laptopshop/gio_hang.png)
 
-### 11. Trang thanh toán đơn hàng
+### 13. Trang thanh toán đơn hàng
 
 ![Trang thanh toán đơn hàng](https://github.com/dung11122005/image_github/blob/master/laptopshop/trang_thanh_toan.png)
 
-### 12. Thanh toán bằng momo
+### 14. Thanh toán bằng momo
 
 ![Thanh toán bằng momo](https://github.com/dung11122005/image_github/blob/master/laptopshop/thanh_toan_momo2.png)
 
-### 13. Thanh toán bằng momo
+### 15. Thanh toán bằng momo
 
 ![Thanh toán bằng momo](https://github.com/dung11122005/image_github/blob/master/laptopshop/thanh_toan_Momo.png)
 
-### 14. Trang xem trạng thái đơn hàng
+### 16. Trang xem trạng thái đơn hàng
 
 ![Trang xem trạng thái đơn hàng](https://github.com/dung11122005/image_github/blob/master/laptopshop/status.png)
 
-### 15. Trang đơn mua và trạng thái mọi đơn hàng
+### 17. Trang đơn mua và trạng thái mọi đơn hàng
 
 ![Trang đơn mua và trạng thái mọi đơn hàng](https://github.com/dung11122005/image_github/blob/master/laptopshop/trang_mua_trang_thai.png)
 
-### 16. Trang lịch sử đặt hàng và thông báo
+### 18. Trang lịch sử đặt hàng và thông báo
 
 ![Trang lịch sử đặt hàng và thông báo](https://github.com/dung11122005/image_github/blob/master/laptopshop/lich_su_dat_hang.png)
 
-### 17. Trang login
+### 19. Trang login
 
 ![Trang login](https://github.com/dung11122005/image_github/blob/master/laptopshop/login.png)
+![Trang login](https://github.com/dung11122005/image_github/blob/master/laptopshop/dang_ki.png)
