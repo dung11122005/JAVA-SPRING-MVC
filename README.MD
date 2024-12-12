@@ -139,42 +139,46 @@ Fanpage “Hoàng Tấn Dũng” : https://www.facebook.com/cotem.khong.90?local
 
 ![Trang cá nhân](https://github.com/dung11122005/image_github/blob/master/laptopshop/trang_ca_nhan.png)
 
-### 7. Admin page
+### 7. Upload ảnh
+
+![Upload ảnh](https://github.com/dung11122005/image_github/blob/master/laptopshop/upload_file.png)
+
+### 8. Admin page
 
 ![Admin page](https://github.com/dung11122005/image_github/blob/master/laptopshop/admin_page.png)
 
-### 8. Trang CRUD người dùng, sản phẩm và cập nhật trạng thái đặt hàng
+### 9. Trang CRUD người dùng, sản phẩm và cập nhật trạng thái đặt hàng
 
 ![Trang CRUD người dùng, sản phẩm và cập nhật trạng thái đặt hàng](https://github.com/dung11122005/image_github/blob/master/laptopshop/crud_user_sp.png)
 
-### 9. Trang giỏ hàng
+### 10. Trang giỏ hàng
 
 ![Trang giỏ hàng](https://github.com/dung11122005/image_github/blob/master/laptopshop/gio_hang.png)
 
-### 10. Trang thanh toán đơn hàng
+### 11. Trang thanh toán đơn hàng
 
 ![Trang thanh toán đơn hàng](https://github.com/dung11122005/image_github/blob/master/laptopshop/trang_thanh_toan.png)
 
-### 11. Thanh toán bằng momo
+### 12. Thanh toán bằng momo
 
 ![Thanh toán bằng momo](https://github.com/dung11122005/image_github/blob/master/laptopshop/thanh_toan_momo2.png)
 
-### 12. Thanh toán bằng momo
+### 13. Thanh toán bằng momo
 
 ![Thanh toán bằng momo](https://github.com/dung11122005/image_github/blob/master/laptopshop/thanh_toan_Momo.png)
 
-### 13. Trang xem trạng thái đơn hàng
+### 14. Trang xem trạng thái đơn hàng
 
 ![Trang xem trạng thái đơn hàng](https://github.com/dung11122005/image_github/blob/master/laptopshop/status.png)
 
-### 14. Trang đơn mua và trạng thái mọi đơn hàng
+### 15. Trang đơn mua và trạng thái mọi đơn hàng
 
 ![Trang đơn mua và trạng thái mọi đơn hàng](https://github.com/dung11122005/image_github/blob/master/laptopshop/trang_mua_trang_thai.png)
 
-### 15. Trang lịch sử đặt hàng và thông báo
+### 16. Trang lịch sử đặt hàng và thông báo
 
 ![Trang lịch sử đặt hàng và thông báo](https://github.com/dung11122005/image_github/blob/master/laptopshop/lich_su_dat_hang.png)
 
-### 16. Trang login
+### 17. Trang login
 
 ![Trang login](https://github.com/dung11122005/image_github/blob/master/laptopshop/login.png)
