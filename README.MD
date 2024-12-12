@@ -127,50 +127,54 @@ Fanpage “Hoàng Tấn Dũng” : https://www.facebook.com/cotem.khong.90?local
 
 ![Trang chi tiết sản phẩm](https://github.com/dung11122005/image_github/blob/master/laptopshop/Screenshot%202024-11-24%20090256.png)
 
-### 4. Tìm sản phẩm bằng elasticsearch và filter
+### 4. comment sản phẩm
+
+![comment sản phẩm](https://github.com/dung11122005/image_github/blob/master/laptopshop/cmt.png)
+
+### 5. Tìm sản phẩm bằng elasticsearch và filter
 
 ![Tìm sản phẩm bằng elasticsearch và filter](https://github.com/dung11122005/image_github/blob/master/laptopshop/Screenshot%202024-11-24%20090647.png)
 
-### 5. Trang cá nhân
+### 6. Trang cá nhân
 
-![Trang cá nhân](https://scontent.fsgn5-8.fna.fbcdn.net/v/t39.30808-6/468147034_122150404394291068_4181066319066834074_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_ohc=KVMeM7DtzQcQ7kNvgHiuGKw&_nc_zt=23&_nc_ht=scontent.fsgn5-8.fna&_nc_gid=AqoodQnsGuQ_uWeJSwiWRhG&oh=00_AYA1xY5VehIDlYriBuzF-79JtygnXviYMoYr_VBkSTNufg&oe=6758B34F)
+![Trang cá nhân](https://github.com/dung11122005/image_github/blob/master/laptopshop/trang_ca_nhan.png)
 
-### 6. Admin page
+### 7. Admin page
 
-![Admin page](https://scontent.fsgn5-8.fna.fbcdn.net/v/t39.30808-6/468234143_122150395580291068_9046488646030231393_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_ohc=IOwdG6iRp7MQ7kNvgGBc9vd&_nc_zt=23&_nc_ht=scontent.fsgn5-8.fna&_nc_gid=AxViO7M9dCZGZZfypHDKxF-&oh=00_AYA6VS2AJQqLCMbt9y5itP6dAqM5nT93Qkpad_Uovy2sIA&oe=67589EB4)
+![Admin page](https://github.com/dung11122005/image_github/blob/master/laptopshop/admin_page.png)
 
-### 7. Trang CRUD người dùng, sản phẩm và cập nhật trạng thái đặt hàng
+### 8. Trang CRUD người dùng, sản phẩm và cập nhật trạng thái đặt hàng
 
-![Trang CRUD người dùng, sản phẩm và cập nhật trạng thái đặt hàng](https://scontent.fsgn5-9.fna.fbcdn.net/v/t39.30808-6/468089144_122150395646291068_7903849632802435327_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=9SsO7xAuQ7cQ7kNvgHNpzms&_nc_zt=23&_nc_ht=scontent.fsgn5-9.fna&_nc_gid=AFSZmj6R4-tpKMZVAEwHi4M&oh=00_AYCzqE9fYl_PB1vWOiXk8iMAVfIBTs7ItET2LrT5RQ13hA&oe=6758B14A)
+![Trang CRUD người dùng, sản phẩm và cập nhật trạng thái đặt hàng](https://github.com/dung11122005/image_github/blob/master/laptopshop/crud_user_sp.png)
 
-### 8. Trang giỏ hàng
+### 9. Trang giỏ hàng
 
-![Trang giỏ hàng](https://scontent.fsgn5-14.fna.fbcdn.net/v/t39.30808-6/468088169_122150395700291068_5132530246234596603_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_ohc=ka3p7X0Cgl0Q7kNvgGcpwrQ&_nc_zt=23&_nc_ht=scontent.fsgn5-14.fna&_nc_gid=A0dVfUHKI01YRhgUVrTgaBu&oh=00_AYD8jm9ZfWwdxbifoEBZD-m1TSKC2zNgI8t14z2mFzRv4Q&oe=67486E7F)
+![Trang giỏ hàng](https://github.com/dung11122005/image_github/blob/master/laptopshop/gio_hang.png)
 
-### 9. Trang thanh toán đơn hàng
+### 10. Trang thanh toán đơn hàng
 
-![Trang thanh toán đơn hàng](https://scontent.fsgn5-14.fna.fbcdn.net/v/t39.30808-6/468206587_122150395616291068_8985177916908040915_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_ohc=3YkuMf3c4xYQ7kNvgH0dzsk&_nc_zt=23&_nc_ht=scontent.fsgn5-14.fna&_nc_gid=A-XjJRBYYhik55V-c-SLXMq&oh=00_AYCrJioDVxM1TrxK5x1sbISWMGN_FUGE-qCNTzoDxVZ29w&oe=6758B317)
-
-### 10. Thanh toán bằng momo
-
-![Thanh toán bằng momo](https://scontent.fsgn5-10.fna.fbcdn.net/v/t39.30808-6/469378052_122152056806291068_4912573978544031294_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_ohc=h7Qvm6tuxPAQ7kNvgEsfzFh&_nc_zt=23&_nc_ht=scontent.fsgn5-10.fna&_nc_gid=ARc9b_8vJU53WEOK9BTpvIw&oh=00_AYB3TXpxKH6WCMQwT4hp0oW_t2gcxVvF2mH9KAqbWdnajg&oe=675888A9)
+![Trang thanh toán đơn hàng](https://github.com/dung11122005/image_github/blob/master/laptopshop/trang_thanh_toan.png)
 
 ### 11. Thanh toán bằng momo
 
-![Thanh toán bằng momo](https://scontent.fsgn5-10.fna.fbcdn.net/v/t39.30808-6/469453182_122152056830291068_136764137432722680_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_ohc=XrJORRG1FcsQ7kNvgGbEY6w&_nc_zt=23&_nc_ht=scontent.fsgn5-10.fna&_nc_gid=AhO1CrV4FW7rxYXrV29Qszi&oh=00_AYAaULWxfpURXco9k4QGeH6viotp1fPdreS4w-Fg3bJetw&oe=6758915A)
+![Thanh toán bằng momo](https://github.com/dung11122005/image_github/blob/master/laptopshop/thanh_toan_momo2.png)
 
-### 12. Trang xem trạng thái đơn hàng
+### 12. Thanh toán bằng momo
 
-![Trang xem trạng thái đơn hàng](https://scontent.fsgn5-9.fna.fbcdn.net/v/t39.30808-6/468209050_122150395838291068_6232282994774543635_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=nVuuAaPoLvoQ7kNvgEnf0yd&_nc_zt=23&_nc_ht=scontent.fsgn5-9.fna&_nc_gid=AR7kNFrqoR5C4V2Xu0uLp9k&oh=00_AYDkKhLrAd0HDnnBScgG8uy9TKVpx_S6biPPLI1WBmtDhg&oe=6758973D)
+![Thanh toán bằng momo](https://github.com/dung11122005/image_github/blob/master/laptopshop/thanh_toan_Momo.png)
 
-### 13. Trang đơn mua và trạng thái mọi đơn hàng
+### 13. Trang xem trạng thái đơn hàng
 
-![Trang đơn mua và trạng thái mọi đơn hàng](https://scontent.fsgn5-3.fna.fbcdn.net/v/t39.30808-6/468101604_122150404358291068_4077510413719410014_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_ohc=X9Fm0vaOVToQ7kNvgE6wtT3&_nc_zt=23&_nc_ht=scontent.fsgn5-3.fna&_nc_gid=AzgbSMcGmU3xWuVO7Sttjz8&oh=00_AYBrbMI0V5DjPAiSxQVYCBQSdU7JD9iNWSbX7WxSo_LCcQ&oe=6758AF6B)
+![Trang xem trạng thái đơn hàng](https://github.com/dung11122005/image_github/blob/master/laptopshop/status.png)
 
-### 14. Trang lịch sử đặt hàng và thông báo
+### 14. Trang đơn mua và trạng thái mọi đơn hàng
 
-![Trang lịch sử đặt hàng và thông báo](https://scontent.fsgn5-5.fna.fbcdn.net/v/t39.30808-6/468348612_122150395748291068_7764951022912230753_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_ohc=BkO1Tf_F6qEQ7kNvgEWPhJM&_nc_zt=23&_nc_ht=scontent.fsgn5-5.fna&_nc_gid=AgK8WHYs0CNys57xp0odgE8&oh=00_AYAwke_uNBd2ejDaMT64JynJRqYRJ6ALphUOqkhNpPLjTg&oe=6758AB61)
+![Trang đơn mua và trạng thái mọi đơn hàng](https://github.com/dung11122005/image_github/blob/master/laptopshop/trang_mua_trang_thai.png)
 
-### 15. Trang login
+### 15. Trang lịch sử đặt hàng và thông báo
 
-![Trang login](https://scontent.fsgn5-5.fna.fbcdn.net/v/t39.30808-6/468140263_122150404334291068_8950719682990869513_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=aaDwRn52oUgQ7kNvgF7PiaQ&_nc_zt=23&_nc_ht=scontent.fsgn5-5.fna&_nc_gid=ACLdbYShkb1OFP4IOS0oQda&oh=00_AYAO6ef2VjsvtPTYs9O8WeC2UZ_WkE89NDWdVopJI0fIhg&oe=675897BA)
+![Trang lịch sử đặt hàng và thông báo](https://github.com/dung11122005/image_github/blob/master/laptopshop/lich_su_dat_hang.png)
+
+### 16. Trang login
+
+![Trang login](https://github.com/dung11122005/image_github/blob/master/laptopshop/login.png)
