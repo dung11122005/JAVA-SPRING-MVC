@@ -117,15 +117,15 @@ Fanpage “Hoàng Tấn Dũng” : https://www.facebook.com/cotem.khong.90?local
 
 ### 1. Home page
 
-![Home page](https://github.com/dung11122005/image_github/blob/master/laptopshop/Screenshot%202024-11-24%20090156.png)
+![Home page](https://github.com/dung11122005/image_github/blob/master/laptopshop/homepage.png)
 
 ### 2. Trang sản phẩm
 
-![Trang sản phẩm](https://github.com/dung11122005/image_github/blob/master/laptopshop/Screenshot%202024-11-24%20090227.png)
+![Trang sản phẩm](https://github.com/dung11122005/image_github/blob/master/laptopshop/sanpham.png)
 
 ### 3. Trang chi tiết sản phẩm
 
-![Trang chi tiết sản phẩm](https://github.com/dung11122005/image_github/blob/master/laptopshop/Screenshot%202024-11-24%20090256.png)
+![Trang chi tiết sản phẩm](https://github.com/dung11122005/image_github/blob/master/laptopshop/chi_tiet_sp.png)
 
 ### 4. comment sản phẩm
 
@@ -133,7 +133,7 @@ Fanpage “Hoàng Tấn Dũng” : https://www.facebook.com/cotem.khong.90?local
 
 ### 5. Tìm sản phẩm bằng elasticsearch và filter
 
-![Tìm sản phẩm bằng elasticsearch và filter](https://github.com/dung11122005/image_github/blob/master/laptopshop/Screenshot%202024-11-24%20090647.png)
+![Tìm sản phẩm bằng elasticsearch và filter](https://github.com/dung11122005/image_github/blob/master/laptopshop/search.png)
 
 ### 6. Trang cá nhân
 
