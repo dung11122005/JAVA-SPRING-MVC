@@ -5,7 +5,6 @@ target/
 !**/src/test/**/target/
 
 ### STS ###
-.application.properties
 .apt_generated
 .classpath
 .factorypath
@@ -32,3 +31,9 @@ build/
 
 ### VS Code ###
 .vscode/
+
+# Ignore environment config files
+.env
+application.properties
+application.yml
+
