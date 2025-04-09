@@ -135,8 +135,8 @@
                                         </div>
 
                                     </form:form>
-                                    <p class="small fw-bold mt-2 pt-1 mb-0">Bạn đã có tài khoản ? <a
-                                            href="/laptopshop/login" class="link-danger">Đăng nhập</a>
+                                    <p class="small fw-bold mt-2 pt-1 mb-0">Bạn đã có tài khoản ? <a href="/login"
+                                            class="link-danger">Đăng nhập</a>
                                     </p>
                                 </div>
                             </div>

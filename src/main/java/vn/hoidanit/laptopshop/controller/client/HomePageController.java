@@ -135,10 +135,10 @@ public class HomePageController {
         user.setRole(this.userService.getRoleByName("USER"));
         // Save
         this.userService.handleSaveUser(user);
-        return "redirect:/laptopshop/login";
+        return "redirect:/login";
     }
 
-    @GetMapping("/laptopshop/login")
+    @GetMapping("/login")
     public String getLoginPage(Model model) {
         return "client/auth/login";
     }

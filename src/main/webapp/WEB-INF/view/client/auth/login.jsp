@@ -66,8 +66,8 @@
                                     </div>
                                     <div
                                         class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
-                                        <a href="https://accounts.google.com/o/oauth2/auth?scope=email&redirect_uri=http://localhost:8080/laptopshop/login&response_type=code&client_id=149764116472-at1e5po7mio5rlqsl9fu08a1evc3n8r0.apps.googleusercontent.com&approval_prompt=force"
-                                            class="btn btn-lg btn-ligth" style="margin-right: 25px;">
+                                        <a href="/oauth2/authorization/google" class="btn btn-lg btn-ligth"
+                                            style="margin-right: 25px;">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                 fill="currentColor" class="bi bi-google" viewBox="0 0 16 16">
                                                 <path
@@ -77,7 +77,7 @@
                                         </a>
                                     </div>
 
-                                    <form:form method="post" action="/laptopshop/login">
+                                    <form:form method="post" action="/login">
 
 
                                         <div class="divider d-flex align-items-center my-4">

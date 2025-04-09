@@ -64,7 +64,7 @@ public class SecurityConfiguration {
                                 DispatcherType.INCLUDE)
                         .permitAll()
 
-                        .requestMatchers("/", "/laptopshop/login/**", "/register", "/product/**", "/products/**",
+                        .requestMatchers("/", "/login/**", "/register", "/product/**", "/products/**",
                                 "/client/**", "/css/**", "/js/**", "/images/**") // https://docs.spring.io/spring-security/reference/servlet/authorization/authorize-http-requests.html#match-requests
                         .permitAll()
 
@@ -72,7 +72,7 @@ public class SecurityConfiguration {
                         .requestMatchers("/shipped/**").hasAnyRole("SHIPPED", "ADMIN")
 
                         .anyRequest().authenticated())
-
+                .oauth2Login(oauth2 -> oauth2.loginPage("/login"))
                 .sessionManagement((sessionManagement) -> sessionManagement
                         .sessionCreationPolicy(SessionCreationPolicy.ALWAYS) // https://docs.spring.io/spring-security/reference/servlet/authentication/session-management.html#stateless-authentication
                         .invalidSessionUrl("/logout?expired") // https://docs.spring.io/spring-security/reference/servlet/authentication/session-management.html#_detecting_timeouts
@@ -83,8 +83,8 @@ public class SecurityConfiguration {
                 .rememberMe(r -> r.rememberMeServices(rememberMeServices())) // https://www.baeldung.com/spring-security-remember-me
 
                 .formLogin(formLogin -> formLogin // https://docs.spring.io/spring-security/reference/servlet/authentication/passwords/form.html
-                        .loginPage("/laptopshop/login")
-                        .failureUrl("/laptopshop/login?error")
+                        .loginPage("/login")
+                        .failureUrl("/login?error")
                         .successHandler(customSuccessHandler())
                         .permitAll())
                 .exceptionHandling(ex -> ex.accessDeniedPage("/access-deny"));

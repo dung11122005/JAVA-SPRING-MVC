@@ -12,11 +12,11 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
+import jakarta.persistence.PrePersist;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
-import vn.hoidanit.laptopshop.service.validator.StrongPassword;
 
 @Entity
 @Table(name = "users")
@@ -45,6 +45,8 @@ public class User implements Serializable {
 
     private String avatar;
 
+    private String provider;
+
     // roleId
     // User many -> to one -> role
     @ManyToOne
@@ -59,6 +61,21 @@ public class User implements Serializable {
 
     @OneToMany(mappedBy = "user")
     List<Comment> comments;
+
+    @PrePersist
+    public void prePersist() {
+        if (this.provider == null) {
+            this.provider = "LOCAL";
+        }
+    }
+
+    public String getProvider() {
+        return provider;
+    }
+
+    public void setProvider(String provider) {
+        this.provider = provider;
+    }
 
     public long getId() {
         return id;

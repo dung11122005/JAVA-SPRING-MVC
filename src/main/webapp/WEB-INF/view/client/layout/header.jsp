@@ -186,7 +186,7 @@
 
                                 <c:if test="${ empty pageContext.request.userPrincipal}">
 
-                                    <a href="/laptopshop/login" class="a-login position-relative me-4 my-auto">
+                                    <a href="/login" class="a-login position-relative me-4 my-auto">
                                         <i class="fas fa-sign-in-alt"></i>
                                         Đăng nhập
                                     </a>

@@ -98,7 +98,7 @@
                                                         accept=".png, .jpg, .jpeg" name="hoidanitFile" />
                                                 </div>
                                                 <div class="col-12 mb-3">
-                                                    <img loading="lazy" style="max-height: 250px;display: none;"
+                                                    <img loading="lazy" style="max-height: 500px;display: none;"
                                                         alt="avatar preview" id="avatarPreview">
                                                 </div>
                                                 <div class="col-12 mb-5">
