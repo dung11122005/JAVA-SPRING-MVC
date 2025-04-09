@@ -31,9 +31,3 @@ build/
 
 ### VS Code ###
 .vscode/
-
-# Ignore environment config files
-.env
-application.properties
-application.yml
-
