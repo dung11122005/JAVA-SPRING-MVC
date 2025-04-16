@@ -3,7 +3,6 @@ package vn.hoidanit.laptopshop.service;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
-import java.util.stream.Collectors;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -57,6 +56,10 @@ public class UserService {
     public User handleSaveUser(User user) {
         User eric = this.userRepository.save(user);
         return eric;
+    }
+
+    public void saveUser(User user) {
+        this.userRepository.save(user);
     }
 
     public User getUserById(long id) {

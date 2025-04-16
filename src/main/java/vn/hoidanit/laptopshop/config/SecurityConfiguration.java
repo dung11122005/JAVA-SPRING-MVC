@@ -16,6 +16,7 @@ import org.springframework.session.security.web.authentication.SpringSessionReme
 import jakarta.servlet.DispatcherType;
 import vn.hoidanit.laptopshop.service.CustomUserDetailsService;
 import vn.hoidanit.laptopshop.service.UserService;
+import vn.hoidanit.laptopshop.service.userinfo.CustomOAuth2UserService;
 
 @Configuration
 @EnableMethodSecurity(securedEnabled = true)
@@ -56,7 +57,8 @@ public class SecurityConfiguration {
     }
 
     @Bean
-    SecurityFilterChain filterChain(HttpSecurity http) throws Exception { // https://docs.spring.io/spring-security/reference/servlet/configuration/java.html#jc-httpsecurity
+    SecurityFilterChain filterChain(HttpSecurity http,
+            UserService userService) throws Exception { // https://docs.spring.io/spring-security/reference/servlet/configuration/java.html#jc-httpsecurity
         http
                 .authorizeHttpRequests(authorize -> authorize
 
@@ -72,7 +74,12 @@ public class SecurityConfiguration {
                         .requestMatchers("/shipped/**").hasAnyRole("SHIPPED", "ADMIN")
 
                         .anyRequest().authenticated())
-                .oauth2Login(oauth2 -> oauth2.loginPage("/login"))
+                .oauth2Login(oauth2 -> oauth2.loginPage("/login")
+                        .successHandler(customSuccessHandler())
+                        .failureUrl("/login?error")
+                        .userInfoEndpoint(user -> user
+                                .userService(new CustomOAuth2UserService(userService))))
+
                 .sessionManagement((sessionManagement) -> sessionManagement
                         .sessionCreationPolicy(SessionCreationPolicy.ALWAYS) // https://docs.spring.io/spring-security/reference/servlet/authentication/session-management.html#stateless-authentication
                         .invalidSessionUrl("/logout?expired") // https://docs.spring.io/spring-security/reference/servlet/authentication/session-management.html#_detecting_timeouts
