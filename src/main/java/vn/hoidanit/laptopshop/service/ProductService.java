@@ -214,6 +214,10 @@ public class ProductService {
         return this.productRepository.findById(id);
     }
 
+    public Optional<Product> fetchProductBySlug(String String) {
+        return this.productRepository.findBySlug(String);
+    }
+
     public void deleteProduct(long id) {
         this.productRepository.deleteById(id);
     }

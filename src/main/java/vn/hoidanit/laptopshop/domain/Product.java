@@ -16,10 +16,13 @@ import jakarta.persistence.Table;
 import jakarta.validation.constraints.DecimalMin;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
 @Table(name = "products")
-
+@Getter
+@Setter
 public class Product implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -54,6 +57,11 @@ public class Product implements Serializable {
     private long sold;
     private String factory;
     private String target;
+
+    @NotNull
+    @NotEmpty(message = "Slug không được để trống")
+    @Column(unique = true)
+    private String slug;
 
     private int sta = 5;
 

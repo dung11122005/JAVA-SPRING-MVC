@@ -122,7 +122,7 @@
                                                             <div
                                                                 class="p-4 border border-secondary border-top-0 rounded-bottom">
                                                                 <h4 style="font-size: 15px;">
-                                                                    <a href="/product/${product.id}">
+                                                                    <a href="/product/${product.slug}">
                                                                         ${product.name}</a>
                                                                 </h4>
                                                                 <p style="font-size: 13px;">${product.shortDesc}</p>
@@ -236,7 +236,7 @@
                                                     class="img-fluid rounded-circle" alt="">
                                             </div>
                                             <div class="col-6">
-                                                <a href="/product/${product.id}" class="h5">${product.name}</a>
+                                                <a href="/product/${product.slug}" class="h5">${product.name}</a>
                                                 <c:if test="${product.sta == '5'}">
                                                     <div class="d-flex my-3">
                                                         <i class="fas fa-star text-secondary"></i>
@@ -300,7 +300,7 @@
                                         <img loading="lazy" src="/images/product/${product.image}"
                                             class="img-fluid rounded" alt="">
                                         <div class="py-4">
-                                            <a href="/product/${product.id}" class="h5">${product.name}</a>
+                                            <a href="/product/${product.slug}" class="h5">${product.name}</a>
                                             <c:if test="${product.sta == '5'}">
                                                 <div class="d-flex my-3 justify-content-center">
                                                     <i class="fas fa-star text-secondary"></i>
@@ -376,7 +376,7 @@
                                         <p class="fw-normal display-3 text-dark mb-4">Uy tín - chất lượng tạo niềm tin
                                         </p>
                                         <p class="mb-4 text-dark">Lựa chọn hàng đầu của người tiêu dùng.</p>
-                                        <a href="/product/${product.id}"
+                                        <a href="/product/${product.slug}"
                                             class="banner-btn btn border-2 border-white rounded-pill text-dark py-3 px-5">BUY</a>
                                     </div>
                                 </div>

@@ -65,15 +65,15 @@ public class ItemController {
         this.paymentService = paymentService;
     }
 
-    @GetMapping("/product/{id}")
-    public String getProductPage(Model model, @PathVariable long id) {
-        Optional<Product> OptionalPr = this.productService.fetchProductById(id);
+    @GetMapping("/product/{slug}")
+    public String getProductPage(Model model, @PathVariable String slug) {
+        Optional<Product> OptionalPr = this.productService.fetchProductBySlug(slug);
         List<Product> ListProductBest = this.orderService.fetchBestSellingProductPage();
         List<Product> productCarousel = this.productService.fetchProducts();
         Product pr;
         Product prs = new Product();
 
-        Optional<Product> optionalProduct = this.productService.fetchProductById(id);
+        Optional<Product> optionalProduct = this.productService.fetchProductById(OptionalPr.get().getId());
         if (optionalProduct.isPresent()) {
             prs = (Product) optionalProduct.get();
         }
@@ -88,7 +88,7 @@ public class ItemController {
         model.addAttribute("products", ListProductBest);
         model.addAttribute("productCarousel", productCarousel);
         model.addAttribute("comments", comments);
-        model.addAttribute("id", id);
+        model.addAttribute("id", OptionalPr.get().getId());
 
         return "client/product/detail";
     }

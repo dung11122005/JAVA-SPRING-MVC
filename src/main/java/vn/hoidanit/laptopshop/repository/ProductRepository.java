@@ -1,5 +1,7 @@
 package vn.hoidanit.laptopshop.repository;
 
+import java.util.Optional;
+
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
@@ -14,4 +16,6 @@ public interface ProductRepository extends JpaRepository<Product, Long>, JpaSpec
     Page<Product> findAll(Pageable page);
 
     Page<Product> findAll(Specification<Product> spec, Pageable page);
+
+    Optional<Product> findBySlug(String slug);
 }
